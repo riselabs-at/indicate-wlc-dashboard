@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="INDICATE WLC Dashboard (work in progress): whole life carbon of buildings across the INDICATE LIFE national datasets for Austria, Croatia and Luxembourg.">
+<title>INDICATE WLC Dashboard (preview)</title>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<style>
+/* Layout: one analytical column (max 1240px) under a sticky filter rail; each section = heading, one-line takeaway, chart, footnote. */
+:root{
+  --bg:#f3f5f3; --surface:#fcfcfb; --ink:#101614; --ink2:#4b534f; --muted:#7f8682;
+  --grid:#e1e5e1; --axis:#c2c8c3; --line:rgba(16,22,20,.10); --accent:#0d6a5a; --accent-wash:#e1efeb;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --d-mod:#a9aea9; --box:#e6ebe7;
+  --wip-bg:#fff4d6; --wip-ink:#4a3500; --wip-edge:#e0a800;
+  --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --critical:#d03b3b; --na:#b9bdb9;
+  --f-ui:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-data:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d100f; --surface:#161a18; --ink:#eef2ef; --ink2:#bfc6c1; --muted:#878e89;
+  --grid:#282d2a; --axis:#3a403c; --line:rgba(255,255,255,.10); --accent:#57c0aa; --accent-wash:#183029;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --d-mod:#5b615d; --box:#242a27; --na:#5d635f; --wip-bg:#3a2c05; --wip-ink:#ffe7a3; --wip-edge:#c98500; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d100f; --surface:#161a18; --ink:#eef2ef; --ink2:#bfc6c1; --muted:#878e89;
+  --grid:#282d2a; --axis:#3a403c; --line:rgba(255,255,255,.10); --accent:#57c0aa; --accent-wash:#183029;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --d-mod:#5b615d; --box:#242a27; --na:#5d635f; --wip-bg:#3a2c05; --wip-ink:#ffe7a3; --wip-edge:#c98500; color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:14px;line-height:1.5}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:20px;padding-block:0 64px}
+header.top{padding-block:28px 18px;display:flex;flex-wrap:wrap;gap:12px 32px;align-items:flex-end;justify-content:space-between}
+.eyebrow{font-family:var(--f-data);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:28px;line-height:1.15;margin:4px 0 6px;font-weight:600;letter-spacing:-.01em;text-wrap:balance}
+.lede{color:var(--ink2);max-width:68ch;margin:0}
+nav.jump{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px}
+nav.jump a{color:var(--ink2);text-decoration:none;border-bottom:1px solid var(--axis)}
+nav.jump a:hover{color:var(--accent);border-color:var(--accent)}
+
+.rail{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-block:1px solid var(--line);margin-inline:-20px;padding:10px 20px}
+.rail-in{max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center}
+.ctl{display:flex;align-items:center;gap:8px;min-width:0}
+.ctl>label,.ctl>.lab{font-family:var(--f-data);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;background:var(--surface);overflow:hidden}
+.seg button{font:inherit;font-size:13px;color:var(--ink2);background:none;border:0;padding:5px 10px;cursor:pointer;border-right:1px solid var(--line);white-space:nowrap}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent-wash);color:var(--ink);font-weight:600}
+.seg button:hover{color:var(--ink)}
+select{font:inherit;font-size:13px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:5px 8px;max-width:100%}
+button:focus-visible,select:focus-visible,a:focus-visible,th:focus-visible,tr:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+section{padding-block:34px 6px;border-top:1px solid var(--line);margin-top:30px}
+section:first-of-type{border-top:0;margin-top:8px}
+h2{font-size:20px;font-weight:600;margin:0 0 4px;letter-spacing:-.005em;text-wrap:balance}
+h3{font-size:14.5px;font-weight:600;margin:22px 0 4px}
+.take{color:var(--ink2);max-width:80ch;margin:0 0 14px}
+.note{font-size:12.5px;color:var(--muted);max-width:90ch;margin:8px 0 0}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 16px 12px;min-width:0}
+.grid2{display:grid;align-items:start;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:16px}
+.row-head{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between;margin-bottom:8px}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.kpi{background:var(--surface);padding:14px 16px}
+.kpi .v{font-size:26px;font-weight:600;line-height:1.1;margin-top:4px}
+.kpi .v small{font-size:12px;font-weight:500;color:var(--muted);margin-left:4px}
+.kpi .s{font-size:12.5px;color:var(--ink2);margin-top:3px}
+
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--ink2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:11px;height:11px;border-radius:3px;display:inline-block;flex:none}
+.sw.dot{border-radius:50%}
+.sw.hatch{background:repeating-linear-gradient(45deg,var(--d-mod) 0 2px,transparent 2px 4px);outline:1px solid var(--d-mod)}
+
+svg text{font-family:var(--f-ui);fill:var(--ink2);font-size:12px}
+svg .tick{font-family:var(--f-data);font-size:10.5px;fill:var(--muted)}
+svg .lab{fill:var(--ink);font-size:12.5px}
+svg .sub{fill:var(--muted);font-size:11px;font-family:var(--f-data)}
+.chart{width:100%;overflow-x:auto}
+.hit{cursor:default}
+
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:0 6px 24px rgba(0,0,0,.14);border-radius:8px;padding:8px 10px;font-size:12.5px;max-width:300px;opacity:0;transition:opacity .08s}
+.tip b{font-weight:600}
+.tip .k{color:var(--muted);font-family:var(--f-data);font-size:11px}
+.tip table{border-collapse:collapse;margin-top:4px}
+.tip td{padding:1px 6px 1px 0;font-variant-numeric:tabular-nums}
+.tip td:last-child{text-align:right}
+
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table.t{border-collapse:collapse;width:100%;font-size:12.5px}
+table.t th,table.t td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+table.t th{font-family:var(--f-data);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;position:sticky;top:0;background:var(--surface)}
+table.t th.num,table.t td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.t tbody tr:hover{background:var(--accent-wash)}
+table.t th[data-k]{cursor:pointer}
+table.t th[aria-sort] ::after{content:""}
+tr.sel{background:var(--accent-wash)}
+tr.clickable{cursor:pointer}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;padding:1px 8px 1px 6px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.pill i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.flag{font-family:var(--f-data);font-size:10.5px;color:var(--muted)}
+.cov td.y{color:var(--ink)} .cov td.n{color:var(--muted)}
+.empty{padding:28px 10px;color:var(--muted);text-align:center}
+.method{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:14px 28px}
+.method div{min-width:0}
+.method h3{margin-top:6px}
+.method p,.method li{color:var(--ink2);font-size:13px;max-width:65ch}
+.method ul{padding-left:18px;margin:6px 0}
+code{font-family:var(--f-data);font-size:12px;background:var(--box);padding:0 4px;border-radius:4px}
+.wip{background:var(--wip-bg);color:var(--wip-ink);border-bottom:3px solid var(--wip-edge);
+  background-image:repeating-linear-gradient(135deg,transparent 0 14px,color-mix(in srgb,var(--wip-edge) 14%,transparent) 14px 28px)}
+.wip-in{max-width:1240px;margin:0 auto;padding:12px 20px;display:flex;gap:12px;align-items:flex-start}
+.wip svg{flex:none;margin-top:2px}
+.wip strong{font-weight:700;letter-spacing:.01em}
+.wip p{margin:2px 0 0;max-width:110ch;font-size:13.5px}
+.wip-chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-data);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+  background:var(--wip-bg);color:var(--wip-ink);border:1px solid var(--wip-edge);border-radius:99px;padding:3px 9px;margin-left:auto;white-space:nowrap}
+footer.foot{border-top:1px solid var(--line);margin-top:40px;padding-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px 28px;font-size:12.5px;color:var(--ink2)}
+footer.foot p{margin:0 0 6px;max-width:70ch}
+footer.foot b{color:var(--ink)}
+@media (max-width:640px){h1{font-size:23px}.rail{position:static}.kpi .v{font-size:22px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wip" role="note" aria-label="Work in progress">
+ <div class="wip-in">
+  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 1.5 21h21L12 2.5Z" fill="var(--wip-edge)"/><path d="M12 9v5.5M12 17.2v.3" stroke="var(--wip-bg)" stroke-width="2.2" stroke-linecap="round"/></svg>
+  <div><strong>Work in progress: preliminary results, not yet verified</strong>
+  <p>This dashboard is under development. Data harmonisation, assumptions and results are still being checked with the national teams, and figures may change. Please do not cite, quote or reuse them. Preview build 2026-10-19, version 0.1 preview.</p></div>
+ </div>
+</div>
+<div class="wrap">
+<header class="top">
+  <div>
+    <div class="eyebrow">INDICATE LIFE · National WLC datasets · AT · HR · LU</div>
+    <h1>INDICATE WLC Dashboard</h1>
+    <p class="lede">Whole life carbon of buildings across three national datasets: distribution, life-cycle profile, building-element contributions and benchmark classes for 169 assessed buildings from deliverables D7.3 (Austria), D7.12 (Croatia) and D7.30 (Luxembourg).</p>
+  </div>
+  <nav class="jump" aria-label="Sections">
+    <a href="#dist">Distribution</a><a href="#lc">Life cycle</a><a href="#el">Elements</a><a href="#bm">Benchmarks</a><a href="#bld">Buildings</a><a href="#method">Method</a>
+  </nav>
+</header>
+
+<div class="rail" role="region" aria-label="Filters">
+ <div class="rail-in">
+  <div class="ctl"><span class="lab" id="lab-c">Country</span><div class="seg" id="f-country" role="group" aria-labelledby="lab-c">
+    <button data-v="AT" aria-pressed="true">Austria</button><button data-v="HR" aria-pressed="true">Croatia</button><button data-v="LU" aria-pressed="true">Luxembourg</button></div></div>
+  <div class="ctl"><label for="f-type">Type</label><select id="f-type"></select></div>
+  <div class="ctl"><span class="lab" id="lab-s">Scope</span><div class="seg" id="f-scope" role="group" aria-labelledby="lab-s">
+    <button data-v="emb" aria-pressed="true" title="A1–A5, B4–B5, C1–C4">Embodied</button><button data-v="wlc" aria-pressed="false" title="Embodied + B3, B6, B7">Whole life</button></div></div>
+  <div class="ctl"><span class="lab" id="lab-a">Per m²</span><div class="seg" id="f-area" role="group" aria-labelledby="lab-a">
+    <button data-v="ufa" aria-pressed="true">UFA</button><button data-v="gfa" aria-pressed="false">GFA</button></div></div>
+  <div class="ctl"><span class="lab" id="lab-u">Unit</span><div class="seg" id="f-unit" role="group" aria-labelledby="lab-u">
+    <button data-v="m2" aria-pressed="true">50 years</button><button data-v="m2a" aria-pressed="false">per year</button></div></div>
+  <span class="wip-chip" title="Preliminary results, verification pending">Preview · not verified</span>
+ </div>
+</div>
+
+<section id="overview" aria-labelledby="h-ov">
+  <h2 id="h-ov" class="eyebrow" style="font-size:11px;font-weight:500">Current selection</h2>
+  <div class="kpis" id="kpis"></div>
+  <p class="note" id="excl"></p>
+</section>
+
+<section id="dist" aria-labelledby="h-dist">
+  <div class="row-head"><div><h2 id="h-dist">Distribution by building type</h2>
+  <p class="take" id="dist-take"></p></div>
+  <div class="legend" id="dist-legend"></div></div>
+  <div class="panel"><div class="chart" id="c-dist"></div></div>
+  <p class="note">Each dot is one building, coloured by its benchmark class within its country and type. Grey bands show the interquartile range, the dark tick the median. Groups with fewer than 5 buildings are not classified.</p>
+  <h3>Summary statistics</h3>
+  <div class="tbl-wrap"><table class="t" id="t-stats"></table></div>
+</section>
+
+<section id="lc" aria-labelledby="h-lc">
+  <div class="row-head"><div><h2 id="h-lc">Contributions across the life cycle</h2>
+  <p class="take" id="lc-take"></p></div>
+  <div class="ctl"><span class="lab" id="lab-lv">Show</span><div class="seg" id="f-lcview" role="group" aria-labelledby="lab-lv"><button data-v="abs" aria-pressed="true">kgCO₂e/m²</button><button data-v="share" aria-pressed="false">Share %</button></div>
+  <div class="seg" id="f-d" role="group" aria-label="Module D"><button data-v="1" aria-pressed="true">Show D</button><button data-v="0" aria-pressed="false">Hide D</button></div></div></div>
+  <div class="panel">
+    <div class="legend" id="lc-legend" style="margin-bottom:10px"></div>
+    <div class="chart" id="c-lc"></div>
+  </div>
+  <p class="note">Bars show the mean of per-building values for each group. Module D is reported outside the system boundary and is not part of the totals. Share mode divides each module by the group's mean total, so it is not available for D.</p>
+  <h3>Module reporting coverage</h3>
+  <div class="tbl-wrap" style="max-width:640px"><table class="t cov" id="t-cov"></table></div>
+</section>
+
+<section id="el" aria-labelledby="h-el">
+  <h2 id="h-el">Contributions across building elements</h2>
+  <p class="take" id="el-take"></p>
+  <div class="grid2">
+    <div class="panel"><div class="row-head"><h3 style="margin:0">Element groups by building type</h3></div>
+      <div class="legend" id="el-legend" style="margin-bottom:10px"></div><div class="chart" id="c-el"></div></div>
+    <div class="panel"><div class="row-head"><h3 style="margin:0" id="h-el3">Elements, ranked</h3></div><div class="chart" id="c-el3"></div></div>
+  </div>
+  <div class="panel" style="margin-top:16px"><div class="row-head"><h3 style="margin:0" id="h-mat">Material groups, ranked</h3></div><div class="chart" id="c-mat"></div></div>
+  <p class="note">Only the Luxembourg dataset (sheet “Overview of results”, 11,133 product rows) carries an element and material breakdown; the Austrian and Croatian files report building totals per module only. Element codes are the source’s “LEVELS Tier 3” codes. The source gives no names for them, so the group names here are inferred from the product categories each code contains, and each code is described by its three largest product categories. Embodied modules only (Luxembourg reports no B6).</p>
+</section>
+
+<section id="bm" aria-labelledby="h-bm">
+  <div class="row-head"><div><h2 id="h-bm">Benchmark classes</h2>
+  <p class="take">Classes are statistical bands of the current indicator within each group: <b>Target</b> ≤ 25th percentile, <b>Reference</b> ≤ median, <b>Limit</b> ≤ 75th percentile, <b>Above limit</b> beyond. They change with the scope, area and unit filters. Select a group to see its buildings and class profiles.</p></div>
+  <div class="ctl"><span class="lab" id="lab-bb">Basis</span><div class="seg" id="f-bmbasis" role="group" aria-labelledby="lab-bb"><button data-v="country" aria-pressed="true">Per country</button><button data-v="pooled" aria-pressed="false">Pooled</button></div></div></div>
+  <div class="legend" id="bm-legend" style="margin-bottom:10px"></div>
+  <div class="tbl-wrap"><table class="t" id="t-bm"></table></div>
+  <div class="panel" style="margin-top:16px"><div class="row-head"><h3 style="margin:0" id="h-bmd"></h3></div><div class="chart" id="c-bm"></div></div>
+  <div class="grid2" style="margin-top:16px">
+    <div class="panel"><h3 style="margin:0 0 8px">Life-cycle profile by class</h3><div class="legend" id="bm-lc-legend" style="margin-bottom:8px"></div><div class="chart" id="c-bmlc"></div></div>
+    <div class="panel"><h3 style="margin:0 0 8px">Element profile by class</h3><div class="legend" id="bm-el-legend" style="margin-bottom:8px"></div><div class="chart" id="c-bmel"></div></div>
+  </div>
+  <p class="note" id="bm-note"></p>
+</section>
+
+<section id="bld" aria-labelledby="h-bld">
+  <h2 id="h-bld">Building records</h2>
+  <p class="take">All buildings in the current selection with the harmonised values. Select a column heading to sort.</p>
+  <div class="tbl-wrap" style="max-height:520px;overflow:auto"><table class="t" id="t-bld"></table></div>
+</section>
+
+<section id="method" aria-labelledby="h-m">
+  <h2 id="h-m">Method and data notes</h2>
+  <div class="method">
+    <div><h3>Harmonisation</h3><ul>
+      <li>Values are GWP-total (fossil + biogenic + LULUC) in kgCO₂e over a 50-year reference study period; “per year” divides by 50.</li>
+      <li><b>Embodied</b> = A1–A3, A4, A5, B4–B5 and C1–C4, the modules all three datasets share. <b>Whole life</b> adds B3, B6 and B7 where reported. Module D is always shown separately.</li>
+      <li>Building types are mapped to eight harmonised types. National typologies are kept in the building table (Austrian “Apartment block” and “Multi-family house” both map to Multi-family / apartments).</li>
+    </ul></div>
+    <div><h3>Assumptions to confirm</h3><ul>
+      <li><b>Luxembourg reference area.</b> The LU results are already per m², but the file does not state which area. They are treated as per m² GFA (total incl. below ground) and converted with the A. Metadata areas. <span class="seg" id="f-luarea" role="group" aria-label="Luxembourg reference area" style="vertical-align:middle;margin-left:4px"><button data-v="gfa" aria-pressed="true">Treat as GFA</button><button data-v="ufa" aria-pressed="false">Treat as UFA</button></span></li>
+      <li><b>Austria, operational energy.</b> The column header reads “GWP total - B5” but its description row says B6; it is treated as B6. Austrian B4–B5 contains B4 only.</li>
+      <li><b>Luxembourg “House”</b> includes some larger multi-unit residences (e.g. MI_Con_1, 35 occupants); it is mapped to Single-family house as labelled.</li>
+    </ul></div>
+    <div><h3>Data quality flags</h3><ul>
+      <li><b>Croatia</b>: the 50 cases are design variants of 16 base buildings (pairs share identical floor areas), so percentiles describe variants rather than an independent stock. The per-GFA B3 column in the source holds a running index; values here are recomputed from the absolute totals (which match the source totals within 2 kgCO₂e).</li>
+      <li><b>Austria</b> reports no GFA, so it drops out when the area is set to GFA.</li>
+      <li><b>Luxembourg</b> reports no operational modules (B6/B7), so it drops out of the whole-life view; its element scope covers shell, core and services plus external works.</li>
+      <li>System boundaries and element scope of the AT and HR models are not documented in the files, so cross-country gaps may reflect scope as well as performance.</li>
+    </ul></div>
+  </div>
+</section>
+<footer class="foot">
+  <div><p><b>INDICATE WLC Dashboard</b> · version 0.1 preview · build 2026-10-19</p>
+  <p>Part of <a href="https://www.indicatedata.com/" style="color:inherit">INDICATE LIFE</a>, National Building LCA Data Accelerator EU LIFE (grant agreement 101167585), coordinated by Smith Innovation.</p></div>
+  <div><p><b>Data sources</b></p>
+  <p>D7.3 AT national WLC dataset (TU Graz) · D7.12 HR national WLC dataset (University of Zagreb, Faculty of Civil Engineering) · D7.30 LU national WLC dataset (Energie et Environnement S.A. on behalf of the OAI). Harmonisation and analysis on this page are preliminary.</p></div>
+  <div><p><b>Funding</b></p>
+  <p>This project is co-funded by the European Union’s LIFE programme under grant agreement 101167585. The views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or CINEA. Neither the European Union nor CINEA can be held responsible for them.</p>
+  <p>This page sets no cookies, stores nothing in your browser and loads nothing from third-party servers.</p></div>
+</footer>
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script src="assets/js/data.js"></script>
+<script>
+(() => {
+'use strict';
+const DATA = window.WLC_DATA;
+if(!DATA){ document.body.insertAdjacentHTML('afterbegin','<p style="padding:20px">Data file assets/js/data.js could not be loaded.</p>'); return; }
+const B = DATA.buildings;
+const MODS_ALL = ['A1-A3','A4','A5','B3','B4-B5','B6','B7','C1-C4'];
+const EMB = ['A1-A3','A4','A5','B4-B5','C1-C4'];
+const MOD_COLOR = {'A1-A3':'--s1','A4':'--s2','A5':'--s3','B3':'--s4','B4-B5':'--s5','B6':'--s6','B7':'--s7','C1-C4':'--s8','D':'--d-mod'};
+const MOD_LABEL = {'A1-A3':'A1–A3 Product','A4':'A4 Transport','A5':'A5 Construction','B3':'B3 Repair','B4-B5':'B4–B5 Replacement','B6':'B6 Operational energy','B7':'B7 Operational water','C1-C4':'C1–C4 End of life','D':'D Beyond boundary'};
+const CTRY = {AT:'Austria',HR:'Croatia',LU:'Luxembourg'};
+const TYPES = ['Single-family house','Multi-family / apartments','Office','Education','Retail','Hotel','Hospital','Hall / sports'];
+const CLASSES = [
+  {k:'T',name:'Target',rule:'≤ P25',c:'--good'},
+  {k:'R',name:'Reference',rule:'≤ P50',c:'--warn'},
+  {k:'L',name:'Limit',rule:'≤ P75',c:'--serious'},
+  {k:'A',name:'Above limit',rule:'> P75',c:'--critical'}];
+const MIN_N = 5;
+// Element groups (inferred names) from LEVELS Tier 3 codes
+const EL_GROUPS = [
+  {k:'1.1',name:'Substructure & basement',test:c=>c.startsWith('1.1.')},
+  {k:'1.2',name:'Load-bearing frame & floors',test:c=>c.startsWith('1.2.')},
+  {k:'1.3',name:'Envelope: façade, openings, roof',test:c=>c.startsWith('1.3.')},
+  {k:'2.1',name:'Interior construction & finishes',test:c=>c.startsWith('2.1.')},
+  {k:'2.2',name:'Energy, HVAC & electrical systems',test:c=>c.startsWith('2.2.')},
+  {k:'2.3',name:'Plumbing, sanitary, fire & lifts',test:c=>/^2\.[345]\./.test(c)},
+  {k:'3',name:'External works & networks',test:c=>c.startsWith('3.')}];
+EL_GROUPS.forEach((g,i)=>g.c='--s'+(i+1));
+const elGroupOf = c => (EL_GROUPS.find(g=>g.test(c))||{k:'?'}).k;
+
+const S = {countries:new Set(['AT','HR','LU']), type:'All', scope:'emb', area:'ufa', unit:'m2', luArea:'gfa', lcView:'abs', showD:true, bmBasis:'country', bmGroup:null};
+const save=()=>{};
+
+const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const col = n => `var(${n})`;
+const esc = s => String(s).replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));
+const dp = () => S.unit==='m2a' ? 1 : 0;
+const fmt = (v,d=dp()) => (v==null||!isFinite(v)) ? '–' : v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+const pct = v => (v==null||!isFinite(v))?'–':(v*100).toFixed(0)+'%';
+const unitLabel = () => `kgCO₂e/${S.unit==='m2a'?'(m²·a)':'m²'} ${S.area.toUpperCase()}`;
+const scopeMods = () => S.scope==='emb' ? EMB : MODS_ALL;
+function quant(s,p){ const n=s.length; if(!n) return NaN; const h=(n-1)*p, lo=Math.floor(h), hi=Math.min(lo+1,n-1); return s[lo]+(s[hi]-s[lo])*(h-lo); }
+const mean = a => a.length? a.reduce((x,y)=>x+y,0)/a.length : NaN;
+
+// ---------- core calculation ----------
+function calc(b){
+  const area = S.area==='ufa' ? b.ufa : b.gfa;
+  if(!area) return {b, ok:false, why:`no ${S.area.toUpperCase()} reported`};
+  if(S.scope==='wlc' && b.mods['B6']==null) return {b, ok:false, why:'no operational (B6) data'};
+  const ref = b.perM2 ? (S.luArea==='gfa'? b.gfa : b.ufa) : 1;
+  const div = area * (S.unit==='m2a' ? (b.rsp||50) : 1);
+  const m = {};
+  for(const k of scopeMods()){ const v=b.mods[k]; m[k] = v==null? null : v*ref/div; }
+  const D = b.mods['D']==null? null : b.mods['D']*ref/div;
+  const total = Object.values(m).reduce((s,v)=>s+(v||0),0);
+  let el=null, mat=null;
+  if(b.perM2 && DATA.luElements[b.id]){
+    const f = ref/div; el={}; mat={};
+    for(const [code,mods] of Object.entries(DATA.luElements[b.id])) el[code]=EMB.reduce((s,k)=>s+(mods[k]||0),0)*f;
+    for(const [mt,mods] of Object.entries(DATA.luMaterials[b.id])) mat[mt]=EMB.reduce((s,k)=>s+(mods[k]||0),0)*f;
+  }
+  return {b, ok:true, m, D, total, el, mat};
+}
+function selection(){
+  const inSel = B.filter(b=>S.countries.has(b.country) && (S.type==='All'||b.type===S.type));
+  const rows = inSel.map(calc);
+  return {all:rows, ok:rows.filter(r=>r.ok), excl:rows.filter(r=>!r.ok)};
+}
+// benchmark groups over current country filter (type filter not applied so table is complete)
+function benchmarks(){
+  const rows = B.filter(b=>S.countries.has(b.country)).map(calc).filter(r=>r.ok);
+  const groups = new Map();
+  for(const r of rows){
+    const key = (S.bmBasis==='pooled'?'Pooled':r.b.country)+'|'+r.b.type;
+    if(!groups.has(key)) groups.set(key,{key, country:S.bmBasis==='pooled'?'Pooled':r.b.country, type:r.b.type, rows:[]});
+    groups.get(key).rows.push(r);
+  }
+  const cls = new Map();
+  for(const g of groups.values()){
+    const s = g.rows.map(r=>r.total).sort((a,b)=>a-b);
+    g.n=s.length; g.p25=quant(s,.25); g.p50=quant(s,.5); g.p75=quant(s,.75); g.min=s[0]; g.max=s[s.length-1];
+    g.ok = g.n>=MIN_N;
+    g.counts={T:0,R:0,L:0,A:0};
+    for(const r of g.rows){
+      let c=null;
+      if(g.ok){ c = r.total<=g.p25?'T': r.total<=g.p50?'R': r.total<=g.p75?'L':'A'; g.counts[c]++; }
+      cls.set(r.b.id,{c,g});
+    }
+  }
+  return {groups:[...groups.values()].sort((a,b)=>TYPES.indexOf(a.type)-TYPES.indexOf(b.type)||a.country.localeCompare(b.country)), cls};
+}
+
+// ---------- svg helpers ----------
+const NS='http://www.w3.org/2000/svg';
+function svgEl(tag,attrs={},parent){ const e=document.createElementNS(NS,tag); for(const [k,v] of Object.entries(attrs)) if(v!=null) e.setAttribute(k,v); if(parent) parent.appendChild(e); return e; }
+function txt(parent,x,y,s,attrs={}){ const t=svgEl('text',{x,y,...attrs},parent); t.textContent=s; return t; }
+function niceTicks(lo,hi,count=5){
+  if(lo===hi){hi=lo+1}
+  const span=hi-lo, step0=span/count, mag=Math.pow(10,Math.floor(Math.log10(step0))), r=step0/mag;
+  const step=(r<1.5?1:r<3?2:r<7?5:10)*mag;
+  const a=Math.floor(lo/step)*step, b=Math.ceil(hi/step)*step, t=[];
+  for(let v=a; v<=b+step/2; v+=step) t.push(+v.toFixed(10));
+  return t;
+}
+// bar with 4px rounded end on the side away from zero
+function barPath(x0,x1,y,h,roundEnd){
+  const r=Math.min(4,Math.abs(x1-x0)/2,h/2); const L=Math.min(x0,x1), R=Math.max(x0,x1);
+  if(!roundEnd||r<=0) return `M${L},${y}H${R}V${y+h}H${L}Z`;
+  if(x1>=x0) return `M${L},${y}H${R-r}Q${R},${y} ${R},${y+r}V${y+h-r}Q${R},${y+h} ${R-r},${y+h}H${L}Z`;
+  return `M${R},${y}H${L+r}Q${L},${y} ${L},${y+r}V${y+h-r}Q${L},${y+h} ${L+r},${y+h}H${R}Z`;
+}
+function vbarPath(x,w,y0,y1){ // y0 baseline, y1 tip
+  const r=Math.min(4,w/2,Math.abs(y0-y1)/2); const T=Math.min(y0,y1),Bt=Math.max(y0,y1);
+  if(y1<=y0) return `M${x},${Bt}V${T+r}Q${x},${T} ${x+r},${T}H${x+w-r}Q${x+w},${T} ${x+w},${T+r}V${Bt}Z`;
+  return `M${x},${T}V${Bt-r}Q${x},${Bt} ${x+r},${Bt}H${x+w-r}Q${x+w},${Bt} ${x+w},${Bt-r}V${T}Z`;
+}
+const widthOf = el => Math.max(300, el.clientWidth || el.parentElement.clientWidth || 600);
+const narrow = () => window.innerWidth < 640;
+
+// tooltip
+const tip = document.getElementById('tip');
+document.addEventListener('mousemove', e=>{
+  const t = e.target.closest && e.target.closest('[data-tip]');
+  if(!t){ tip.style.opacity=0; return; }
+  tip.innerHTML = t.getAttribute('data-tip'); tip.style.opacity=1;
+  const w=tip.offsetWidth, h=tip.offsetHeight; let x=e.clientX+14, y=e.clientY+14;
+  if(x+w>innerWidth-8) x=e.clientX-w-14; if(y+h>innerHeight-8) y=e.clientY-h-14;
+  tip.style.left=x+'px'; tip.style.top=y+'px';
+});
+document.addEventListener('scroll',()=>tip.style.opacity=0,{passive:true});
+
+// generic horizontal stacked bar chart (positives right of 0, negatives left)
+function hStack(host, rows, keys, colorOf, labelOf, opts={}){
+  host.innerHTML='';
+  if(!rows.length){ host.innerHTML='<div class="empty">No buildings in the current selection.</div>'; return; }
+  const W=widthOf(host), lw = narrow()? 118 : (opts.labelW||200), rh=opts.rowH||30, bh=16, top=6, bottom=26, padR=56;
+  const gapH=12; const ys=[]; let acc=top; rows.forEach((r,i)=>{ if(i&&r.gap) acc+=gapH; ys.push(acc); acc+=rh; });
+  const H = acc + bottom;
+  let lo=0, hi=0;
+  for(const r of rows){ let p=0,n=0; for(const k of keys){ const v=r.vals[k]||0; if(v>0)p+=v; else n+=v; } hi=Math.max(hi,p); lo=Math.min(lo,n); }
+  if(opts.share){ hi=Math.max(hi,1); }
+  const ticks = niceTicks(lo,hi, narrow()?3:6); lo=Math.min(lo,ticks[0]); hi=Math.max(hi,ticks[ticks.length-1]);
+  const x = v => lw + (v-lo)/(hi-lo)*(W-lw-padR);
+  const svg = svgEl('svg',{width:W,height:H,viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':opts.aria||'bar chart'},host);
+  for(const t of ticks){ svgEl('line',{x1:x(t),x2:x(t),y1:top-2,y2:H-bottom+2,stroke:col(t===0?'--axis':'--grid'),'stroke-width':1},svg);
+    txt(svg,x(t),H-8,opts.share? (t*100).toFixed(0)+'%' : fmt(t, Math.abs(ticks[1]-ticks[0])<1?1:0),{class:'tick','text-anchor':'middle'}); }
+  rows.forEach((r,i)=>{
+    const y = ys[i] + (rh-bh)/2;
+    if(i&&r.gap) svgEl('line',{x1:0,x2:W,y1:ys[i]-gapH/2,y2:ys[i]-gapH/2,stroke:col('--grid')},svg);
+    const lab = txt(svg,8,y+bh/2-1,r.label,{class:'lab','dominant-baseline':'middle'});
+    if(r.sub) txt(svg,8,y+bh/2+12,r.sub,{class:'sub','dominant-baseline':'middle'});
+    if(r.sub) lab.setAttribute('y',y+bh/2-5);
+    let pos=0, neg=0;
+    const segs=[];
+    for(const k of keys){ const v=r.vals[k]; if(v==null||v===0) continue;
+      if(v>0){ segs.push({k,a:pos,b:pos+v,v}); pos+=v; } else { segs.push({k,a:neg,b:neg+v,v}); neg+=v; } }
+    const lastPos = segs.filter(s=>s.v>0).pop(), lastNeg = segs.filter(s=>s.v<0).pop();
+    for(const s of segs){
+      let x0=x(s.a), x1=x(s.b); // 2px surface gap at the far end
+      if(Math.abs(x1-x0)>3){ x1 += s.v>0 ? -2 : 2; } else if(Math.abs(x1-x0)<0.5) continue;
+      const p = svgEl('path',{d:barPath(x0,x1,y,bh,s===lastPos||s===lastNeg),fill:col(colorOf(s.k)),class:'hit'},svg);
+      if(opts.hatch && opts.hatch(s.k)) p.setAttribute('fill','url(#hatchD)');
+      const t = opts.tipOf? opts.tipOf(r,s.k,s.v) : `<b>${esc(r.label)}</b>${r.sub?` <span class="k">${esc(r.sub)}</span>`:''}<br>${esc(labelOf(s.k))}: <b>${opts.share?pct(s.v):fmt(s.v)}</b>`;
+      p.setAttribute('data-tip',t);
+    }
+    if(!opts.share && opts.tipTotal!==false){ txt(svg,x(pos)+6,y+bh/2,fmt(r.total!=null?r.total:pos),{class:'tick','dominant-baseline':'middle',style:'fill:var(--ink2)'}); }
+    // full-row hit target for summary tooltip
+    if(opts.rowTip){ const hr=svgEl('rect',{x:0,y:ys[i],width:lw-4,height:rh,fill:'transparent','data-tip':opts.rowTip(r)},svg); }
+  });
+  if(opts.hatch){ const defs=svgEl('defs',{},svg); const pt=svgEl('pattern',{id:'hatchD',width:5,height:5,patternUnits:'userSpaceOnUse',patternTransform:'rotate(45)'},defs);
+    svgEl('rect',{width:5,height:5,fill:col('--box')},pt); svgEl('line',{x1:0,y1:0,x2:0,y2:5,stroke:col('--d-mod'),'stroke-width':2.2},pt); svg.insertBefore(defs,svg.firstChild); }
+}
+function legend(host, items){ host.innerHTML = items.map(i=>`<span><i class="sw ${i.cls||''}" style="${i.cls==='hatch'?'':`background:${col(i.c)}`}"></i>${esc(i.label)}</span>`).join(''); }
+
+// ---------- KPIs ----------
+function renderKPIs(sel){
+  const v = sel.ok.map(r=>r.total).sort((a,b)=>a-b);
+  const k = document.getElementById('kpis');
+  const embShare = S.scope==='wlc' ? mean(sel.ok.map(r=>EMB.reduce((s,m)=>s+(r.m[m]||0),0)/r.total)) : null;
+  const prodShare = mean(sel.ok.map(r=>(r.m['A1-A3']||0)/r.total));
+  const Dm = sel.ok.filter(r=>r.D!=null).map(r=>r.D).sort((a,b)=>a-b);
+  const byC = ['AT','HR','LU'].filter(c=>S.countries.has(c)).map(c=>`${c} ${sel.ok.filter(r=>r.b.country===c).length}`).join(' · ');
+  k.innerHTML = `
+   <div class="kpi"><div class="eyebrow">Buildings</div><div class="v">${v.length}<small>of ${sel.all.length}</small></div><div class="s">${byC}</div></div>
+   <div class="kpi"><div class="eyebrow">Median ${S.scope==='emb'?'embodied':'whole life'}</div><div class="v">${fmt(quant(v,.5))}<small>${unitLabel()}</small></div><div class="s">IQR ${fmt(quant(v,.25))} – ${fmt(quant(v,.75))}</div></div>
+   <div class="kpi"><div class="eyebrow">${S.scope==='wlc'?'Embodied share':'Product stage share'}</div><div class="v">${pct(S.scope==='wlc'?embShare:prodShare)}</div><div class="s">${S.scope==='wlc'?'mean share of whole-life total':'A1–A3, mean share of embodied total'}</div></div>
+   <div class="kpi"><div class="eyebrow">Module D (median)</div><div class="v">${Dm.length?fmt(quant(Dm,.5))+`<small>${unitLabel()}</small>`:'n/r'}</div><div class="s">${Dm.length} buildings report D · outside totals</div></div>`;
+  const ex = {}; sel.excl.forEach(r=>{ const key=r.b.country+': '+r.why; ex[key]=(ex[key]||0)+1; });
+  const luNote = sel.ok.some(r=>r.b.country==='LU') ? ` Luxembourg values assume the source figures are per m² ${S.luArea.toUpperCase()}; the file does not state the reference area (switch under Method).` : '';
+  document.getElementById('excl').textContent = (Object.keys(ex).length ? 'Excluded from this view: ' + Object.entries(ex).map(([k,n])=>`${k} (${n})`).join('; ') + '.' : '') + luNote;
+}
+
+// ---------- distribution ----------
+function renderDist(sel, bm){
+  const host=document.getElementById('c-dist'); host.innerHTML='';
+  const types = TYPES.filter(t=>sel.ok.some(r=>r.b.type===t));
+  if(!types.length){ host.innerHTML='<div class="empty">No buildings in the current selection.</div>'; return; }
+  const lanes=[]; for(const t of types) for(const c of ['AT','HR','LU']){ const rs=sel.ok.filter(r=>r.b.type===t&&r.b.country===c); if(rs.length) lanes.push({t,c,rs}); }
+  const W=widthOf(host), lw=narrow()?118:200, laneH=24, typeGap=14, top=8, bottom=28, padR=16;
+  let H=top+bottom; let prev=null; lanes.forEach(l=>{ H+=laneH + (prev && prev!==l.t ? typeGap:0); prev=l.t; });
+  const vals=sel.ok.map(r=>r.total); let lo=Math.min(0,...vals), hi=Math.max(...vals);
+  const ticks=niceTicks(lo,hi,narrow()?4:7); lo=ticks[0]; hi=ticks[ticks.length-1];
+  const x=v=>lw+(v-lo)/(hi-lo)*(W-lw-padR);
+  const svg=svgEl('svg',{width:W,height:H,viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':'Distribution of carbon per building by type and country'},host);
+  for(const t of ticks){ svgEl('line',{x1:x(t),x2:x(t),y1:top,y2:H-bottom,stroke:col(t===0?'--axis':'--grid')},svg); txt(svg,x(t),H-9,fmt(t,S.unit==='m2a'&&Math.abs(ticks[1]-ticks[0])<1?1:0),{class:'tick','text-anchor':'middle'}); }
+  let y=top; prev=null;
+  for(const l of lanes){
+    if(prev && prev!==l.t) { y+=typeGap; svgEl('line',{x1:0,x2:W,y1:y-typeGap/2,y2:y-typeGap/2,stroke:col('--grid')},svg); }
+    const cy=y+laneH/2;
+    if(prev!==l.t) txt(svg,8,cy,narrow()? l.t.replace(' / apartments','').replace('Single-family house','Single-family'):l.t,{class:'lab','dominant-baseline':'middle'});
+    txt(svg,lw-10,cy,l.c,{class:'sub','text-anchor':'end','dominant-baseline':'middle'});
+    const s=l.rs.map(r=>r.total).sort((a,b)=>a-b), q1=quant(s,.25), q2=quant(s,.5), q3=quant(s,.75);
+    if(s.length>=3){ svgEl('rect',{x:x(q1),y:cy-7,width:Math.max(1,x(q3)-x(q1)),height:14,rx:3,fill:col('--box')},svg); }
+    svgEl('line',{x1:x(q2),x2:x(q2),y1:cy-9,y2:cy+9,stroke:col('--ink'),'stroke-width':2,'data-tip':`<b>${esc(l.t)} · ${CTRY[l.c]}</b><br>n = ${s.length}<br>Median <b>${fmt(q2)}</b><br>P25–P75 ${fmt(q1)} – ${fmt(q3)}`},svg);
+    for(const r of l.rs){
+      const c=bm.cls.get(r.b.id); const cl=c&&c.c? CLASSES.find(k=>k.k===c.c):null;
+      const h=[...r.b.id].reduce((a,ch)=>(a*31+ch.charCodeAt(0))%997,7)/997;
+      svgEl('circle',{cx:x(r.total),cy:cy+(h-.5)*8,r:4.5,fill:col(cl?cl.c:'--na'),stroke:col('--surface'),'stroke-width':2,class:'hit',
+        'data-tip':`<b>${esc(r.b.id)}</b> <span class="k">${esc(r.b.natType)}</span><br>${fmt(r.total)} <span class="k">${unitLabel()}</span><br>Class: ${cl?`<b>${cl.name}</b>`:'not classified (n&lt;5)'}`},svg);
+    }
+    y+=laneH; prev=l.t;
+  }
+  // take-away
+  const med = c => quant(sel.ok.filter(r=>r.b.country===c).map(r=>r.total).sort((a,b)=>a-b),.5);
+  const parts=['AT','HR','LU'].filter(c=>sel.ok.some(r=>r.b.country===c)).map(c=>`${CTRY[c]} ${fmt(med(c))}`);
+  document.getElementById('dist-take').textContent = `Median ${S.scope==='emb'?'embodied':'whole-life'} carbon in ${unitLabel()}: ${parts.join(', ')}. Spread within a country and type is often as large as the gap between countries.`;
+  legend(document.getElementById('dist-legend'), [...CLASSES.map(c=>({c:c.c,label:c.name,cls:'dot'})),{c:'--na',label:'Not classified',cls:'dot'}]);
+  // stats table
+  const t=document.getElementById('t-stats');
+  const rows=lanes.map(l=>{const s=l.rs.map(r=>r.total).sort((a,b)=>a-b);return `<tr><td>${esc(l.t)}</td><td>${l.c}</td><td class="num">${s.length}</td><td class="num">${fmt(s[0])}</td><td class="num">${fmt(quant(s,.25))}</td><td class="num">${fmt(quant(s,.5))}</td><td class="num">${fmt(quant(s,.75))}</td><td class="num">${fmt(s[s.length-1])}</td><td class="num">${fmt(mean(s))}</td></tr>`;});
+  t.innerHTML=`<thead><tr><th>Type</th><th>Country</th><th class="num">n</th><th class="num">Min</th><th class="num">P25</th><th class="num">Median</th><th class="num">P75</th><th class="num">Max</th><th class="num">Mean</th></tr></thead><tbody>${rows.join('')}</tbody><caption class="note" style="caption-side:bottom;text-align:left;padding:8px 10px">${unitLabel()}</caption>`;
+}
+
+// ---------- life cycle ----------
+function groupMeans(rs){
+  const v={}; for(const k of scopeMods()){ const a=rs.map(r=>r.m[k]).filter(x=>x!=null); v[k]= a.length? a.reduce((s,x)=>s+x,0)/rs.length : null; }
+  const d=rs.map(r=>r.D).filter(x=>x!=null); v.D = d.length? mean(d):null;
+  return v;
+}
+function renderLC(sel){
+  const host=document.getElementById('c-lc');
+  const keys=[...scopeMods()];
+  const rows=[];
+  if(S.type==='All') for(const c of ['AT','HR','LU']){ const rs=sel.ok.filter(r=>r.b.country===c); if(!rs.length) continue;
+    rows.push({label:`${CTRY[c]} · all types`, sub:`n=${rs.length}`, rs}); }
+  let firstAll=true; for(const t of TYPES){ let first=true; for(const c of ['AT','HR','LU']){ const rs=sel.ok.filter(r=>r.b.type===t&&r.b.country===c); if(!rs.length) continue; rows.push({label:t, sub:`${c} · n=${rs.length}`, rs, gap:first}); first=false; } }
+  const share=S.lcView==='share';
+  for(const r of rows){ const m=groupMeans(r.rs); const tot=keys.reduce((s,k)=>s+(m[k]||0),0); r.total=tot; r.means=m;
+    r.vals={}; for(const k of keys) r.vals[k]= m[k]==null?null:(share? m[k]/tot : m[k]);
+    if(S.showD && !share && m.D!=null) r.vals.D=m.D; }
+  const allKeys = S.showD&&!share ? [...keys,'D'] : keys;
+  hStack(host, rows, allKeys, k=>MOD_COLOR[k], k=>MOD_LABEL[k], {share, labelW:210, rowH:34, hatch:k=>k==='D', aria:'Life-cycle module contributions',
+    rowTip:r=>`<b>${esc(r.label)}</b> <span class="k">${esc(r.sub)}</span><table>${allKeys.map(k=>`<tr><td><i class="sw" style="background:${col(MOD_COLOR[k])}"></i> ${MOD_LABEL[k]}</td><td>${r.means[k]==null?'n/r':fmt(r.means[k])}</td><td class="k">${k!=='D'&&r.means[k]!=null?pct(r.means[k]/r.total):''}</td></tr>`).join('')}<tr><td><b>Total (excl. D)</b></td><td><b>${fmt(r.total)}</b></td><td></td></tr></table>`});
+  const usedKeys = allKeys.filter(k=>rows.some(r=>r.vals[k]!=null&&r.vals[k]!==0));
+  legend(document.getElementById('lc-legend'), usedKeys.map(k=>({c:MOD_COLOR[k],label:MOD_LABEL[k],cls:k==='D'?'hatch':''})));
+  // takeaway
+  const all=groupMeans(sel.ok); const tot=keys.reduce((s,k)=>s+(all[k]||0),0);
+  const top=keys.filter(k=>all[k]!=null).sort((a,b)=>all[b]-all[a]).slice(0,2);
+  document.getElementById('lc-take').textContent = sel.ok.length? `Across the selection, ${MOD_LABEL[top[0]]} accounts for ${pct(all[top[0]]/tot)} of the ${S.scope==='emb'?'embodied':'whole-life'} total${top[1]?`, followed by ${MOD_LABEL[top[1]]} at ${pct(all[top[1]]/tot)}`:''}. Hover a row label for the full module breakdown.` : '';
+  // coverage table
+  const cov = {AT:{'A1-A3':'✓','A4':'✓','A5':'✓','B3':'—','B4-B5':'B4 only','B6':'✓','B7':'—','C1-C4':'✓','D':'—'},
+               HR:{'A1-A3':'✓','A4':'✓','A5':'✓','B3':'✓','B4-B5':'✓','B6':'✓','B7':'✓','C1-C4':'✓','D':'✓'},
+               LU:{'A1-A3':'✓','A4':'✓','A5':'✓','B3':'—','B4-B5':'✓','B6':'—','B7':'—','C1-C4':'C2–C4','D':'✓'}};
+  document.getElementById('t-cov').innerHTML = `<thead><tr><th>Module</th><th>Austria</th><th>Croatia</th><th>Luxembourg</th><th>In scope</th></tr></thead><tbody>${[...MODS_ALL,'D'].map(k=>`<tr><td><i class="sw ${k==='D'?'hatch':''}" style="${k==='D'?'':`background:${col(MOD_COLOR[k])}`}"></i> ${MOD_LABEL[k]}</td>${['AT','HR','LU'].map(c=>`<td class="${cov[c][k]==='—'?'n':'y'}">${cov[c][k]}</td>`).join('')}<td>${k==='D'?'Separate':EMB.includes(k)?'Embodied + whole life':'Whole life'}</td></tr>`).join('')}</tbody>`;
+}
+
+// ---------- elements ----------
+function renderEl(sel){
+  const lu = sel.ok.filter(r=>r.el);
+  const hosts=['c-el','c-el3','c-mat'].map(id=>document.getElementById(id));
+  legend(document.getElementById('el-legend'), EL_GROUPS.map(g=>({c:g.c,label:g.name})));
+  if(!lu.length){ hosts.forEach(h=>h.innerHTML=`<div class="empty">${S.countries.has('LU')? (S.type!=='All'?'No Luxembourg buildings of this type.':'No Luxembourg buildings in this view.') : 'Element data is only available for Luxembourg. Add Luxembourg to the country filter.'}</div>`);
+    document.getElementById('el-take').textContent='Element-level results exist only in the Luxembourg dataset.'; return; }
+  // by type, element groups
+  const rows=[];
+  const typesLU = TYPES.filter(t=>lu.some(r=>r.b.type===t));
+  if(typesLU.length>1) rows.push({label:'All Luxembourg', sub:`n=${lu.length}`, rs:lu});
+  for(const t of typesLU){ const rs=lu.filter(r=>r.b.type===t); rows.push({label:t,sub:`n=${rs.length}`,rs}); }
+  for(const r of rows){ r.vals={}; for(const g of EL_GROUPS) r.vals[g.k]= mean(r.rs.map(x=>Object.entries(x.el).filter(([c])=>elGroupOf(c)===g.k).reduce((s,[,v])=>s+v,0))); r.total=Object.values(r.vals).reduce((a,b)=>a+b,0); }
+  hStack(hosts[0], rows, EL_GROUPS.map(g=>g.k), k=>EL_GROUPS.find(g=>g.k===k).c, k=>EL_GROUPS.find(g=>g.k===k).name, {labelW:190, rowH:34, aria:'Element group contributions',
+    rowTip:r=>`<b>${esc(r.label)}</b> <span class="k">${r.sub}</span><table>${EL_GROUPS.map(g=>`<tr><td><i class="sw" style="background:${col(g.c)}"></i> ${g.name}</td><td>${fmt(r.vals[g.k])}</td><td class="k">${pct(r.vals[g.k]/r.total)}</td></tr>`).join('')}</table>`});
+  // tier 3 ranking
+  const codes=Object.keys(DATA.luTier3Desc).sort();
+  const t3=codes.map(c=>({c, v:mean(lu.map(r=>r.el[c]||0))})).filter(o=>Math.abs(o.v)>0).sort((a,b)=>b.v-a.v);
+  const tot=t3.reduce((s,o)=>s+o.v,0);
+  const top = t3.slice(0,14);
+  document.getElementById('h-el3').textContent = `Elements ranked · ${S.type==='All'?'all Luxembourg':S.type} (top ${top.length} of ${t3.length})`;
+  hStack(hosts[1], top.map(o=>({label:o.c, sub:DATA.luTier3Desc[o.c][0].slice(0,narrow()?16:30), vals:{v:o.v}, total:o.v, o})), ['v'], ()=>'--s1', ()=>'', {labelW:230,rowH:40,aria:'Elements ranked',
+    tipOf:(r)=>`<b>${r.o.c}</b> · group ${esc(EL_GROUPS.find(g=>g.k===elGroupOf(r.o.c)).name)}<br>${fmt(r.o.v)} <span class="k">${unitLabel()}</span> · ${pct(r.o.v/tot)} of embodied<br><span class="k">Largest product categories:</span><br>${DATA.luTier3Desc[r.o.c].map(esc).join('<br>')}`});
+  // materials
+  const mats=[...new Set(lu.flatMap(r=>Object.keys(r.mat)))];
+  const mv=mats.map(m=>({m,v:mean(lu.map(r=>r.mat[m]||0))})).sort((a,b)=>b.v-a.v).filter(o=>Math.abs(o.v)>0.05);
+  const mt=mv.reduce((s,o)=>s+o.v,0);
+  document.getElementById('h-mat').textContent = `Material groups ranked · ${S.type==='All'?'all Luxembourg':S.type} (INDICATE Materials Tier 2)`;
+  hStack(hosts[2], mv.map(o=>({label:o.m.replace(/\s*\(.*\)/,''), vals:{v:o.v}, total:o.v, o})), ['v'], ()=>'--s1', ()=>'', {labelW:250,rowH:26,aria:'Material groups ranked',
+    tipOf:r=>`<b>${esc(r.o.m)}</b><br>${fmt(r.o.v)} <span class="k">${unitLabel()}</span> · ${pct(r.o.v/mt)} of embodied`});
+  const best=rows[0]; const sg=EL_GROUPS.map(g=>({g,v:best.vals[g.k]})).sort((a,b)=>b.v-a.v);
+  document.getElementById('el-take').textContent = `In ${best.label==='All Luxembourg'?'the Luxembourg dataset':best.label+' (Luxembourg)'}, ${sg[0].g.name.toLowerCase()} contributes ${pct(sg[0].v/best.total)} of embodied carbon and ${sg[1].g.name.toLowerCase()} ${pct(sg[1].v/best.total)}. Building services (2.2–2.5) together account for ${pct((best.vals['2.2']+best.vals['2.3'])/best.total)}.`;
+}
+
+// ---------- benchmarks ----------
+function renderBM(bm){
+  const groups=bm.groups.filter(g=>S.type==='All'||g.type===S.type);
+  if(!S.bmGroup || !groups.some(g=>g.key===S.bmGroup)){ const g=groups.find(g=>g.ok)||groups[0]; S.bmGroup=g?g.key:null; }
+  legend(document.getElementById('bm-legend'), [...CLASSES.map(c=>({c:c.c,label:`${c.name} ${c.rule}`,cls:'dot'})),{c:'--na',label:`Not classified (n < ${MIN_N})`,cls:'dot'}]);
+  const t=document.getElementById('t-bm');
+  t.innerHTML=`<thead><tr><th>Group</th><th>Basis</th><th class="num">n</th><th class="num">Target ≤</th><th class="num">Reference ≤</th><th class="num">Limit ≤</th><th>Buildings per class</th></tr></thead><tbody>${groups.map(g=>`<tr class="clickable ${g.key===S.bmGroup?'sel':''}" data-g="${esc(g.key)}" tabindex="0"><td>${esc(g.type)}</td><td>${g.country==='Pooled'?'Pooled ('+[...S.countries].join(', ')+')':CTRY[g.country]}</td><td class="num">${g.n}</td>${g.ok?`<td class="num">${fmt(g.p25)}</td><td class="num">${fmt(g.p50)}</td><td class="num">${fmt(g.p75)}</td><td>${CLASSES.map(c=>`<span class="pill" title="${c.name}"><i style="background:${col(c.c)}"></i>${g.counts[c.k]}</span>`).join(' ')}</td>`:`<td class="num flag" colspan="3">n &lt; ${MIN_N}, not classified</td><td></td>`}</tr>`).join('')}</tbody><caption class="note" style="caption-side:bottom;text-align:left;padding:8px 10px">Thresholds in ${unitLabel()}, ${S.scope==='emb'?'embodied':'whole-life'} scope.</caption>`;
+  t.querySelectorAll('tr[data-g]').forEach(tr=>{ const go=()=>{S.bmGroup=tr.dataset.g; save(); renderBM(bm);}; tr.addEventListener('click',go); tr.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}}); });
+  const g=groups.find(x=>x.key===S.bmGroup);
+  const hd=document.getElementById('h-bmd'), host=document.getElementById('c-bm');
+  if(!g){ hd.textContent=''; host.innerHTML='<div class="empty">No groups in the current selection.</div>'; ['c-bmlc','c-bmel'].forEach(id=>document.getElementById(id).innerHTML=''); return; }
+  hd.textContent=`${g.type} · ${g.country==='Pooled'?'pooled':CTRY[g.country]} · ${g.n} buildings`;
+  // column chart sorted
+  host.innerHTML='';
+  const rs=[...g.rows].sort((a,b)=>a.total-b.total);
+  const W=widthOf(host), H=260, l=54, r=narrow()?16:118, top=12, bottom=narrow()?20:70;
+  const vals=rs.map(x=>x.total); let lo=Math.min(0,...vals), hi=Math.max(...vals); const ticks=niceTicks(lo,hi,5); lo=ticks[0]; hi=ticks[ticks.length-1];
+  const y=v=>top+(hi-v)/(hi-lo)*(H-top-bottom);
+  const svg=svgEl('svg',{width:W,height:H,viewBox:`0 0 ${W} ${H}`,role:'img','aria-label':'Buildings in the group, sorted'},host);
+  for(const tk of ticks){ svgEl('line',{x1:l,x2:W-r,y1:y(tk),y2:y(tk),stroke:col(tk===0?'--axis':'--grid')},svg); txt(svg,l-6,y(tk),fmt(tk,0),{class:'tick','text-anchor':'end','dominant-baseline':'middle'}); }
+  const slot=(W-l-r)/rs.length, bw=Math.min(24,slot*.72);
+  rs.forEach((x,i)=>{ const c=bm.cls.get(x.b.id); const cl=c&&c.c?CLASSES.find(k=>k.k===c.c):null; const bx=l+i*slot+(slot-bw)/2;
+    svgEl('path',{d:vbarPath(bx,bw,y(0),y(x.total)),fill:col(cl?cl.c:'--na'),class:'hit','data-tip':`<b>${esc(x.b.id)}</b> <span class="k">${esc(x.b.natType)}</span><br>${fmt(x.total)} <span class="k">${unitLabel()}</span><br>${cl?`<b>${cl.name}</b>`:'not classified'}`},svg);
+    svgEl('rect',{x:l+i*slot,y:top,width:slot,height:H-top-bottom,fill:'transparent','data-tip':`<b>${esc(x.b.id)}</b><br>${fmt(x.total)} <span class="k">${unitLabel()}</span><br>${cl?`<b>${cl.name}</b>`:'not classified'}`},svg);
+    if(!narrow() && slot>=13) txt(svg,0,0,x.b.id.replace(/^(AT|HR|LU)-/,''),{class:'tick',transform:`translate(${bx+bw/2+3},${H-bottom+8}) rotate(-60)`,'text-anchor':'end'});
+  });
+  if(g.ok){ const th=[['p75','Limit ≤'],['p50','Reference ≤'],['p25','Target ≤']]; let lastY=-1e9;
+    th.forEach(([k,lab])=>{ svgEl('line',{x1:l,x2:W-r,y1:y(g[k]),y2:y(g[k]),stroke:col('--ink'),'stroke-width':1,'stroke-dasharray':'5 3',opacity:.7},svg);
+      const ly=Math.max(y(g[k]), lastY+13); lastY=ly;
+      if(!narrow()) txt(svg,W-r+6,ly,`${lab} ${fmt(g[k])}`,{class:'tick','dominant-baseline':'middle',style:'fill:var(--ink2)'}); }); }
+  // class profiles
+  const classRows = CLASSES.map(c=>{ const m=g.rows.filter(x=>{const q=bm.cls.get(x.b.id);return q&&q.c===c.k;}); return {c, rs:m}; }).filter(o=>o.rs.length);
+  const lcHost=document.getElementById('c-bmlc'), elHost=document.getElementById('c-bmel');
+  if(!g.ok){ lcHost.innerHTML=elHost.innerHTML=`<div class="empty">Fewer than ${MIN_N} buildings, so no classes are formed.</div>`; document.getElementById('bm-lc-legend').innerHTML=document.getElementById('bm-el-legend').innerHTML=''; }
+  else{
+    const keys=scopeMods();
+    const lrows=classRows.map(o=>{ const m=groupMeans(o.rs); const tot=keys.reduce((s,k)=>s+(m[k]||0),0); return {label:o.c.name, sub:`n=${o.rs.length}`, vals:Object.fromEntries(keys.map(k=>[k,m[k]])), total:tot, means:m}; });
+    hStack(lcHost, lrows, keys, k=>MOD_COLOR[k], k=>MOD_LABEL[k], {labelW:120,rowH:34,aria:'Life-cycle profile by class',
+      rowTip:r=>`<b>${r.label}</b> <span class="k">${r.sub}</span><table>${keys.map(k=>`<tr><td>${MOD_LABEL[k]}</td><td>${r.means[k]==null?'n/r':fmt(r.means[k])}</td><td class="k">${r.means[k]==null?'':pct(r.means[k]/r.total)}</td></tr>`).join('')}</table>`});
+    legend(document.getElementById('bm-lc-legend'), keys.filter(k=>lrows.some(r=>r.vals[k])).map(k=>({c:MOD_COLOR[k],label:MOD_LABEL[k]})));
+    if(g.rows.some(x=>x.el)){
+      const erows=classRows.map(o=>{ const ers=o.rs.filter(x=>x.el); const v={}; for(const eg of EL_GROUPS) v[eg.k]=mean(ers.map(x=>Object.entries(x.el).filter(([c])=>elGroupOf(c)===eg.k).reduce((s,[,vv])=>s+vv,0))); return {label:o.c.name, sub:`n=${ers.length}`, vals:v, total:Object.values(v).reduce((a,b)=>a+b,0)}; });
+      hStack(elHost, erows, EL_GROUPS.map(e=>e.k), k=>EL_GROUPS.find(e=>e.k===k).c, k=>EL_GROUPS.find(e=>e.k===k).name, {labelW:120,rowH:34,aria:'Element profile by class',
+        rowTip:r=>`<b>${r.label}</b> <span class="k">${r.sub}</span><table>${EL_GROUPS.map(e=>`<tr><td>${e.name}</td><td>${fmt(r.vals[e.k])}</td><td class="k">${pct(r.vals[e.k]/r.total)}</td></tr>`).join('')}</table>`});
+      legend(document.getElementById('bm-el-legend'), EL_GROUPS.map(e=>({c:e.c,label:e.name})));
+      if(S.scope==='wlc') elHost.insertAdjacentHTML('beforeend','<p class="note">Element values cover embodied modules only.</p>');
+    } else { elHost.innerHTML='<div class="empty">No element breakdown for this group. Element data exists only for Luxembourg buildings.</div>'; document.getElementById('bm-el-legend').innerHTML=''; }
+  }
+  document.getElementById('bm-note').textContent = g.country==='HR'||(g.country==='Pooled'&&S.countries.has('HR')) ? 'Croatian groups consist of design variants of two base buildings per type, so their percentiles mainly reflect variant spread.' : (g.country==='Pooled'?'Pooled groups mix national methods and scopes; read pooled classes as indicative.':'');
+}
+
+// ---------- building table ----------
+let sortK='total', sortDir=1;
+function renderTable(sel, bm){
+  const keys=scopeMods();
+  const cols=[{k:'id',l:'Building'},{k:'country',l:'Ctry'},{k:'natType',l:'National type'},{k:'type',l:'Harmonised type'},{k:'ufa',l:'UFA m²',n:1,d:0},{k:'gfa',l:'GFA m²',n:1,d:0},
+    {k:'total',l:'Total',n:1},{k:'cls',l:'Class'},...keys.map(k=>({k,l:k.replace('-','–'),n:1})),{k:'D',l:'D',n:1}];
+  const val=(r,k)=> k==='total'?r.total: k==='D'?r.D: k==='cls'?(['T','R','L','A'].indexOf((bm.cls.get(r.b.id)||{}).c)): keys.includes(k)? r.m[k] : r.b[k];
+  const rs=[...sel.ok].sort((a,b)=>{ const x=val(a,sortK), y=val(b,sortK); if(x==null) return 1; if(y==null) return -1; return (typeof x==='string'? x.localeCompare(y): x-y)*sortDir; });
+  const t=document.getElementById('t-bld');
+  t.innerHTML=`<thead><tr>${cols.map(c=>`<th data-k="${c.k}" class="${c.n?'num':''}" tabindex="0" aria-sort="${sortK===c.k?(sortDir>0?'ascending':'descending'):'none'}">${c.l}${sortK===c.k?(sortDir>0?' ↑':' ↓'):''}</th>`).join('')}</tr></thead><tbody>${rs.map(r=>{const c=bm.cls.get(r.b.id); const cl=c&&c.c?CLASSES.find(k=>k.k===c.c):null; return `<tr>${cols.map(cc=>{
+      if(cc.k==='cls') return `<td>${cl?`<span class="pill"><i style="background:${col(cl.c)}"></i>${cl.name}</span>`:'<span class="flag">n/c</span>'}</td>`;
+      const v=val(r,cc.k); return `<td class="${cc.n?'num':''}">${cc.n? (v==null?'<span class="flag">n/r</span>':fmt(v,cc.d)) : esc(v??'')}</td>`; }).join('')}</tr>`;}).join('')}</tbody>`;
+  t.querySelectorAll('th[data-k]').forEach(th=>{ const go=()=>{ const k=th.dataset.k; if(sortK===k) sortDir*=-1; else {sortK=k; sortDir=1;} renderTable(sel,bm); }; th.addEventListener('click',go); th.addEventListener('keydown',e=>{if(e.key==='Enter'){go();}}); });
+}
+
+// ---------- controls ----------
+const typeSel=document.getElementById('f-type');
+typeSel.innerHTML = `<option value="All">All types</option>` + TYPES.map(t=>`<option>${t}</option>`).join('');
+function syncControls(){
+  document.querySelectorAll('#f-country button').forEach(b=>b.setAttribute('aria-pressed',S.countries.has(b.dataset.v)));
+  const map={'f-scope':S.scope,'f-area':S.area,'f-unit':S.unit,'f-lcview':S.lcView,'f-d':S.showD?'1':'0','f-bmbasis':S.bmBasis,'f-luarea':S.luArea};
+  for(const [id,v] of Object.entries(map)) document.querySelectorAll(`#${id} button`).forEach(b=>b.setAttribute('aria-pressed',b.dataset.v===v));
+  typeSel.value=S.type;
+}
+document.getElementById('f-country').addEventListener('click',e=>{ const b=e.target.closest('button'); if(!b) return; const v=b.dataset.v;
+  if(S.countries.has(v)){ if(S.countries.size>1) S.countries.delete(v); } else S.countries.add(v); update(); });
+const segBind=(id,key,conv=v=>v)=>document.getElementById(id).addEventListener('click',e=>{const b=e.target.closest('button'); if(!b) return; S[key]=conv(b.dataset.v); update();});
+segBind('f-scope','scope'); segBind('f-area','area'); segBind('f-unit','unit'); segBind('f-lcview','lcView'); segBind('f-d','showD',v=>v==='1'); segBind('f-bmbasis','bmBasis'); segBind('f-luarea','luArea');
+typeSel.addEventListener('change',()=>{S.type=typeSel.value; update();});
+
+function update(){
+  syncControls(); save();
+  const sel=selection(), bm=benchmarks();
+  renderKPIs(sel); renderDist(sel,bm); renderLC(sel); renderEl(sel); renderBM(bm); renderTable(sel,bm);
+}
+let rt; window.addEventListener('resize',()=>{clearTimeout(rt); rt=setTimeout(update,150);});
+update();
+})();
+</script>
+</body>
+</html>
