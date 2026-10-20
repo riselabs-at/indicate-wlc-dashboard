@@ -1,0 +1,220 @@
+building_id,country,source_deliverable,source_id,national_typology,harmonised_type,intervention,intervention_class,renovation_level,gfa_m2,ufa_m2,hfa_m2,ufa_equivalent_m2,ufa_equivalent_basis,rsp_years,results_basis,has_element_data,storeys,year,structure,energy_source,typology_use,n_products,gwp_fossil_kgco2e,gwp_biogenic_kgco2e,gwp_luluc_kgco2e
+AT-005,AT,D7.3,005,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,12518.0,,12518.0,UFA,50.0,absolute kgCO2e,no,12.0,,,,,,14672273.369000256,263225.3780838344,11529.416387422116
+AT-006,AT,D7.3,006,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,11789.49,,11789.49,UFA,50.0,absolute kgCO2e,no,9.0,,,,,,15384155.7791003,516583.1037069134,14971.561201164403
+AT-007,AT,D7.3,007,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,3660.0,,3660.0,UFA,50.0,absolute kgCO2e,no,7.0,,,,,,4061880.8814301784,98153.12698731812,3834.593514962584
+AT-008,AT,D7.3,008,Multi-family house,Multi-family / apartments,New construction (assumed),New construction,,,2658.8,,2658.8,UFA,50.0,absolute kgCO2e,no,4.0,,,,,,3786690.3177817306,92754.8196426489,4331.433260134465
+AT-010,AT,D7.3,010,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,1795.9,,1795.9,UFA,50.0,absolute kgCO2e,no,4.0,,,,,,3092364.879092558,107995.11069267339,2708.798770502517
+AT-011,AT,D7.3,011,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,2277.8,,2277.8,UFA,50.0,absolute kgCO2e,no,5.0,,,,,,4397341.335600941,97032.79351035117,3596.6644791502663
+AT-012,AT,D7.3,012,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,7850.344000000001,,7850.344000000001,UFA,50.0,absolute kgCO2e,no,9.0,,,,,,8864206.33654605,236877.802534192,9643.78189879246
+AT-013,AT,D7.3,013,Multi-family house,Multi-family / apartments,New construction (assumed),New construction,,,493.54,,493.54,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,951949.7055237786,36413.36787183538,1053.919264340701
+AT-014,AT,D7.3,014,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,2201.11,,2201.11,UFA,50.0,absolute kgCO2e,no,5.0,,,,,,2918376.237619114,86755.26022617928,2995.9696402068157
+AT-017,AT,D7.3,017,Office building,Office,New construction (assumed),New construction,,,1222.46,,1222.46,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,1964166.387959974,82164.1912864556,2494.9632265224673
+AT-019,AT,D7.3,019,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,1665.521,,1665.521,UFA,50.0,absolute kgCO2e,no,4.0,,,,,,3025875.8116623233,91272.82494844156,3467.23071577946
+AT-024,AT,D7.3,024,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,11155.2,,11155.2,UFA,50.0,absolute kgCO2e,no,12.0,,,,,,10848489.389172716,258675.8542829754,8482.46261551343
+AT-030,AT,D7.3,030,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,19405.2,,19405.2,UFA,50.0,absolute kgCO2e,no,10.0,,,,,,30546258.391745076,830773.9953593179,21352.697466351507
+AT-031,AT,D7.3,031,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,6011.78,,6011.78,UFA,50.0,absolute kgCO2e,no,4.0,,,,,,5177910.884611902,148499.04222486148,5738.707903192027
+AT-034,AT,D7.3,034,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,3707.48,,3707.48,UFA,50.0,absolute kgCO2e,no,10.0,,,,,,5544275.529235943,160897.47416219092,5930.657339618499
+AT-035,AT,D7.3,035,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,6050.0,,6050.0,UFA,50.0,absolute kgCO2e,no,8.0,,,,,,6756692.516804052,127518.82889108003,5232.036104333482
+AT-041,AT,D7.3,041,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,2763.82,,2763.82,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,3772223.388905007,110630.56073628124,4634.379565234567
+AT-043,AT,D7.3,043,Education building,Education,New construction (assumed),New construction,,,933.2,,933.2,UFA,50.0,absolute kgCO2e,no,5.0,,,,,,1184934.0813478134,39370.66314133393,1196.4151047447954
+AT-044,AT,D7.3,044,Education building,Education,New construction (assumed),New construction,,,1134.032,,1134.032,UFA,50.0,absolute kgCO2e,no,2.0,,,,,,1079583.5451332757,18129.719098638143,2103.776133487887
+AT-045,AT,D7.3,045,Office building,Office,New construction (assumed),New construction,,,1925.0400000000002,,1925.0400000000002,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,2284414.038316187,67058.15806541547,2395.5584322697896
+AT-046,AT,D7.3,046,Multi-family house,Multi-family / apartments,New construction (assumed),New construction,,,324.8,,324.8,UFA,50.0,absolute kgCO2e,no,2.0,,,,,,446735.1088363582,6840.856187402598,346.1524248609871
+AT-047,AT,D7.3,047,Multi-family house,Multi-family / apartments,New construction (assumed),New construction,,,444.6,,444.6,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,796711.6804424563,9994.634538713044,703.392831192513
+AT-048,AT,D7.3,048,Multi-family house,Multi-family / apartments,New construction (assumed),New construction,,,722.6,,722.6,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,847626.3270536896,15727.050713160404,665.6914126590237
+AT-049,AT,D7.3,049,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,986.9,,986.9,UFA,50.0,absolute kgCO2e,no,5.0,,,,,,1377964.850146811,22126.832658821535,1015.9907843773409
+AT-050,AT,D7.3,050,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,1918.5,,1918.5,UFA,50.0,absolute kgCO2e,no,9.0,,,,,,1959530.754619655,40690.23537724086,1625.6707276511186
+AT-052,AT,D7.3,052,Hotel and Restaurant,Hotel,New construction (assumed),New construction,,,5348.560000000001,,5348.560000000001,UFA,50.0,absolute kgCO2e,no,8.0,,,,,,10684869.90732693,395833.68726809305,12260.82977572939
+AT-055,AT,D7.3,055,Education building,Education,New construction (assumed),New construction,,,2802.26,,2802.26,UFA,50.0,absolute kgCO2e,no,5.0,,,,,,2825463.2367818775,80291.52651117269,4280.275674241085
+AT-056,AT,D7.3,056,Education building,Education,New construction (assumed),New construction,,,3409.6800000000003,,3409.6800000000003,UFA,50.0,absolute kgCO2e,no,5.0,,,,,,3967357.566577353,59410.01885863889,18177.64021160775
+AT-057,AT,D7.3,057,Office building,Office,New construction (assumed),New construction,,,2421.0,,2421.0,UFA,50.0,absolute kgCO2e,no,6.0,,,,,,3133295.7421364887,91698.54994573451,5831.210566963118
+AT-058,AT,D7.3,058,Education building,Education,New construction (assumed),New construction,,,4328.45,,4328.45,UFA,50.0,absolute kgCO2e,no,8.0,,,,,,9049169.99066668,263817.81832221797,14491.893702907055
+AT-060,AT,D7.3,060,Single-family house,Single-family house,New construction (assumed),New construction,,,177.0,,177.0,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,275908.63855375105,2055.993937677115,552.1012065288809
+AT-061,AT,D7.3,061,Single-family house,Single-family house,New construction (assumed),New construction,,,177.0,,177.0,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,260800.49690436752,6339.105241660574,232.94076144731508
+AT-062,AT,D7.3,062,Single-family house,Single-family house,New construction (assumed),New construction,,,167.60999999999999,,167.60999999999999,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,287513.706713401,1897.541448151554,551.5975217935141
+AT-063,AT,D7.3,063,Single-family house,Single-family house,New construction (assumed),New construction,,,167.60999999999999,,167.60999999999999,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,272277.70639484364,6079.356161016567,238.43504076457356
+AT-064,AT,D7.3,064,Single-family house,Single-family house,New construction (assumed),New construction,,,176.82999999999998,,176.82999999999998,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,279025.28673166165,3012.503161254503,525.5198523004135
+AT-065,AT,D7.3,065,Single-family house,Single-family house,New construction (assumed),New construction,,,176.82999999999998,,176.82999999999998,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,271135.7392382714,7266.94361054075,239.81917288081513
+AT-072,AT,D7.3,072,Single-family house,Single-family house,New construction (assumed),New construction,,,178.39,,178.39,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,251334.569347256,2529.2144766784086,613.4754964758052
+AT-073,AT,D7.3,073,Single-family house,Single-family house,New construction (assumed),New construction,,,178.39,,178.39,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,226217.87505945165,6269.094058276074,283.73636537160036
+AT-074,AT,D7.3,074,Single-family house,Single-family house,New construction (assumed),New construction,,,177.19,,177.19,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,254372.8882052146,2530.4190483463276,621.230230784398
+AT-075,AT,D7.3,075,Single-family house,Single-family house,New construction (assumed),New construction,,,177.19,,177.19,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,230782.64327406668,6354.196536945797,293.1284177559939
+AT-076,AT,D7.3,076,Single-family house,Single-family house,New construction (assumed),New construction,,,167.97,,167.97,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,258602.5203937679,3130.2391545696833,368.3733768971467
+AT-077,AT,D7.3,077,Single-family house,Single-family house,New construction (assumed),New construction,,,167.97,,167.97,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,258602.5203937679,3130.2391545696833,368.3733768971467
+AT-078,AT,D7.3,078,Single-family house,Single-family house,New construction (assumed),New construction,,,166.75,,166.75,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,253787.153097421,2837.9747787775646,372.17305074363077
+AT-079,AT,D7.3,079,Single-family house,Single-family house,New construction (assumed),New construction,,,166.75,,166.75,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,255683.0969877383,5434.115566786734,226.83980750054798
+AT-080,AT,D7.3,080,Single-family house,Single-family house,New construction (assumed),New construction,,,169.94,,169.94,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,262557.8899248509,4031.7881303791546,371.0665139756132
+AT-081,AT,D7.3,081,Single-family house,Single-family house,New construction (assumed),New construction,,,169.94,,169.94,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,247283.48572379877,5638.020321531682,214.52457276087102
+AT-086,AT,D7.3,086,Single-family house,Single-family house,New construction (assumed),New construction,,,169.04,,169.04,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,236585.776835947,3792.877166429337,457.68652187090066
+AT-087,AT,D7.3,087,Single-family house,Single-family house,New construction (assumed),New construction,,,169.04,,169.04,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,213036.24944245841,5166.253942667062,274.6705277186939
+AT-088,AT,D7.3,088,Single-family house,Single-family house,New construction (assumed),New construction,,,164.66,,164.66,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,254890.1903059127,3407.837408953791,548.1493288184638
+AT-089,AT,D7.3,089,Single-family house,Single-family house,New construction (assumed),New construction,,,164.66,,164.66,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,230000.58443991392,5872.495640915444,298.44882591376074
+AT-099,AT,D7.3,099,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,1110.47,,1110.47,UFA,50.0,absolute kgCO2e,no,5.0,,,,,,1988303.2384677217,27610.597613426125,3536.7896016173586
+AT-101,AT,D7.3,101,Education building,Education,New construction (assumed),New construction,,,4306.16,,4306.16,UFA,50.0,absolute kgCO2e,no,4.0,,,,,,7379226.938097771,157651.47948881434,20703.12839183639
+AT-106,AT,D7.3,106,Single-family house,Single-family house,New construction (assumed),New construction,,,200.862,,200.862,UFA,50.0,absolute kgCO2e,no,3.0,,,,,,248273.51324421327,5845.154533303587,175.14050899789348
+AT-107,AT,D7.3,107,Single-family house,Single-family house,New construction (assumed),New construction,,,86.29,,86.29,UFA,50.0,absolute kgCO2e,no,1.0,,,,,,234954.71616178442,1807.967192738896,528.2640664184224
+AT-113,AT,D7.3,113,Retail,Retail,New construction (assumed),New construction,,,1774.8000000000002,,1774.8000000000002,UFA,50.0,absolute kgCO2e,no,1.0,,,,,,3562151.4811279047,133196.98439954166,3064.334165353407
+AT-114,AT,D7.3,114,Retail,Retail,New construction (assumed),New construction,,,2420.0,,2420.0,UFA,50.0,absolute kgCO2e,no,2.0,,,,,,4565959.972815689,181948.32302926705,4160.8679038317805
+AT-115,AT,D7.3,115,Retail,Retail,New construction (assumed),New construction,,,3336.0,,3336.0,UFA,50.0,absolute kgCO2e,no,1.0,,,,,,7636643.850372317,313080.65931379696,6676.913819302531
+AT-116,AT,D7.3,116,Retail,Retail,New construction (assumed),New construction,,,1648.0,,1648.0,UFA,50.0,absolute kgCO2e,no,1.0,,,,,,3212132.176076174,74914.1375987414,2641.7393751542086
+AT-117,AT,D7.3,117,Retail,Retail,New construction (assumed),New construction,,,2455.648,,2455.648,UFA,50.0,absolute kgCO2e,no,1.0,,,,,,3744775.258317463,90854.4512492947,3307.5918104408674
+AT-123,AT,D7.3,123,Retail,Retail,New construction (assumed),New construction,,,14236.299,,14236.299,UFA,50.0,absolute kgCO2e,no,2.0,,,,,,41856399.15366715,1459535.6502167378,47092.41788146901
+AT-140a,AT,D7.3,140a,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,1015.06,,1015.06,UFA,50.0,absolute kgCO2e,no,4.0,,,,,,1560641.2703786532,10458.840610353565,2167.825301196802
+AT-140b,AT,D7.3,140b,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,955.725375,,955.725375,UFA,50.0,absolute kgCO2e,no,4.0,,,,,,1557181.680402722,10337.417923650166,2151.8601017814062
+AT-141,AT,D7.3,141,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,1802.0,,1802.0,UFA,50.0,absolute kgCO2e,no,5.0,,,,,,4755109.75574965,59274.561851555474,4137.406558004013
+AT-143,AT,D7.3,143,Multi-family house,Multi-family / apartments,New construction (assumed),New construction,,,780.7199999999999,,780.7199999999999,UFA,50.0,absolute kgCO2e,no,4.0,,,,,,1141463.5985818466,32360.108689888784,1866.2763749722146
+AT-146,AT,D7.3,146,Single-family house,Single-family house,New construction (assumed),New construction,,,195.2,,195.2,UFA,50.0,absolute kgCO2e,no,1.0,,,,,,235930.9819617818,2102.7921999443047,283.5343667937984
+AT-147,AT,D7.3,147,Single-family house,Single-family house,New construction (assumed),New construction,,,235.282,,235.282,UFA,50.0,absolute kgCO2e,no,2.0,,,,,,321931.5253404557,2493.7393896116164,433.0982420004921
+AT-158,AT,D7.3,158,Apartment block,Multi-family / apartments,New construction (assumed),New construction,,,1543.8,,1543.8,UFA,50.0,absolute kgCO2e,no,5.0,,,,,,2554446.3561006463,58731.916897209776,2092.5589233965775
+HR-CS1,HR,D7.12,CS1,Single family house,Single-family house,New construction,New construction,,120.65,104.03,,104.03,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS2,HR,D7.12,CS2,Single family house,Single-family house,New construction,New construction,,111.0,95.39,,95.39,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS17,HR,D7.12,CS17,Single family house,Single-family house,New construction,New construction,,120.65,104.03,,104.03,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS18,HR,D7.12,CS18,Single family house,Single-family house,New construction,New construction,,111.0,95.39,,95.39,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS19,HR,D7.12,CS19,Single family house,Single-family house,New construction,New construction,,120.65,104.03,,104.03,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS20,HR,D7.12,CS20,Single family house,Single-family house,New construction,New construction,,111.0,95.39,,95.39,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS21,HR,D7.12,CS21,Single family house,Single-family house,New construction,New construction,,120.65,104.03,,104.03,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS22,HR,D7.12,CS22,Single family house,Single-family house,New construction,New construction,,111.0,95.39,,95.39,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS23,HR,D7.12,CS23,Single family house,Single-family house,New construction,New construction,,120.65,104.03,,104.03,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS24,HR,D7.12,CS24,Single family house,Single-family house,New construction,New construction,,111.0,95.39,,95.39,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS25,HR,D7.12,CS25,Single family house,Single-family house,New construction,New construction,,120.65,104.03,,104.03,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS26,HR,D7.12,CS26,Single family house,Single-family house,New construction,New construction,,111.0,95.39,,95.39,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS3,HR,D7.12,CS3,Multi family house,Multi-family / apartments,New construction,New construction,,1284.0,1231.77,,1231.77,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS4,HR,D7.12,CS4,Multi family house,Multi-family / apartments,New construction,New construction,,946.72,821.9,,821.9,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS27,HR,D7.12,CS27,Multi family house,Multi-family / apartments,New construction,New construction,,1284.0,1231.77,,1231.77,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS28,HR,D7.12,CS28,Multi family house,Multi-family / apartments,New construction,New construction,,946.72,821.9,,821.9,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS29,HR,D7.12,CS29,Multi family house,Multi-family / apartments,New construction,New construction,,1284.0,1231.77,,1231.77,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS30,HR,D7.12,CS30,Multi family house,Multi-family / apartments,New construction,New construction,,946.72,821.9,,821.9,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS31,HR,D7.12,CS31,Multi family house,Multi-family / apartments,New construction,New construction,,1284.0,1231.77,,1231.77,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS32,HR,D7.12,CS32,Multi family house,Multi-family / apartments,New construction,New construction,,946.72,821.9,,821.9,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS33,HR,D7.12,CS33,Multi family house,Multi-family / apartments,New construction,New construction,,1284.0,1231.77,,1231.77,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS34,HR,D7.12,CS34,Multi family house,Multi-family / apartments,New construction,New construction,,946.72,821.9,,821.9,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS35,HR,D7.12,CS35,Multi family house,Multi-family / apartments,New construction,New construction,,1284.0,1231.77,,1231.77,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS36,HR,D7.12,CS36,Multi family house,Multi-family / apartments,New construction,New construction,,946.72,821.9,,821.9,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS5,HR,D7.12,CS5,Office building,Office,New construction,New construction,,4562.84,3876.35,,3876.35,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS6,HR,D7.12,CS6,Office building,Office,New construction,New construction,,3055.0,2604.21,,2604.21,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS37,HR,D7.12,CS37,Office building,Office,New construction,New construction,,4562.84,3876.35,,3876.35,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS38,HR,D7.12,CS38,Office building,Office,New construction,New construction,,3055.0,2604.21,,2604.21,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS39,HR,D7.12,CS39,Office building,Office,New construction,New construction,,4562.84,3876.35,,3876.35,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS40,HR,D7.12,CS40,Office building,Office,New construction,New construction,,3055.0,2604.21,,2604.21,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS41,HR,D7.12,CS41,Office building,Office,New construction,New construction,,4562.84,3876.35,,3876.35,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS42,HR,D7.12,CS42,Office building,Office,New construction,New construction,,3055.0,2604.21,,2604.21,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS43,HR,D7.12,CS43,Office building,Office,New construction,New construction,,4562.84,3876.35,,3876.35,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS44,HR,D7.12,CS44,Office building,Office,New construction,New construction,,3055.0,2604.21,,2604.21,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS45,HR,D7.12,CS45,Office building,Office,New construction,New construction,,4562.84,3876.35,,3876.35,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS46,HR,D7.12,CS46,Office building,Office,New construction,New construction,,3055.0,2604.21,,2604.21,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS7,HR,D7.12,CS7,Education,Education,New construction,New construction,,1861.68,1654.1,,1654.1,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS8,HR,D7.12,CS8,Education,Education,New construction,New construction,,2508.08,2203.0,,2203.0,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS47,HR,D7.12,CS47,Education,Education,New construction,New construction,,1861.68,1654.1,,1654.1,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS48,HR,D7.12,CS48,Education,Education,New construction,New construction,,2508.08,2203.0,,2203.0,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS49,HR,D7.12,CS49,Education,Education,New construction,New construction,,1861.68,1654.1,,1654.1,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS50,HR,D7.12,CS50,Education,Education,New construction,New construction,,2508.08,2203.0,,2203.0,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS9,HR,D7.12,CS9,Hospital,Hospital,New construction,New construction,,3771.48,3249.69,,3249.69,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS10,HR,D7.12,CS10,Hospital,Hospital,New construction,New construction,,2880.0,2557.22,,2557.22,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS11,HR,D7.12,CS11,Hotel,Hotel,New construction,New construction,,8738.0,8022.61,,8022.61,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS12,HR,D7.12,CS12,Hotel,Hotel,New construction,New construction,,11441.0,10391.4,,10391.4,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS13,HR,D7.12,CS13,Sport hall,Hall / sports,New construction,New construction,,1110.0,1035.0,,1035.0,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS14,HR,D7.12,CS14,Sport hall,Hall / sports,New construction,New construction,,2519.0,2266.92,,2266.92,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS15,HR,D7.12,CS15,Retail and wholesale,Retail,New construction,New construction,,11632.2,10742.4,,10742.4,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+HR-CS16,HR,D7.12,CS16,Retail and wholesale,Retail,New construction,New construction,,10767.62,10035.6,,10035.6,UFA,50.0,absolute kgCO2e,no,,,,,,,,,
+IT-SFH_01_N_E_4,IT,D7.21,IT_SFH_01_N_E_4,SFH,Single-family house,New construction,New construction,,205.0,,164.0,164.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-SFH_02_N_E_4,IT,D7.21,IT_SFH_02_N_E_4,SFH,Single-family house,New construction,New construction,,368.0,,207.8,207.8,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-SFH_08_N_C_2,IT,D7.21,IT_SFH_08_N_C_2,SFH,Single-family house,New construction,New construction,,306.56,,158.67,158.67,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-SFH_09_N_E_2,IT,D7.21,IT_SFH_09_N_E_2,SFH,Single-family house,New construction,New construction,,228.72,,101.56,101.56,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-SFH_10_N_E_2,IT,D7.21,IT_SFH_10_N_E_2,SFH,Single-family house,New construction,New construction,,355.0,,106.81,106.81,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-SFH_11_N_E_2,IT,D7.21,IT_SFH_11_N_E_2,SFH,Single-family house,New construction,New construction,,102.0,,82.11,82.11,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_01_N_E_3,IT,D7.21,IT_MFH_01_N_E_3,MFH,Multi-family / apartments,New construction,New construction,,8652.0,,4050.0,4050.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_02_N_E_3,IT,D7.21,IT_MFH_02_N_E_3,MFH,Multi-family / apartments,New construction,New construction,,7925.0,,4903.0,4903.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_14_N_C_3,IT,D7.21,IT_MFH_14_N_C_3,MFH,Multi-family / apartments,New construction,New construction,,6713.9,,3091.7,3091.7,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_18_N_E_3,IT,D7.21,IT_MFH_18_N_E_3,MFH,Multi-family / apartments,New construction,New construction,,530.0,,335.23,335.23,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_19_N_D_3,IT,D7.21,IT_MFH_19_N_D_3,MFH,Multi-family / apartments,New construction,New construction,,1351.0,,1088.77,1088.77,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_22_N_E_3,IT,D7.21,IT_MFH_22_N_E_3,MFH,Multi-family / apartments,New construction,New construction,,5535.0,,2521.0,2521.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_24_N_E_3,IT,D7.21,IT_MFH_24_N_E_3,MFH,Multi-family / apartments,New construction,New construction,,11270.0,,4856.65,4856.65,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_27_N_E_3,IT,D7.21,IT_MFH_27_N_E_3,MFH,Multi-family / apartments,New construction,New construction,,2827.25,,1822.62,1822.62,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-HOS_03_N_E_3,IT,D7.21,IT_HOS_03_N_E_3,HOS,Other residential (IT: HOS),New construction,New construction,,35038.0,,18150.9,18150.9,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-HOS_05_N_E_3,IT,D7.21,IT_HOS_05_N_E_3,HOS,Other residential (IT: HOS),New construction,New construction,,53380.0,,50710.0,50710.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-HOS_06_N_E_3,IT,D7.21,IT_HOS_06_N_E_3,HOS,Other residential (IT: HOS),New construction,New construction,,20795.0,,14000.9,14000.9,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-OFF_01_N_C_2,IT,D7.21,IT_OFF_01_N_C_2,OFF,Office,New construction,New construction,,8471.0,,8057.52,8057.52,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-OFF_07_N_E_3,IT,D7.21,IT_OFF_07_N_E_3,OFF,Office,New construction,New construction,,46000.0,,21788.0,21788.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-OFF_08_N_E_3,IT,D7.21,IT_OFF_08_N_E_3,OFF,Office,New construction,New construction,,48000.0,,25617.0,25617.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-OFF_09_N_E_3,IT,D7.21,IT_OFF_09_N_E_3,OFF,Office,New construction,New construction,,80529.7,,29523.2,29523.2,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-OFF_10_N_E_3,IT,D7.21,IT_OFF_10_N_E_3,OFF,Office,New construction,New construction,,56069.0,,30561.3,30561.3,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-OFF_11_N_E_3,IT,D7.21,IT_OFF_11_N_E_3,OFF,Office,New construction,New construction,,14822.0,,7424.2,7424.2,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-OFF_13_N_E_3,IT,D7.21,IT_OFF_13_N_E_3,OFF,Office,New construction,New construction,,32450.0,,20312.0,20312.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-EDU_01_N_C_3,IT,D7.21,IT_EDU_01_N_C_3,EDU,Education,New construction,New construction,,23417.0,,13650.99,13650.99,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-EDU_02_N_E_4,IT,D7.21,IT_EDU_02_N_E_4,EDU,Education,New construction,New construction,,3489.0,,1873.68,1873.68,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-EDU_04_N_D_3,IT,D7.21,IT_EDU_04_N_D_3,EDU,Education,New construction,New construction,,3474.8,,1011.63,1011.63,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-XTR_03_N_E_2,IT,D7.21,IT_XTR_03_N_E_2,XTR,Other non-residential (IT: XTR),New construction,New construction,,1655.0,,1542.81,1542.81,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-XTR_07_N_E_3,IT,D7.21,IT_XTR_07_N_E_3,XTR,Other non-residential (IT: XTR),New construction,New construction,,1015.0,,,,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-SFH_04_R_C_3,IT,D7.21,IT_SFH_04_R_C_3,SFH,Single-family house,Renovation,Renovation,Minor,230.15,,202.37,202.37,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-SFH_07_R_C_2,IT,D7.21,IT_SFH_07_R_C_2,SFH,Single-family house,Renovation,Renovation,Major,368.16,,201.32,201.32,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_03_R_D_2A-3A-3B,IT,D7.21,IT_MFH_03_R_D_2A-3A-3B,MFH,Multi-family / apartments,Renovation,Renovation,Minor,7450.0,,5574.0,5574.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_04_R_D_2A-3A-3B,IT,D7.21,IT_MFH_04_R_D_2A-3A-3B,MFH,Multi-family / apartments,Renovation,Renovation,Minor,1460.7,,1219.2,1219.2,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_05_R_D_2A-3A-3B,IT,D7.21,IT_MFH_05_R_D_2A-3A-3B,MFH,Multi-family / apartments,Renovation,Renovation,Minor,1530.3,,1282.0,1282.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_06_R_D_2A-3A-3B,IT,D7.21,IT_MFH_06_R_D_2A-3A-3B,MFH,Multi-family / apartments,Renovation,Renovation,Minor,2434.5,,2059.5,2059.5,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_07_R_D_2A-3A-3B,IT,D7.21,IT_MFH_07_R_D_2A-3A-3B,MFH,Multi-family / apartments,Renovation,Renovation,Minor,1530.26,,1301.72,1301.72,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_11_R_E_3,IT,D7.21,IT_MFH_11_R_E_3,MFH,Multi-family / apartments,Renovation,Renovation,Minor,4862.28,,2794.0,2794.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_12_R_F_3S,IT,D7.21,IT_MFH_12_R_F_3S,MFH,Multi-family / apartments,Renovation,Renovation,Minor,896.66,,574.87,574.87,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_13_R_E_2,IT,D7.21,IT_MFH_13_R_E_2,MFH,Multi-family / apartments,Renovation,Renovation,Minor,1837.0,,1241.0,1241.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_16_R_E_2,IT,D7.21,IT_MFH_16_R_E_2,MFH,Multi-family / apartments,Renovation,Renovation,Major,819.27,,553.27,553.27,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_17_R_E_2,IT,D7.21,IT_MFH_17_R_E_2,MFH,Multi-family / apartments,Renovation,Renovation,Minor,1193.0,,903.95,903.95,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_20_R_E_2,IT,D7.21,IT_MFH_20_R_E_2,MFH,Multi-family / apartments,Renovation,Renovation,Minor,1193.0,,903.95,903.95,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_21_R_E_2,IT,D7.21,IT_MFH_21_R_E_2,MFH,Multi-family / apartments,Renovation,Renovation,Minor,1193.0,,903.95,903.95,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_25_R_E_2,IT,D7.21,IT_MFH_25_R_E_2,MFH,Multi-family / apartments,Renovation,Renovation,Minor,1193.0,,903.95,903.95,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-MFH_26_R_E_2,IT,D7.21,IT_MFH_26_R_E_2,MFH,Multi-family / apartments,Renovation,Renovation,Major,1317.9,,510.0,510.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,R,,,,
+IT-OFF_02_R_C_2,IT,D7.21,IT_OFF_02_R_C_2,OFF,Office,Renovation,Renovation,Major,2263.86,,1939.69,1939.69,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-OFF_12_R_E_3,IT,D7.21,IT_OFF_12_R_E_3,OFF,Office,Renovation,Renovation,Major,42000.0,,39128.0,39128.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-EDU_05_R_C_2,IT,D7.21,IT_EDU_05_R_C_2,EDU,Education,Renovation,Renovation,Major,2430.0,,2135.0,2135.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-XTR_02_R_E_3,IT,D7.21,IT_XTR_02_R_E_3,XTR,Other non-residential (IT: XTR),Renovation,Renovation,Major,11338.0,,7300.0,7300.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+IT-XTR_09_R_E_3,IT,D7.21,IT_XTR_09_R_E_3,XTR,Other non-residential (IT: XTR),Renovation,Renovation,Major,2926.0,,2668.0,2668.0,HFA (heated floor area),50.0,absolute kgCO2e,yes,,,,,NR,,,,
+LU-Adm_Bet_1,LU,D7.30,Adm_Bet_1,Office,Office,New construction (assumed),New construction,,6781.0,3165.0,,3165.0,UFA,50.0,per m² (assumed GFA),yes,,2028.0,Concrete,none,,218.0,,,
+LU-Adm_E&E_1,LU,D7.30,Adm_E&E_1,Office,Office,New construction (assumed),New construction,,6300.2,3085.0,,3085.0,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Concrete,gas,,188.0,,,
+LU-Adm_E&E_2,LU,D7.30,Adm_E&E_2,Office,Office,New construction (assumed),New construction,,51048.399999999994,28709.9,,28709.9,UFA,50.0,per m² (assumed GFA),yes,,2027.0,Concrete,heat,,325.0,,,
+LU-Adm_E&E_3,LU,D7.30,Adm_E&E_3,Office,Office,New construction (assumed),New construction,,15018.6,7153.78,,7153.78,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Concrete,heat,,211.0,,,
+LU-Adm_E&E_4,LU,D7.30,Adm_E&E_4,Office,Office,New construction (assumed),New construction,,12373.0,6737.7,,6737.7,UFA,50.0,per m² (assumed GFA),yes,,2028.0,Mix wood-concrete,heat,,206.0,,,
+LU-Adm_E&E_5,LU,D7.30,Adm_E&E_5,Office,Office,New construction (assumed),New construction,,19016.0,9292.0,,9292.0,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Mix wood-concrete,heat,,378.0,,,
+LU-Adm_E&E_6,LU,D7.30,Adm_E&E_6,Office,Office,New construction (assumed),New construction,,8022.7,3688.6,,3688.6,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Mix wood-concrete,heat,,371.0,,,
+LU-Adm_E&E_7,LU,D7.30,Adm_E&E_7,Office,Office,New construction (assumed),New construction,,4792.0,2801.8,,2801.8,UFA,50.0,per m² (assumed GFA),yes,,2027.0,Mix wood-concrete,heat,,229.0,,,
+LU-Adm_E&E_8,LU,D7.30,Adm_E&E_8,Office,Office,New construction (assumed),New construction,,8228.6,3969.9,,3969.9,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Mix wood-concrete,heat,,210.0,,,
+LU-Adm_Gol_1,LU,D7.30,Adm_Gol_1,Office,Office,New construction (assumed),New construction,,6300.050000000001,1915.0,,1915.0,UFA,50.0,per m² (assumed GFA),yes,,2017.0,Concrete,geothermal,,304.0,,,
+LU-Autr_Coe_2,LU,D7.30,Autr_Coe_2,Hall,Hall / sports,New construction (assumed),New construction,,809.0,705.37,,705.37,UFA,50.0,per m² (assumed GFA),yes,,2022.0,Mix wood-concrete,heat,,190.0,,,
+LU-Hal_Bui_4,LU,D7.30,Hal_Bui_4,Hall,Hall / sports,New construction (assumed),New construction,,1000.0,824.0,,824.0,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Steel,electricity,,151.0,,,
+LU-Hal_Con_2,LU,D7.30,Hal_Con_2,Hall,Hall / sports,New construction (assumed),New construction,,3755.0,2942.9,,2942.9,UFA,50.0,per m² (assumed GFA),yes,,,Mix wood-concrete,electricity,,465.0,,,
+LU-Hal_Schr_1,LU,D7.30,Hal_Schr_1,Hall,Hall / sports,New construction (assumed),New construction,,7828.215,7572.315299999999,,7572.315299999999,UFA,50.0,per m² (assumed GFA),yes,,2024.0,Mix wood-concrete,,,244.0,,,
+LU-MI_Ben_1,LU,D7.30,MI_Ben_1,House,Single-family house,New construction (assumed),New construction,,374.04,252.91,,252.91,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Concrete,electricity,,188.0,,,
+LU-MI_Bui_2,LU,D7.30,MI_Bui_2,House,Single-family house,New construction (assumed),New construction,,240.0,180.0,,180.0,UFA,50.0,per m² (assumed GFA),yes,,2027.0,Mix wood-concrete,electricity,,162.0,,,
+LU-MI_Bui_3,LU,D7.30,MI_Bui_3,House,Single-family house,New construction (assumed),New construction,,283.18,202.0,,202.0,UFA,50.0,per m² (assumed GFA),yes,,2027.0,Mix wood-concrete,electricity,,162.0,,,
+LU-MI_Con_1,LU,D7.30,MI_Con_1,House,Single-family house,New construction (assumed),New construction,,4176.0,2121.2400000000002,,2121.2400000000002,UFA,50.0,per m² (assumed GFA),yes,,,Concrete,electricity,,232.0,,,
+LU-MI_Doi_2,LU,D7.30,MI_Doi_2,House,Single-family house,New construction (assumed),New construction,,877.8840000000001,645.0,,645.0,UFA,50.0,per m² (assumed GFA),yes,,2024.0,Concrete,electricity,,170.0,,,
+LU-MI_FG_1,LU,D7.30,MI_FG_1,House,Single-family house,New construction (assumed),New construction,,751.0123,339.2,,339.2,UFA,50.0,per m² (assumed GFA),yes,,2025.0,Concrete,electricity,,122.0,,,
+LU-MI_FG_2,LU,D7.30,MI_FG_2,House,Single-family house,New construction (assumed),New construction,,144.06,195.01,,195.01,UFA,50.0,per m² (assumed GFA),yes,,2025.0,Concrete,electricity,,111.0,,,
+LU-MI_MB_1,LU,D7.30,MI_MB_1,House,Single-family house,New construction (assumed),New construction,,318.63,218.82000000000002,,218.82000000000002,UFA,50.0,per m² (assumed GFA),yes,,2024.0,Concrete,electricity,,56.0,,,
+LU-MI_MB_3,LU,D7.30,MI_MB_3,House,Single-family house,New construction (assumed),New construction,,180.98,138.61,,138.61,UFA,50.0,per m² (assumed GFA),yes,,2022.0,Concrete,electricity,,53.0,,,
+LU-MI_MB_5,LU,D7.30,MI_MB_5,House,Single-family house,New construction (assumed),New construction,,240.0,168.26,,168.26,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Concrete,electricity,,56.0,,,
+LU-MI_MB_7,LU,D7.30,MI_MB_7,House,Single-family house,New construction (assumed),New construction,,241.89,165.88000000000002,,165.88000000000002,UFA,50.0,per m² (assumed GFA),yes,,2024.0,Concrete,gas,,55.0,,,
+LU-MI_Qar_4,LU,D7.30,MI_Qar_4,House,Single-family house,New construction (assumed),New construction,,2116.8,1161.04,,1161.04,UFA,50.0,per m² (assumed GFA),yes,,2025.0,Wood,heat,,172.0,,,
+LU-Mi_Six_1,LU,D7.30,Mi_Six_1,House,Single-family house,New construction (assumed),New construction,,312.5,131.0,,131.0,UFA,50.0,per m² (assumed GFA),yes,,2025.0,Concrete,heat,,103.0,,,
+LU-Res_Bui_1,LU,D7.30,Res_Bui_1,Apartments,Multi-family / apartments,New construction (assumed),New construction,,6939.5,3100.0,,3100.0,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Mix wood-concrete,heat,,374.0,,,
+LU-Res_Coe_1,LU,D7.30,Res_Coe_1,Apartments,Multi-family / apartments,New construction (assumed),New construction,,5557.4,2134.05,,2134.05,UFA,50.0,per m² (assumed GFA),yes,,2027.0,Mix wood-concrete,heat,,333.0,,,
+LU-Res_E&E_1,LU,D7.30,Res_E&E_1,Apartments,Multi-family / apartments,New construction (assumed),New construction,,5516.2,2577.7,,2577.7,UFA,50.0,per m² (assumed GFA),yes,,,Concrete,electricity,,222.0,,,
+LU-Res_E&E_10,LU,D7.30,Res_E&E_10,Apartments,Multi-family / apartments,New construction (assumed),New construction,,3534.6,1575.11,,1575.11,UFA,50.0,per m² (assumed GFA),yes,,,Concrete,electricity,,262.0,,,
+LU-Res_E&E_11,LU,D7.30,Res_E&E_11,Apartments,Multi-family / apartments,New construction (assumed),New construction,,7429.0,3147.0,,3147.0,UFA,50.0,per m² (assumed GFA),yes,,,Concrete,electricity,,298.0,,,
+LU-Res_E&E_2,LU,D7.30,Res_E&E_2,Apartments,Multi-family / apartments,New construction (assumed),New construction,,9583.900000000001,4822.6900000000005,,4822.6900000000005,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Concrete,electricity,,231.0,,,
+LU-Res_E&E_3,LU,D7.30,Res_E&E_3,Apartments,Multi-family / apartments,New construction (assumed),New construction,,8868.0,3434.9900000000002,,3434.9900000000002,UFA,50.0,per m² (assumed GFA),yes,,,Concrete,heat,,291.0,,,
+LU-Res_E&E_4,LU,D7.30,Res_E&E_4,Apartments,Multi-family / apartments,New construction (assumed),New construction,,9529.0,3656.0,,3656.0,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Concrete,heat,,252.0,,,
+LU-Res_E&E_5,LU,D7.30,Res_E&E_5,Apartments,Multi-family / apartments,New construction (assumed),New construction,,16682.629999999997,6645.69,,6645.69,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Mix wood-concrete,electricity,,253.0,,,
+LU-Res_E&E_6,LU,D7.30,Res_E&E_6,Apartments,Multi-family / apartments,New construction (assumed),New construction,,1890.9,872.2,,872.2,UFA,50.0,per m² (assumed GFA),yes,,,Wood,electricity,,87.0,,,
+LU-Res_E&E_7,LU,D7.30,Res_E&E_7,Apartments,Multi-family / apartments,New construction (assumed),New construction,,13172.3,6574.9,,6574.9,UFA,50.0,per m² (assumed GFA),yes,,,Mix wood-concrete,electricity,,216.0,,,
+LU-Res_E&E_8,LU,D7.30,Res_E&E_8,Apartments,Multi-family / apartments,New construction (assumed),New construction,,15142.0,6538.0,,6538.0,UFA,50.0,per m² (assumed GFA),yes,,2027.0,Concrete,electricity,,207.0,,,
+LU-Res_E&E_9,LU,D7.30,Res_E&E_9,Apartments,Multi-family / apartments,New construction (assumed),New construction,,7705.0,3554.0,,3554.0,UFA,50.0,per m² (assumed GFA),yes,,2027.0,Mix wood-concrete,electricity,,201.0,,,
+LU-Res_MB_4,LU,D7.30,Res_MB_4,Apartments,Multi-family / apartments,New construction (assumed),New construction,,1354.28,598.24,,598.24,UFA,50.0,per m² (assumed GFA),yes,,2027.0,Concrete,electricity,,57.0,,,
+LU-Res_Qar_2,LU,D7.30,Res_Qar_2,Apartments,Multi-family / apartments,New construction (assumed),New construction,,644.0,399.0,,399.0,UFA,50.0,per m² (assumed GFA),yes,,2025.0,Wood,heat,,140.0,,,
+LU-Res_Qar_3,LU,D7.30,Res_Qar_3,Apartments,Multi-family / apartments,New construction (assumed),New construction,,5701.0,2872.0,,2872.0,UFA,50.0,per m² (assumed GFA),yes,,2024.0,Concrete,heat,,373.0,,,
+LU-Res_Six_2,LU,D7.30,Res_Six_2,Apartments,Multi-family / apartments,New construction (assumed),New construction,,3254.73,1387.28,,1387.28,UFA,50.0,per m² (assumed GFA),yes,,2025.0,Mix steel-concrete,gas,,263.0,,,
+LU-Sco_E&E_1,LU,D7.30,Sco_E&E_1,School,Education,New construction (assumed),New construction,,12643.5,8437.34,,8437.34,UFA,50.0,per m² (assumed GFA),yes,,,Mix wood-concrete,heat,,114.0,,,
+LU-Sco_E&E_2,LU,D7.30,Sco_E&E_2,School,Education,New construction (assumed),New construction,,14814.0,9987.0,,9987.0,UFA,50.0,per m² (assumed GFA),yes,,,Concrete,electricity,,145.0,,,
+LU-Sco_e3c_16,LU,D7.30,Sco_e3c_16,School,Education,New construction (assumed),New construction,,3380.0,2384.8,,2384.8,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Mix wood-concrete,electricity,,196.0,,,
+LU-Sco_e3c_17,LU,D7.30,Sco_e3c_17,School,Education,New construction (assumed),New construction,,2658.0,1314.0,,1314.0,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Mix wood-concrete,heat,,254.0,,,
+LU-Sco_e3c_5,LU,D7.30,Sco_e3c_5,School,Education,New construction (assumed),New construction,,5480.0,4278.0,,4278.0,UFA,50.0,per m² (assumed GFA),yes,,2026.0,Mix wood-concrete,heat,,235.0,,,
+LU-Sco_JC_1,LU,D7.30,Sco_JC_1,School,Education,New construction (assumed),New construction,,2518.0,1549.0,,1549.0,UFA,50.0,per m² (assumed GFA),yes,,2025.0,Mix wood-concrete,biomass,,154.0,,,
+LU-Sco_Lsc_1,LU,D7.30,Sco_Lsc_1,School,Education,New construction (assumed),New construction,,12670.0,10166.74,,10166.74,UFA,50.0,per m² (assumed GFA),yes,,,Concrete,heat,,352.0,,,
+LU-Sco_Xxa_1,LU,D7.30,Sco_Xxa_1,School,Education,New construction (assumed),New construction,,1410.9199999999998,1160.6,,1160.6,UFA,50.0,per m² (assumed GFA),yes,,2027.0,Mix wood-concrete,electricity,,291.0,,,

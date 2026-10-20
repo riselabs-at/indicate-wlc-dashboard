@@ -1,0 +1,24 @@
+issue_id,country,type,building_ids,observation,handling,status
+I01,AT,confirm,,"Column header ""GWP total - B5"" but description row says B6",Treated as B6 (operational energy),open – partner to confirm
+I02,AT,info,,B4-B5 contains B4 only,Mapped to B4-B5,noted
+I03,AT,info,,No GFA reported,Austria drops out of per-GFA views,noted
+I04,AT,info,,Type of intervention not stated,Treated as new construction,noted
+I05,HR,info,,"Per-GFA B3 column in the source holds a running index (0, 1, 2…)",Per-m² values recomputed from the absolute block,noted
+I06,HR,info,,The 50 cases are design variants of 16 base buildings (identical floor areas),Kept as separate records; percentiles reflect variant spread,noted
+I07,IT,warning,IT-EDU_01_N_C_3,B6 reported as 0 (operational carbon share 0 %),Treated as not reported,handled
+I08,IT,warning,IT-XTR_07_N_E_3,B6 reported as 0 (operational carbon share 0 %),Treated as not reported,handled
+I09,IT,warning,IT-XTR_07_N_E_3,No HFA reported,Excluded from per-HFA/UFA views,handled
+I10,IT,confirm,"IT-MFH_17_R_E_2, IT-MFH_20_R_E_2, IT-MFH_21_R_E_2, IT-MFH_25_R_E_2","Identical B6 value (375,913 kgCO2e) for different buildings",Kept as reported,open – partner to confirm
+I11,IT,confirm,"IT-OFF_07_N_E_3, IT-OFF_08_N_E_3","Identical B6 value (38,633,327 kgCO2e) for different buildings",Kept as reported,open – partner to confirm
+I12,IT,info,"IT-MFH_17_R_E_2, IT-MFH_20_R_E_2, IT-MFH_21_R_E_2, IT-MFH_25_R_E_2",Cases share identical GFA and HFA (variants of one building),Kept as separate records,noted
+I13,IT,confirm,,No UFA reported; heated floor area (HFA) given instead,HFA used as the UFA-equivalent in per-UFA views (switchable),open – partner to confirm
+I14,IT,confirm,,Typology codes HOS and XTR are not defined in the file,"Kept as own harmonised types: ""Other residential (IT: HOS)"", ""Other non-residential (IT: XTR)""",open – partner to confirm
+I15,IT,info,,"21 of 50 cases are renovations (12 minor R-, 9 major R+)",Flagged by intervention; dashboard defaults to new construction,noted
+I16,IT,info,,B2 and B3 are GWP-fossil only; C1 is GWP-fossil only,Used as reported,noted
+I17,IT,info,,Module D and B7 not reported,,noted
+I18,IT,confirm,,"Element tiers include proxy values (missing values, outlier replacement, cross-typology proxies, +16.67 paint)",Each tier value carries a quality flag from the cell colour; tier totals differ from LCM totals,open – partner to confirm
+I19,LU,confirm,,Reference area of the per-m² results not stated in the file,Assumed GFA total; switchable in the dashboard,open – partner to confirm
+I20,LU,confirm,,"""House"" typology includes larger multi-unit residences (e.g. MI_Con_1, 35 occupants)",Mapped to Single-family house,open – partner to confirm
+I21,LU,confirm,,LEVELS Tier 3 codes have no names in the file,Group names inferred from product content; codes described by top-3 product categories,open – partner to confirm
+I22,LU,info,,No operational modules (B6/B7) reported,Luxembourg drops out of whole-life views,noted
+I23,LU,info,,Type of intervention not stated (construction years 2017–2028),Treated as new construction,noted

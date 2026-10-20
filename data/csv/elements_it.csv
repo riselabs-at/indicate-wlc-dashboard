@@ -1,0 +1,616 @@
+building_id,code,group,value_kgco2e_m2,quality,note,source_cell
+IT-MFH_18_N_E_3,1.1,1.1,167.27937675563211,original,,C11
+IT-MFH_19_N_D_3,1.1,1.1,243.13036861454833,original,,D11
+IT-MFH_22_N_E_3,1.1,1.1,200.63129157580363,original,,E11
+IT-MFH_24_N_E_3,1.1,1.1,97.38327715723592,original,,F11
+IT-MFH_27_N_E_3,1.1,1.1,296.40995885861724,original,,G11
+IT-MFH_01_N_E_3,1.1,1.1,237.38243756635015,original,,H11
+IT-MFH_02_N_E_3,1.1,1.1,208.20815432275012,original,,I11
+IT-MFH_14_N_C_3,1.1,1.1,135.09622514716418,original,,J11
+IT-HOS_03_N_E_3,1.1,1.1,104.19460213723666,original,,K11
+IT-HOS_05_N_E_3,1.1,1.1,93.70323050085567,original,,L11
+IT-HOS_06_N_E_3,1.1,1.1,192.82142379574,original,,M11
+IT-MFH_18_N_E_3,1.2,1.2,145.96306832923273,original,,C12
+IT-MFH_19_N_D_3,1.2,1.2,355.3755560365263,original,,D12
+IT-MFH_22_N_E_3,1.2,1.2,133.02367864286958,original,,E12
+IT-MFH_24_N_E_3,1.2,1.2,415.5962405917316,original,,F12
+IT-MFH_27_N_E_3,1.2,1.2,231.46171758083588,original,,G12
+IT-MFH_01_N_E_3,1.2,1.2,227.0849998051237,original,,H12
+IT-MFH_02_N_E_3,1.2,1.2,353.7096248162075,original,,I12
+IT-MFH_14_N_C_3,1.2,1.2,190.52246442022613,original,,J12
+IT-HOS_03_N_E_3,1.2,1.2,358.50366496541557,original,,K12
+IT-HOS_05_N_E_3,1.2,1.2,113.88932338386452,original,,L12
+IT-HOS_06_N_E_3,1.2,1.2,240.4196055916509,original,,M12
+IT-MFH_18_N_E_3,1.3.1,1.3,134.40820509194066,original,,C13
+IT-MFH_19_N_D_3,1.3.1,1.3,114.58630779721797,original,,D13
+IT-MFH_22_N_E_3,1.3.1,1.3,148.2033669687606,original,,E13
+IT-MFH_24_N_E_3,1.3.1,1.3,89.9172612785198,original,,F13
+IT-MFH_27_N_E_3,1.3.1,1.3,65.19862071628403,original,,G13
+IT-MFH_01_N_E_3,1.3.1,1.3,123.08606742549794,original,,H13
+IT-MFH_02_N_E_3,1.3.1,1.3,230.7234440035054,original,,I13
+IT-MFH_14_N_C_3,1.3.1,1.3,105.97575829829809,original,,J13
+IT-HOS_03_N_E_3,1.3.1,1.3,172.1509942042297,original,,K13
+IT-HOS_05_N_E_3,1.3.1,1.3,346.1935839775344,original,,L13
+IT-HOS_06_N_E_3,1.3.1,1.3,88.3619952757403,original,,M13
+IT-MFH_18_N_E_3,1.3.2,1.3,34.2058741369845,original,,C14
+IT-MFH_19_N_D_3,1.3.2,1.3,26.910497802091356,original,,D14
+IT-MFH_22_N_E_3,1.3.2,1.3,28.734341885814644,proxy: replaces outlier,,E14
+IT-MFH_24_N_E_3,1.3.2,1.3,15.866995717754612,original,,F14
+IT-MFH_27_N_E_3,1.3.2,1.3,20.643862578671893,original,,G14
+IT-MFH_01_N_E_3,1.3.2,1.3,9.268055259380079,original,,H14
+IT-MFH_02_N_E_3,1.3.2,1.3,28.734341885814644,proxy: replaces outlier,,I14
+IT-MFH_14_N_C_3,1.3.2,1.3,28.734341885814644,proxy: replaces outlier,,J14
+IT-HOS_03_N_E_3,1.3.2,1.3,15.809390193499809,original,,K14
+IT-HOS_05_N_E_3,1.3.2,1.3,150.06519487731305,original,,L14
+IT-HOS_06_N_E_3,1.3.2,1.3,12.139478145830228,original,,M14
+IT-MFH_18_N_E_3,2.1,2.1,244.44911929928605,original,,C15
+IT-MFH_19_N_D_3,2.1,2.1,443.5063719160158,original,,D15
+IT-MFH_22_N_E_3,2.1,2.1,217.92251553347103,original,includes +16.67 kgCO2e/m² proxy for internal paint,E15
+IT-MFH_24_N_E_3,2.1,2.1,298.435111206309,original,includes +16.67 kgCO2e/m² proxy for internal paint,F15
+IT-MFH_27_N_E_3,2.1,2.1,324.513361811987,original,includes +16.67 kgCO2e/m² proxy for internal paint,G15
+IT-MFH_01_N_E_3,2.1,2.1,384.9873083917045,original,,H15
+IT-MFH_02_N_E_3,2.1,2.1,424.11294289160674,original,,I15
+IT-MFH_14_N_C_3,2.1,2.1,105.5247772886772,original,includes +16.67 kgCO2e/m² proxy for internal paint,J15
+IT-HOS_03_N_E_3,2.1,2.1,378.8481616491459,original,,K15
+IT-HOS_05_N_E_3,2.1,2.1,205.96789857734942,original,,L15
+IT-HOS_06_N_E_3,2.1,2.1,385.620825785492,original,includes +16.67 kgCO2e/m² proxy for internal paint,M15
+IT-MFH_18_N_E_3,2.2,2.2,8.49349219270977,original,,C16
+IT-MFH_19_N_D_3,2.2,2.2,10.766982480952148,proxy: missing value,,D16
+IT-MFH_22_N_E_3,2.2,2.2,11.524812577032941,original,,E16
+IT-MFH_24_N_E_3,2.2,2.2,4.6028805071710925,original,,F16
+IT-MFH_27_N_E_3,2.2,2.2,10.766982480952148,proxy: replaces outlier,,G16
+IT-MFH_01_N_E_3,2.2,2.2,7.599862055880969,original,,H16
+IT-MFH_02_N_E_3,2.2,2.2,27.651983708309935,proxy: replaces outlier,,I16
+IT-MFH_14_N_C_3,2.2,2.2,1.2572841203857308,original,,J16
+IT-HOS_03_N_E_3,2.2,2.2,4.072695127441671,original,,K16
+IT-HOS_05_N_E_3,2.2,2.2,10.766982480952148,proxy: replaces outlier,,L16
+IT-HOS_06_N_E_3,2.2,2.2,10.766982480952148,proxy: replaces outlier,,M16
+IT-MFH_18_N_E_3,2.3,2.3,104.61725362085821,original,,C17
+IT-MFH_19_N_D_3,2.3,2.3,143.24041241529068,proxy: missing value,,D17
+IT-MFH_22_N_E_3,2.3,2.3,46.8160849476474,original,,E17
+IT-MFH_24_N_E_3,2.3,2.3,141.3639264588807,original,,F17
+IT-MFH_27_N_E_3,2.3,2.3,96.9404124152907,original,,G17
+IT-MFH_01_N_E_3,2.3,2.3,61.088051924165995,original,,H17
+IT-MFH_02_N_E_3,2.3,2.3,53.644223469959414,original,,I17
+IT-MFH_14_N_C_3,2.3,2.3,31.80385080953964,original,,J17
+IT-HOS_03_N_E_3,2.3,2.3,96.8095883664927,original,,K17
+IT-HOS_05_N_E_3,2.3,2.3,52.92342499763745,original,,L17
+IT-HOS_06_N_E_3,2.3,2.3,143.24041241529068,proxy: replaces outlier,,M17
+IT-MFH_18_N_E_3,2.5,2.5,3.2933191157481656,original,,C18
+IT-MFH_19_N_D_3,2.5,2.5,7.124718281889706,proxy: missing value,,D18
+IT-MFH_22_N_E_3,2.5,2.5,7.124718281889706,proxy: replaces outlier,,E18
+IT-MFH_24_N_E_3,2.5,2.5,7.124718281889706,proxy: replaces outlier,,F18
+IT-MFH_27_N_E_3,2.5,2.5,7.124718281889706,proxy: missing value,,G18
+IT-MFH_01_N_E_3,2.5,2.5,7.124718281889706,proxy: missing value,,H18
+IT-MFH_02_N_E_3,2.5,2.5,10.903753263376121,original,,I18
+IT-MFH_14_N_C_3,2.5,2.5,7.124718281889706,proxy: missing value,,J18
+IT-HOS_03_N_E_3,2.5,2.5,3.3456833004032895,original,,K18
+IT-HOS_05_N_E_3,2.5,2.5,7.124718281889706,proxy: replaces outlier,,L18
+IT-HOS_06_N_E_3,2.5,2.5,7.124718281889706,proxy: replaces outlier,,M18
+IT-MFH_18_N_E_3,2.6,2.6,6.803043308764322,original,,C19
+IT-MFH_19_N_D_3,2.6,2.6,13.256281958720592,original,,D19
+IT-MFH_22_N_E_3,2.6,2.6,8.81602064936581,original,,E19
+IT-MFH_24_N_E_3,2.6,2.6,5.0166683527791305,original,,F19
+IT-MFH_27_N_E_3,2.6,2.6,14.5507448855353,proxy: missing value,,G19
+IT-MFH_01_N_E_3,2.6,2.6,10.004214166912126,original,,H19
+IT-MFH_02_N_E_3,2.6,2.6,15.845207812350008,original,,I19
+IT-MFH_14_N_C_3,2.6,2.6,14.5507448855353,proxy: missing value,,J19
+IT-HOS_03_N_E_3,2.6,2.6,30.71454629771707,original,,K19
+IT-HOS_05_N_E_3,2.6,2.6,14.5507448855353,proxy: replaces outlier,,L19
+IT-HOS_06_N_E_3,2.6,2.6,14.5507448855353,proxy: missing value,,M19
+IT-MFH_18_N_E_3,2.7,2.7,45.92181236310013,original,,C20
+IT-MFH_19_N_D_3,2.7,2.7,152.07059895687019,original,,D20
+IT-MFH_22_N_E_3,2.7,2.7,165.342648105502,proxy: replaces outlier,,E20
+IT-MFH_24_N_E_3,2.7,2.7,165.342648105502,proxy: replaces outlier,,F20
+IT-MFH_27_N_E_3,2.7,2.7,165.342648105502,proxy: missing value,,G20
+IT-MFH_01_N_E_3,2.7,2.7,125.4211847998659,original,,H20
+IT-MFH_02_N_E_3,2.7,2.7,205.15879555139753,original,,I20
+IT-MFH_14_N_C_3,2.7,2.7,165.342648105502,proxy: missing value,,J20
+IT-HOS_03_N_E_3,2.7,2.7,165.342648105502,proxy: replaces outlier,,K20
+IT-HOS_05_N_E_3,2.7,2.7,165.342648105502,proxy: missing value,,L20
+IT-HOS_06_N_E_3,2.7,2.7,165.342648105502,proxy: missing value,,M20
+IT-MFH_18_N_E_3,2.8,2.8,124.26413183994946,original,,C21
+IT-MFH_19_N_D_3,2.8,2.8,46.947551094029826,proxy: replaces outlier,,D21
+IT-MFH_22_N_E_3,2.8,2.8,14.2275732361192,original,,E21
+IT-MFH_24_N_E_3,2.8,2.8,8.967261511887292,original,,F21
+IT-MFH_27_N_E_3,2.8,2.8,46.947551094029826,original,,G21
+IT-MFH_01_N_E_3,2.8,2.8,46.947551094029826,proxy: replaces outlier,,H21
+IT-MFH_02_N_E_3,2.8,2.8,46.947551094029826,proxy: replaces outlier,,I21
+IT-MFH_14_N_C_3,2.8,2.8,46.947551094029826,proxy: replaces outlier,,J21
+IT-HOS_03_N_E_3,2.8,2.8,46.947551094029826,proxy: replaces outlier,,K21
+IT-HOS_05_N_E_3,2.8,2.8,46.947551094029826,proxy: replaces outlier,,L21
+IT-HOS_06_N_E_3,2.8,2.8,11.514685380529263,original,,M21
+IT-MFH_18_N_E_3,2.9,2.9,12.518462258345943,original,,C22
+IT-MFH_19_N_D_3,2.9,2.9,12.518462258345943,original,,D22
+IT-MFH_22_N_E_3,2.9,2.9,14.26313488435674,original,,E22
+IT-MFH_24_N_E_3,2.9,2.9,10.095566392755549,original,,F22
+IT-MFH_27_N_E_3,2.9,2.9,10.468167280767705,original,,G22
+IT-MFH_01_N_E_3,2.9,2.9,13.285710630513403,original,,H22
+IT-MFH_02_N_E_3,2.9,2.9,12.518462258345943,original,,I22
+IT-MFH_14_N_C_3,2.9,2.9,9.026132745824334,original,,J22
+IT-HOS_03_N_E_3,2.9,2.9,6.494493592462757,original,,K22
+IT-HOS_05_N_E_3,2.9,2.9,6.927226640139639,original,,L22
+IT-HOS_06_N_E_3,2.9,2.9,5.47136490725439,original,,M22
+IT-SFH_01_N_E_4,1.1,1.1,69.36554682969998,original,,C30
+IT-SFH_02_N_E_4,1.1,1.1,321.5717154942845,original,,D30
+IT-SFH_09_N_E_2,1.1,1.1,181.78402008564544,original,,E30
+IT-SFH_10_N_E_2,1.1,1.1,334.3135671642052,original,,F30
+IT-SFH_11_N_E_2,1.1,1.1,182.09117647058824,original,,G30
+IT-SFH_08_N_C_2,1.1,1.1,190.5571302718302,original,,H30
+IT-SFH_01_N_E_4,1.2,1.2,92.34417841936377,original,,C31
+IT-SFH_02_N_E_4,1.2,1.2,256.459961258295,original,,D31
+IT-SFH_09_N_E_2,1.2,1.2,114.29299915651212,original,,E31
+IT-SFH_10_N_E_2,1.2,1.2,175.75206211828947,original,,F31
+IT-SFH_11_N_E_2,1.2,1.2,243.79411764705884,original,,G31
+IT-SFH_08_N_C_2,1.2,1.2,57.68251524446596,original,,H31
+IT-SFH_01_N_E_4,1.3.1,1.3,164.32729546724417,original,,C32
+IT-SFH_02_N_E_4,1.3.1,1.3,212.7321061047252,original,,D32
+IT-SFH_09_N_E_2,1.3.1,1.3,213.54302822316893,original,,E32
+IT-SFH_10_N_E_2,1.3.1,1.3,95.47112511502245,original,,F32
+IT-SFH_11_N_E_2,1.3.1,1.3,39.78235294117647,original,,G32
+IT-SFH_08_N_C_2,1.3.1,1.3,230.204292132087,original,,H32
+IT-SFH_01_N_E_4,1.3.2,1.3,44.20866673111502,original,,C33
+IT-SFH_02_N_E_4,1.3.2,1.3,62.78567090972653,original,,D33
+IT-SFH_09_N_E_2,1.3.2,1.3,61.748285251833444,original,,E33
+IT-SFH_10_N_E_2,1.3.2,1.3,73.52622049702933,original,,F33
+IT-SFH_11_N_E_2,1.3.2,1.3,136.58823529411765,original,,G33
+IT-SFH_08_N_C_2,1.3.2,1.3,24.56939896762258,original,,H33
+IT-SFH_01_N_E_4,2.1,2.1,145.57154304387,original,includes +16.67 kgCO2e/m² proxy for internal paint,C34
+IT-SFH_02_N_E_4,2.1,2.1,99.37199269077063,original,,D34
+IT-SFH_09_N_E_2,2.1,2.1,92.262328291012,original,includes +16.67 kgCO2e/m² proxy for internal paint,E34
+IT-SFH_10_N_E_2,2.1,2.1,118.9669065463286,original,,F34
+IT-SFH_11_N_E_2,2.1,2.1,345.419509803922,original,,G34
+IT-SFH_08_N_C_2,2.1,2.1,183.154720030325,original,includes +16.67 kgCO2e/m² proxy for internal paint,H34
+IT-SFH_01_N_E_4,2.2,2.2,1.3688478176759458,proxy: missing value,,C35
+IT-SFH_02_N_E_4,2.2,2.2,2.2105991052117413,original,,D35
+IT-SFH_09_N_E_2,2.2,2.2,0.4753200755217847,original,,E35
+IT-SFH_10_N_E_2,2.2,2.2,0.5270965301401503,original,,F35
+IT-SFH_11_N_E_2,2.2,2.2,1.3688478176759458,proxy: missing value,,G35
+IT-SFH_08_N_C_2,2.2,2.2,1.3688478176759458,proxy: missing value,,H35
+IT-SFH_01_N_E_4,2.3,2.3,24.021366271668434,original,,C36
+IT-SFH_02_N_E_4,2.3,2.3,74.11764705882354,proxy: replaces outlier,,D36
+IT-SFH_09_N_E_2,2.3,2.3,35.1304857821225,original,,E36
+IT-SFH_10_N_E_2,2.3,2.3,29.554292930191043,original,,F36
+IT-SFH_11_N_E_2,2.3,2.3,74.11764705882354,original,,G36
+IT-SFH_08_N_C_2,2.3,2.3,103.46941549421278,original,,H36
+IT-SFH_01_N_E_4,2.5,2.5,8.92178782269886,proxy: missing value,,C37
+IT-SFH_02_N_E_4,2.5,2.5,2.0773230026740306,original,,D37
+IT-SFH_09_N_E_2,2.5,2.5,14.120862735619829,original,,E37
+IT-SFH_10_N_E_2,2.5,2.5,3.722712909777891,original,,F37
+IT-SFH_11_N_E_2,2.5,2.5,8.92178782269886,proxy: missing value,,G37
+IT-SFH_08_N_C_2,2.5,2.5,8.92178782269886,proxy: missing value,,H37
+IT-SFH_01_N_E_4,2.6,2.6,14.6,proxy: from MFH-HOS typology,,C38
+IT-SFH_02_N_E_4,2.6,2.6,14.6,proxy: from MFH-HOS typology,,D38
+IT-SFH_09_N_E_2,2.6,2.6,14.6,proxy: from MFH-HOS typology,,E38
+IT-SFH_10_N_E_2,2.6,2.6,14.6,proxy: from MFH-HOS typology,,F38
+IT-SFH_11_N_E_2,2.6,2.6,14.6,proxy: from MFH-HOS typology,,G38
+IT-SFH_08_N_C_2,2.6,2.6,14.6,proxy: from MFH-HOS typology,,H38
+IT-SFH_01_N_E_4,2.7,2.7,165.342648105502,proxy: from MFH-HOS typology,,C39
+IT-SFH_02_N_E_4,2.7,2.7,165.342648105502,proxy: from MFH-HOS typology,,D39
+IT-SFH_09_N_E_2,2.7,2.7,165.342648105502,proxy: from MFH-HOS typology,,E39
+IT-SFH_10_N_E_2,2.7,2.7,165.342648105502,proxy: from MFH-HOS typology,,F39
+IT-SFH_11_N_E_2,2.7,2.7,165.342648105502,proxy: from MFH-HOS typology,,G39
+IT-SFH_08_N_C_2,2.7,2.7,165.342648105502,proxy: from MFH-HOS typology,,H39
+IT-SFH_01_N_E_4,2.8,2.8,63.299394418171836,original,,C40
+IT-SFH_02_N_E_4,2.8,2.8,16.14491625955467,original,,D40
+IT-SFH_09_N_E_2,2.8,2.8,37.14718945184914,original,,E40
+IT-SFH_10_N_E_2,2.8,2.8,52.00120747776889,original,,F40
+IT-SFH_11_N_E_2,2.8,2.8,20.107843137254903,original,,G40
+IT-SFH_08_N_C_2,2.8,2.8,105.80121164707703,original,,H40
+IT-OFF_07_N_E_3,1.1,1.1,51.785171827555814,original,,C49
+IT-OFF_08_N_E_3,1.1,1.1,24.333104849353134,original,,D49
+IT-OFF_09_N_E_3,1.1,1.1,106.39877398490242,original,,E49
+IT-OFF_10_N_E_3,1.1,1.1,222.65793871936899,original,,F49
+IT-OFF_11_N_E_3,1.1,1.1,219.52027728582374,original,,G49
+IT-OFF_13_N_E_3,1.1,1.1,253.51961259051973,original,,H49
+IT-OFF_01_N_C_2,1.1,1.1,220.85783568919862,original,,I49
+IT-OFF_07_N_E_3,1.2,1.2,75.3451371761071,original,,C50
+IT-OFF_08_N_E_3,1.2,1.2,183.23973438750082,original,,D50
+IT-OFF_09_N_E_3,1.2,1.2,99.34802822018736,original,,E50
+IT-OFF_10_N_E_3,1.2,1.2,203.5025801015183,original,,F50
+IT-OFF_11_N_E_3,1.2,1.2,253.1603851070641,original,,G50
+IT-OFF_13_N_E_3,1.2,1.2,144.94618145230757,original,,H50
+IT-OFF_01_N_C_2,1.2,1.2,405.1828364516719,original,,I50
+IT-OFF_07_N_E_3,1.3.1,1.3,36.73541584287739,original,,C51
+IT-OFF_08_N_E_3,1.3.1,1.3,118.02096066100167,original,,D51
+IT-OFF_09_N_E_3,1.3.1,1.3,50.080978646347425,original,,E51
+IT-OFF_10_N_E_3,1.3.1,1.3,246.69945064143627,original,,F51
+IT-OFF_11_N_E_3,1.3.1,1.3,394.218055889177,original,,G51
+IT-OFF_13_N_E_3,1.3.1,1.3,104.65652995753337,original,,H51
+IT-OFF_01_N_C_2,1.3.1,1.3,240.44068866795905,original,,I51
+IT-OFF_07_N_E_3,1.3.2,1.3,4.980727641192483,original,,C52
+IT-OFF_08_N_E_3,1.3.2,1.3,7.6615940020466695,original,,D52
+IT-OFF_09_N_E_3,1.3.2,1.3,66.3649988819931,original,,E52
+IT-OFF_10_N_E_3,1.3.2,1.3,6.0763515472856025,original,,F52
+IT-OFF_11_N_E_3,1.3.2,1.3,19.536749754090543,original,,G52
+IT-OFF_13_N_E_3,1.3.2,1.3,19.64536815268962,original,,H52
+IT-OFF_01_N_C_2,1.3.2,1.3,5.814088537020581,original,,I52
+IT-OFF_07_N_E_3,2.1,2.1,209.46462371050802,original,includes +16.67 kgCO2e/m² proxy for internal paint,C53
+IT-OFF_08_N_E_3,2.1,2.1,309.84105869278375,original,,D53
+IT-OFF_09_N_E_3,2.1,2.1,422.72070407576257,original,,E53
+IT-OFF_10_N_E_3,2.1,2.1,209.9358849313993,original,,F53
+IT-OFF_11_N_E_3,2.1,2.1,230.95009906702808,original,,G53
+IT-OFF_13_N_E_3,2.1,2.1,279.6836793269307,original,,H53
+IT-OFF_01_N_C_2,2.1,2.1,635.667236632666,original,includes +16.67 kgCO2e/m² proxy for internal paint,I53
+IT-OFF_07_N_E_3,2.2,2.2,7.334405116807945,proxy: missing value,,C54
+IT-OFF_08_N_E_3,2.2,2.2,7.334405116807945,proxy: replaces outlier,,D54
+IT-OFF_09_N_E_3,2.2,2.2,2.2169519741959167,original,,E54
+IT-OFF_10_N_E_3,2.2,2.2,7.737161791806643,original,,F54
+IT-OFF_11_N_E_3,2.2,2.2,7.334405116807945,proxy: replaces outlier,,G54
+IT-OFF_13_N_E_3,2.2,2.2,7.200152891808379,original,,H54
+IT-OFF_01_N_C_2,2.2,2.2,6.403550337874835,original,,I54
+IT-OFF_07_N_E_3,2.3,2.3,3.1203148447749527,original,,C55
+IT-OFF_08_N_E_3,2.3,2.3,66.16580304956766,proxy: replaces outlier,,D55
+IT-OFF_09_N_E_3,2.3,2.3,66.16580304956766,proxy: replaces outlier,,E55
+IT-OFF_10_N_E_3,2.3,2.3,33.587130624636636,original,,F55
+IT-OFF_11_N_E_3,2.3,2.3,66.16580304956766,proxy: replaces outlier,,G55
+IT-OFF_13_N_E_3,2.3,2.3,102.01339813805156,original,,H55
+IT-OFF_01_N_C_2,2.3,2.3,54.21660468673969,original,,I55
+IT-OFF_07_N_E_3,2.5,2.5,67.5425008592151,proxy: from EDU typology,,C56
+IT-OFF_08_N_E_3,2.5,2.5,67.5425008592151,proxy: from EDU typology,,D56
+IT-OFF_09_N_E_3,2.5,2.5,67.5425008592151,proxy: from EDU typology,,E56
+IT-OFF_10_N_E_3,2.5,2.5,104.19080109035708,original,,F56
+IT-OFF_11_N_E_3,2.5,2.5,67.5425008592151,proxy: from EDU typology,,G56
+IT-OFF_13_N_E_3,2.5,2.5,67.5425008592151,proxy: from EDU typology,,H56
+IT-OFF_01_N_C_2,2.5,2.5,67.5425008592151,proxy: from EDU typology,,I56
+IT-OFF_07_N_E_3,2.6,2.6,14.6,original,,C57
+IT-OFF_08_N_E_3,2.6,2.6,14.6,original,,D57
+IT-OFF_09_N_E_3,2.6,2.6,14.6,original,,E57
+IT-OFF_10_N_E_3,2.6,2.6,14.6,proxy: missing value,,F57
+IT-OFF_11_N_E_3,2.6,2.6,14.6,proxy: missing value,,G57
+IT-OFF_13_N_E_3,2.6,2.6,14.6,proxy: missing value,,H57
+IT-OFF_01_N_C_2,2.6,2.6,14.6,proxy: missing value,,I57
+IT-OFF_07_N_E_3,2.7,2.7,165.342648105502,proxy: from EDU typology,,C58
+IT-OFF_08_N_E_3,2.7,2.7,165.342648105502,proxy: from EDU typology,,D58
+IT-OFF_09_N_E_3,2.7,2.7,165.342648105502,proxy: from EDU typology,,E58
+IT-OFF_10_N_E_3,2.7,2.7,165.342648105502,proxy: from EDU typology,,F58
+IT-OFF_11_N_E_3,2.7,2.7,165.342648105502,proxy: from EDU typology,,G58
+IT-OFF_13_N_E_3,2.7,2.7,165.342648105502,proxy: from EDU typology,,H58
+IT-OFF_01_N_C_2,2.7,2.7,165.342648105502,proxy: from EDU typology,,I58
+IT-OFF_07_N_E_3,2.8,2.8,4.879352268567789,original,,C59
+IT-OFF_08_N_E_3,2.8,2.8,30.03029925198588,proxy: replaces outlier,,D59
+IT-OFF_09_N_E_3,2.8,2.8,10.243928401759282,original,,E59
+IT-OFF_10_N_E_3,2.8,2.8,30.03029925198588,proxy: replaces outlier,,F59
+IT-OFF_11_N_E_3,2.8,2.8,6.256584278963382,original,,G59
+IT-OFF_13_N_E_3,2.8,2.8,30.03029925198588,original,,H59
+IT-OFF_01_N_C_2,2.8,2.8,45.6733237621713,original,,I59
+IT-OFF_07_N_E_3,2.9,2.9,7.4202412986753306,original,,C60
+IT-OFF_08_N_E_3,2.9,2.9,7.703653292721957,original,,D60
+IT-OFF_09_N_E_3,2.9,2.9,21.4688096031127,proxy: replaces outlier,,E60
+IT-OFF_10_N_E_3,2.9,2.9,36.48089837493502,original,,F60
+IT-OFF_11_N_E_3,2.9,2.9,23.028680322430525,original,,G60
+IT-OFF_13_N_E_3,2.9,2.9,13.148347447575702,original,,H60
+IT-OFF_01_N_C_2,2.9,2.9,16.789197445159225,original,,I60
+IT-EDU_01_N_C_3,1.1,1.1,86.25525845257312,original,,C69
+IT-EDU_02_N_E_4,1.1,1.1,239.50200315716947,original,,D69
+IT-EDU_04_N_D_3,1.1,1.1,370.6043422121732,original,,E69
+IT-EDU_01_N_C_3,1.2,1.2,223.60466062839478,original,,C70
+IT-EDU_02_N_E_4,1.2,1.2,278.25956521137914,original,,D70
+IT-EDU_04_N_D_3,1.2,1.2,57.707102289894536,original,,E70
+IT-EDU_01_N_C_3,1.3.1,1.3,83.1388672908796,original,,C71
+IT-EDU_02_N_E_4,1.3.1,1.3,68.03039814593484,original,,D71
+IT-EDU_04_N_D_3,1.3.1,1.3,129.50253376307376,original,,E71
+IT-EDU_01_N_C_3,1.3.2,1.3,36.99968835473613,original,,C72
+IT-EDU_02_N_E_4,1.3.2,1.3,76.71564481271436,original,,D72
+IT-EDU_04_N_D_3,1.3.2,1.3,39.76500844993771,original,,E72
+IT-EDU_01_N_C_3,2.1,2.1,234.70214989483003,original,includes +16.67 kgCO2e/m² proxy for internal paint,C73
+IT-EDU_02_N_E_4,2.1,2.1,417.3443061376369,original,,D73
+IT-EDU_04_N_D_3,2.1,2.1,212.50555740735047,original,,E73
+IT-EDU_01_N_C_3,2.2,2.2,3.2034759895672122,original,,C74
+IT-EDU_02_N_E_4,2.2,2.2,2.0436335091496716,original,,D74
+IT-EDU_04_N_D_3,2.2,2.2,12.750288379565879,original,,E74
+IT-EDU_01_N_C_3,2.3,2.3,96.9,proxy: replaces outlier,,C75
+IT-EDU_02_N_E_4,2.3,2.3,96.9,proxy: replaces outlier,,D75
+IT-EDU_04_N_D_3,2.3,2.3,120.3514613335218,proxy: replaces outlier,,E75
+IT-EDU_01_N_C_3,2.5,2.5,14.7980402908033,original,,C76
+IT-EDU_02_N_E_4,2.5,2.5,67.54250085921508,proxy: replaces outlier,,D76
+IT-EDU_04_N_D_3,2.5,2.5,85.12398771535234,original,,E76
+IT-EDU_01_N_C_3,2.6,2.6,14.55,proxy: from MFH-HOS typology,,C77
+IT-EDU_02_N_E_4,2.6,2.6,14.55,proxy: from MFH-HOS typology,,D77
+IT-EDU_04_N_D_3,2.6,2.6,14.55,proxy: from MFH-HOS typology,,E77
+IT-EDU_01_N_C_3,2.7,2.7,165.342648105502,proxy: replaces outlier,,C78
+IT-EDU_02_N_E_4,2.7,2.7,165.342648105502,original,,D78
+IT-EDU_04_N_D_3,2.7,2.7,165.342648105502,original,,E78
+IT-EDU_01_N_C_3,2.8,2.8,25.39252534240666,proxy: missing value,,C79
+IT-EDU_02_N_E_4,2.8,2.8,28.770309908123266,original,,D79
+IT-EDU_04_N_D_3,2.8,2.8,15.259171645256842,original,,E79
+IT-EDU_01_N_C_3,2.9,2.9,50.51536517706122,proxy: replaces outlier,,C80
+IT-EDU_02_N_E_4,2.9,2.9,64.6251971679349,original,,D80
+IT-EDU_04_N_D_3,2.9,2.9,8.185869204440186,original,,E80
+IT-XTR_03_N_E_2,1.1,1.1,193.96637616064228,original,,C87
+IT-XTR_07_N_E_3,1.1,1.1,338.06677311463864,original,,D87
+IT-XTR_03_N_E_2,1.2,1.2,131.70980099889786,original,,C88
+IT-XTR_07_N_E_3,1.2,1.2,299.6121014136146,original,,D88
+IT-XTR_03_N_E_2,1.3.1,1.3,53.71962839520209,original,,C89
+IT-XTR_07_N_E_3,1.3.1,1.3,242.36694258446838,original,,D89
+IT-XTR_03_N_E_2,1.3.2,1.3,92.18825973073109,original,,C90
+IT-XTR_07_N_E_3,1.3.2,1.3,30.677773590097654,original,,D90
+IT-XTR_03_N_E_2,2.1,2.1,306.69337968050735,original,,C91
+IT-XTR_07_N_E_3,2.1,2.1,146.96876365095034,original,,D91
+IT-XTR_03_N_E_2,2.2,2.2,8.144893146601786,original,,C92
+IT-XTR_07_N_E_3,2.2,2.2,2.0722386652308527,original,,D92
+IT-XTR_03_N_E_2,2.3,2.3,33.027980686387444,original,,C93
+IT-XTR_07_N_E_3,2.3,2.3,1.5694325855792346,original,,D93
+IT-XTR_03_N_E_2,2.5,2.5,0.0,original,,C94
+IT-XTR_07_N_E_3,2.5,2.5,22.28454884603585,original,,D94
+IT-XTR_03_N_E_2,2.6,2.6,19.519588067991947,original,,C95
+IT-XTR_07_N_E_3,2.6,2.6,1.7251436932290827,original,,D95
+IT-XTR_03_N_E_2,2.7,2.7,4.562289644179269,original,,C96
+IT-XTR_07_N_E_3,2.7,2.7,9.442027855202205,original,,D96
+IT-XTR_03_N_E_2,2.8,2.8,305.22970601864705,original,,C97
+IT-XTR_07_N_E_3,2.8,2.8,197.77293876155966,original,,D97
+IT-XTR_03_N_E_2,2.9,2.9,0.0,original,,C98
+IT-XTR_07_N_E_3,2.9,2.9,114.02734615385513,original,,D98
+IT-MFH_04_R_D_2A-3A-3B,1.1,1.1,0.0,original,,B112
+IT-SFH_04_R_C_3,1.1,1.1,0.0,original,,C112
+IT-MFH_11_R_E_3,1.1,1.1,5.6,original,,D112
+IT-MFH_07_R_D_2A-3A-3B,1.1,1.1,0.0,original,,E112
+IT-MFH_12_R_F_3S,1.1,1.1,0.0,original,,F112
+IT-MFH_05_R_D_2A-3A-3B,1.1,1.1,0.0,original,,G112
+IT-MFH_21_R_E_2,1.1,1.1,41.4,original,,H112
+IT-MFH_03_R_D_2A-3A-3B,1.1,1.1,0.6,original,,I112
+IT-MFH_06_R_D_2A-3A-3B,1.1,1.1,0.0,original,,J112
+IT-MFH_20_R_E_2,1.1,1.1,41.0,original,,K112
+IT-MFH_25_R_E_2,1.1,1.1,127.1,original,,L112
+IT-MFH_17_R_E_2,1.1,1.1,39.1,original,,M112
+IT-MFH_13_R_E_2,1.1,1.1,1.1,original,,N112
+IT-MFH_04_R_D_2A-3A-3B,1.2,1.2,1.4,original,,B113
+IT-SFH_04_R_C_3,1.2,1.2,0.0,original,,C113
+IT-MFH_11_R_E_3,1.2,1.2,1.1,original,,D113
+IT-MFH_07_R_D_2A-3A-3B,1.2,1.2,1.3,original,,E113
+IT-MFH_12_R_F_3S,1.2,1.2,3.5,original,,F113
+IT-MFH_05_R_D_2A-3A-3B,1.2,1.2,1.5,original,,G113
+IT-MFH_21_R_E_2,1.2,1.2,40.2,original,,H113
+IT-MFH_03_R_D_2A-3A-3B,1.2,1.2,0.0,original,,I113
+IT-MFH_06_R_D_2A-3A-3B,1.2,1.2,1.8,original,,J113
+IT-MFH_20_R_E_2,1.2,1.2,74.8,original,,K113
+IT-MFH_25_R_E_2,1.2,1.2,17.7,original,,L113
+IT-MFH_17_R_E_2,1.2,1.2,113.3,original,,M113
+IT-MFH_13_R_E_2,1.2,1.2,19.3,original,,N113
+IT-MFH_04_R_D_2A-3A-3B,1.3.1,1.3,20.7,original,,B114
+IT-SFH_04_R_C_3,1.3.1,1.3,15.9,original,,C114
+IT-MFH_11_R_E_3,1.3.1,1.3,65.0,original,,D114
+IT-MFH_07_R_D_2A-3A-3B,1.3.1,1.3,25.7,original,,E114
+IT-MFH_12_R_F_3S,1.3.1,1.3,84.2,original,,F114
+IT-MFH_05_R_D_2A-3A-3B,1.3.1,1.3,27.2,original,,G114
+IT-MFH_21_R_E_2,1.3.1,1.3,48.2,original,,H114
+IT-MFH_03_R_D_2A-3A-3B,1.3.1,1.3,109.2,original,,I114
+IT-MFH_06_R_D_2A-3A-3B,1.3.1,1.3,27.1,original,,J114
+IT-MFH_20_R_E_2,1.3.1,1.3,59.4,original,,K114
+IT-MFH_25_R_E_2,1.3.1,1.3,59.3,original,,L114
+IT-MFH_17_R_E_2,1.3.1,1.3,29.8,original,,M114
+IT-MFH_13_R_E_2,1.3.1,1.3,192.6,original,,N114
+IT-MFH_04_R_D_2A-3A-3B,1.3.2,1.3,17.5,original,,B115
+IT-SFH_04_R_C_3,1.3.2,1.3,0.0,original,,C115
+IT-MFH_11_R_E_3,1.3.2,1.3,31.3,original,,D115
+IT-MFH_07_R_D_2A-3A-3B,1.3.2,1.3,17.6,original,,E115
+IT-MFH_12_R_F_3S,1.3.2,1.3,38.7,original,,F115
+IT-MFH_05_R_D_2A-3A-3B,1.3.2,1.3,19.5,original,,G115
+IT-MFH_21_R_E_2,1.3.2,1.3,3.4,original,,H115
+IT-MFH_03_R_D_2A-3A-3B,1.3.2,1.3,19.5,original,,I115
+IT-MFH_06_R_D_2A-3A-3B,1.3.2,1.3,16.1,original,,J115
+IT-MFH_20_R_E_2,1.3.2,1.3,3.5,original,,K115
+IT-MFH_25_R_E_2,1.3.2,1.3,3.4,original,,L115
+IT-MFH_17_R_E_2,1.3.2,1.3,31.7,original,,M115
+IT-MFH_13_R_E_2,1.3.2,1.3,19.5,original,,N115
+IT-MFH_04_R_D_2A-3A-3B,2.1,2.1,29.1,original,,B116
+IT-SFH_04_R_C_3,2.1,2.1,0.0,original,,C116
+IT-MFH_11_R_E_3,2.1,2.1,6.4,original,,D116
+IT-MFH_07_R_D_2A-3A-3B,2.1,2.1,32.7,original,,E116
+IT-MFH_12_R_F_3S,2.1,2.1,1.1,original,,F116
+IT-MFH_05_R_D_2A-3A-3B,2.1,2.1,34.9,original,,G116
+IT-MFH_21_R_E_2,2.1,2.1,0.0,original,,H116
+IT-MFH_03_R_D_2A-3A-3B,2.1,2.1,0.0,original,,I116
+IT-MFH_06_R_D_2A-3A-3B,2.1,2.1,56.6,original,,J116
+IT-MFH_20_R_E_2,2.1,2.1,0.0,original,,K116
+IT-MFH_25_R_E_2,2.1,2.1,0.0,original,,L116
+IT-MFH_17_R_E_2,2.1,2.1,0.0,original,,M116
+IT-MFH_13_R_E_2,2.1,2.1,46.7,original,,N116
+IT-MFH_04_R_D_2A-3A-3B,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),B117
+IT-SFH_04_R_C_3,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),C117
+IT-MFH_11_R_E_3,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),D117
+IT-MFH_07_R_D_2A-3A-3B,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),E117
+IT-MFH_12_R_F_3S,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),F117
+IT-MFH_05_R_D_2A-3A-3B,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),G117
+IT-MFH_21_R_E_2,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),H117
+IT-MFH_03_R_D_2A-3A-3B,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),I117
+IT-MFH_06_R_D_2A-3A-3B,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),J117
+IT-MFH_20_R_E_2,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),K117
+IT-MFH_25_R_E_2,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),L117
+IT-MFH_17_R_E_2,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),M117
+IT-MFH_13_R_E_2,2.2,2.2,8.2,original,insufficient data for D7.22 benchmarks (grey in source),N117
+IT-MFH_04_R_D_2A-3A-3B,2.3,2.3,21.5,original,,B118
+IT-SFH_04_R_C_3,2.3,2.3,30.3,original,,C118
+IT-MFH_11_R_E_3,2.3,2.3,2.1,original,,D118
+IT-MFH_07_R_D_2A-3A-3B,2.3,2.3,22.4,original,,E118
+IT-MFH_12_R_F_3S,2.3,2.3,4.0,original,,F118
+IT-MFH_05_R_D_2A-3A-3B,2.3,2.3,25.1,original,,G118
+IT-MFH_21_R_E_2,2.3,2.3,4.0,original,,H118
+IT-MFH_03_R_D_2A-3A-3B,2.3,2.3,3.2,original,,I118
+IT-MFH_06_R_D_2A-3A-3B,2.3,2.3,22.3,original,,J118
+IT-MFH_20_R_E_2,2.3,2.3,4.0,original,,K118
+IT-MFH_25_R_E_2,2.3,2.3,4.0,original,,L118
+IT-MFH_17_R_E_2,2.3,2.3,4.0,original,,M118
+IT-MFH_13_R_E_2,2.3,2.3,4.1,original,,N118
+IT-MFH_04_R_D_2A-3A-3B,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),B119
+IT-SFH_04_R_C_3,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),C119
+IT-MFH_11_R_E_3,2.5,2.5,0.3,original,insufficient data for D7.22 benchmarks (grey in source),D119
+IT-MFH_07_R_D_2A-3A-3B,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),E119
+IT-MFH_12_R_F_3S,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),F119
+IT-MFH_05_R_D_2A-3A-3B,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),G119
+IT-MFH_21_R_E_2,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),H119
+IT-MFH_03_R_D_2A-3A-3B,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),I119
+IT-MFH_06_R_D_2A-3A-3B,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),J119
+IT-MFH_20_R_E_2,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),K119
+IT-MFH_25_R_E_2,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),L119
+IT-MFH_17_R_E_2,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),M119
+IT-MFH_13_R_E_2,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),N119
+IT-MFH_04_R_D_2A-3A-3B,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),B120
+IT-SFH_04_R_C_3,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),C120
+IT-MFH_11_R_E_3,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),D120
+IT-MFH_07_R_D_2A-3A-3B,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),E120
+IT-MFH_12_R_F_3S,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),F120
+IT-MFH_05_R_D_2A-3A-3B,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),G120
+IT-MFH_21_R_E_2,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),H120
+IT-MFH_03_R_D_2A-3A-3B,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),I120
+IT-MFH_06_R_D_2A-3A-3B,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),J120
+IT-MFH_20_R_E_2,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),K120
+IT-MFH_25_R_E_2,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),L120
+IT-MFH_17_R_E_2,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),M120
+IT-MFH_13_R_E_2,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),N120
+IT-MFH_04_R_D_2A-3A-3B,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),B121
+IT-SFH_04_R_C_3,2.7,2.7,7.8,original,insufficient data for D7.22 benchmarks (grey in source),C121
+IT-MFH_11_R_E_3,2.7,2.7,3.5,original,insufficient data for D7.22 benchmarks (grey in source),D121
+IT-MFH_07_R_D_2A-3A-3B,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),E121
+IT-MFH_12_R_F_3S,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),F121
+IT-MFH_05_R_D_2A-3A-3B,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),G121
+IT-MFH_21_R_E_2,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),H121
+IT-MFH_03_R_D_2A-3A-3B,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),I121
+IT-MFH_06_R_D_2A-3A-3B,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),J121
+IT-MFH_20_R_E_2,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),K121
+IT-MFH_25_R_E_2,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),L121
+IT-MFH_17_R_E_2,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),M121
+IT-MFH_13_R_E_2,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),N121
+IT-MFH_04_R_D_2A-3A-3B,2.8,2.8,0.0,original,insufficient data for D7.22 benchmarks (grey in source),B122
+IT-SFH_04_R_C_3,2.8,2.8,51.7,original,insufficient data for D7.22 benchmarks (grey in source),C122
+IT-MFH_11_R_E_3,2.8,2.8,6.3,original,insufficient data for D7.22 benchmarks (grey in source),D122
+IT-MFH_07_R_D_2A-3A-3B,2.8,2.8,6.3,original,insufficient data for D7.22 benchmarks (grey in source),E122
+IT-MFH_12_R_F_3S,2.8,2.8,0.0,original,insufficient data for D7.22 benchmarks (grey in source),F122
+IT-MFH_05_R_D_2A-3A-3B,2.8,2.8,8.0,original,insufficient data for D7.22 benchmarks (grey in source),G122
+IT-MFH_21_R_E_2,2.8,2.8,0.0,original,insufficient data for D7.22 benchmarks (grey in source),H122
+IT-MFH_03_R_D_2A-3A-3B,2.8,2.8,5.9,original,insufficient data for D7.22 benchmarks (grey in source),I122
+IT-MFH_06_R_D_2A-3A-3B,2.8,2.8,8.0,original,insufficient data for D7.22 benchmarks (grey in source),J122
+IT-MFH_20_R_E_2,2.8,2.8,0.0,original,insufficient data for D7.22 benchmarks (grey in source),K122
+IT-MFH_25_R_E_2,2.8,2.8,0.0,original,insufficient data for D7.22 benchmarks (grey in source),L122
+IT-MFH_17_R_E_2,2.8,2.8,0.0,original,insufficient data for D7.22 benchmarks (grey in source),M122
+IT-MFH_13_R_E_2,2.8,2.8,2.9,original,insufficient data for D7.22 benchmarks (grey in source),N122
+IT-MFH_04_R_D_2A-3A-3B,2.9,2.9,0.0,original,insufficient data for D7.22 benchmarks (grey in source),B123
+IT-SFH_04_R_C_3,2.9,2.9,0.1,original,insufficient data for D7.22 benchmarks (grey in source),C123
+IT-MFH_11_R_E_3,2.9,2.9,0.0,original,insufficient data for D7.22 benchmarks (grey in source),D123
+IT-MFH_07_R_D_2A-3A-3B,2.9,2.9,20.4,original,insufficient data for D7.22 benchmarks (grey in source),E123
+IT-MFH_12_R_F_3S,2.9,2.9,0.0,original,insufficient data for D7.22 benchmarks (grey in source),F123
+IT-MFH_05_R_D_2A-3A-3B,2.9,2.9,20.4,original,insufficient data for D7.22 benchmarks (grey in source),G123
+IT-MFH_21_R_E_2,2.9,2.9,0.0,original,insufficient data for D7.22 benchmarks (grey in source),H123
+IT-MFH_03_R_D_2A-3A-3B,2.9,2.9,0.0,original,insufficient data for D7.22 benchmarks (grey in source),I123
+IT-MFH_06_R_D_2A-3A-3B,2.9,2.9,12.4,original,insufficient data for D7.22 benchmarks (grey in source),J123
+IT-MFH_20_R_E_2,2.9,2.9,0.0,original,insufficient data for D7.22 benchmarks (grey in source),K123
+IT-MFH_25_R_E_2,2.9,2.9,0.0,original,insufficient data for D7.22 benchmarks (grey in source),L123
+IT-MFH_17_R_E_2,2.9,2.9,0.0,original,insufficient data for D7.22 benchmarks (grey in source),M123
+IT-MFH_13_R_E_2,2.9,2.9,45.5,original,insufficient data for D7.22 benchmarks (grey in source),N123
+IT-MFH_04_R_D_2A-3A-3B,4.1,4.1,4.2,original,,B124
+IT-SFH_04_R_C_3,4.1,4.1,1.0,original,,C124
+IT-MFH_11_R_E_3,4.1,4.1,4.1,original,,D124
+IT-MFH_07_R_D_2A-3A-3B,4.1,4.1,4.2,original,,E124
+IT-MFH_12_R_F_3S,4.1,4.1,2.0,original,,F124
+IT-MFH_05_R_D_2A-3A-3B,4.1,4.1,4.3,original,,G124
+IT-MFH_21_R_E_2,4.1,4.1,13.6,original,,H124
+IT-MFH_03_R_D_2A-3A-3B,4.1,4.1,0.6,original,,I124
+IT-MFH_06_R_D_2A-3A-3B,4.1,4.1,4.4,original,,J124
+IT-MFH_20_R_E_2,4.1,4.1,13.6,original,,K124
+IT-MFH_25_R_E_2,4.1,4.1,14.5,original,,L124
+IT-MFH_17_R_E_2,4.1,4.1,13.7,original,,M124
+IT-MFH_13_R_E_2,4.1,4.1,7.5,original,,N124
+IT-MFH_16_R_E_2,1.1,1.1,61.0,original,,B133
+IT-OFF_02_R_C_2,1.1,1.1,0.0,original,,C133
+IT-SFH_07_R_C_2,1.1,1.1,84.2,original,,D133
+IT-MFH_26_R_E_2,1.1,1.1,166.3,original,,E133
+IT-OFF_12_R_E_3,1.1,1.1,46.6,original,,F133
+IT-XTR_02_R_E_3,1.1,1.1,79.6,original,,G133
+IT-XTR_09_R_E_3,1.1,1.1,86.2,original,,H133
+IT-EDU_05_R_C_2,1.1,1.1,38.9,original,,I133
+IT-MFH_16_R_E_2,1.2,1.2,88.6,original,,B134
+IT-OFF_02_R_C_2,1.2,1.2,65.1,original,,C134
+IT-SFH_07_R_C_2,1.2,1.2,86.6,original,,D134
+IT-MFH_26_R_E_2,1.2,1.2,154.9,original,,E134
+IT-OFF_12_R_E_3,1.2,1.2,492.9,original,,F134
+IT-XTR_02_R_E_3,1.2,1.2,141.3,original,,G134
+IT-XTR_09_R_E_3,1.2,1.2,324.8,original,,H134
+IT-EDU_05_R_C_2,1.2,1.2,506.5,original,,I134
+IT-MFH_16_R_E_2,1.3.1,1.3,23.6,original,,B135
+IT-OFF_02_R_C_2,1.3.1,1.3,132.8,original,,C135
+IT-SFH_07_R_C_2,1.3.1,1.3,81.2,original,,D135
+IT-MFH_26_R_E_2,1.3.1,1.3,180.5,original,,E135
+IT-OFF_12_R_E_3,1.3.1,1.3,12.2,original,,F135
+IT-XTR_02_R_E_3,1.3.1,1.3,26.7,original,,G135
+IT-XTR_09_R_E_3,1.3.1,1.3,125.0,original,,H135
+IT-EDU_05_R_C_2,1.3.1,1.3,206.0,original,,I135
+IT-MFH_16_R_E_2,1.3.2,1.3,50.9,original,,B136
+IT-OFF_02_R_C_2,1.3.2,1.3,0.0,original,,C136
+IT-SFH_07_R_C_2,1.3.2,1.3,146.9,original,,D136
+IT-MFH_26_R_E_2,1.3.2,1.3,0.0,original,,E136
+IT-OFF_12_R_E_3,1.3.2,1.3,0.0,original,,F136
+IT-XTR_02_R_E_3,1.3.2,1.3,66.3,original,,G136
+IT-XTR_09_R_E_3,1.3.2,1.3,56.9,original,,H136
+IT-EDU_05_R_C_2,1.3.2,1.3,38.6,original,,I136
+IT-MFH_16_R_E_2,2.1,2.1,194.7,original,,B137
+IT-OFF_02_R_C_2,2.1,2.1,72.7,original,,C137
+IT-SFH_07_R_C_2,2.1,2.1,29.5,original,,D137
+IT-MFH_26_R_E_2,2.1,2.1,6.2,original,,E137
+IT-OFF_12_R_E_3,2.1,2.1,184.4,original,,F137
+IT-XTR_02_R_E_3,2.1,2.1,305.6,original,,G137
+IT-XTR_09_R_E_3,2.1,2.1,419.4,original,,H137
+IT-EDU_05_R_C_2,2.1,2.1,157.4,original,,I137
+IT-MFH_16_R_E_2,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),B138
+IT-OFF_02_R_C_2,2.2,2.2,3.3,original,insufficient data for D7.22 benchmarks (grey in source),C138
+IT-SFH_07_R_C_2,2.2,2.2,0.4,original,insufficient data for D7.22 benchmarks (grey in source),D138
+IT-MFH_26_R_E_2,2.2,2.2,10.9,original,insufficient data for D7.22 benchmarks (grey in source),E138
+IT-OFF_12_R_E_3,2.2,2.2,0.0,original,insufficient data for D7.22 benchmarks (grey in source),F138
+IT-XTR_02_R_E_3,2.2,2.2,14.9,original,insufficient data for D7.22 benchmarks (grey in source),G138
+IT-XTR_09_R_E_3,2.2,2.2,1.2,original,insufficient data for D7.22 benchmarks (grey in source),H138
+IT-EDU_05_R_C_2,2.2,2.2,10.2,original,insufficient data for D7.22 benchmarks (grey in source),I138
+IT-MFH_16_R_E_2,2.3,2.3,2.8,original,,B139
+IT-OFF_02_R_C_2,2.3,2.3,53.1,original,,C139
+IT-SFH_07_R_C_2,2.3,2.3,24.7,original,,D139
+IT-MFH_26_R_E_2,2.3,2.3,12.8,original,,E139
+IT-OFF_12_R_E_3,2.3,2.3,6.9,original,,F139
+IT-XTR_02_R_E_3,2.3,2.3,23.2,original,,G139
+IT-XTR_09_R_E_3,2.3,2.3,15.5,original,,H139
+IT-EDU_05_R_C_2,2.3,2.3,61.2,original,,I139
+IT-MFH_16_R_E_2,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),B140
+IT-OFF_02_R_C_2,2.5,2.5,3.3,original,insufficient data for D7.22 benchmarks (grey in source),C140
+IT-SFH_07_R_C_2,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),D140
+IT-MFH_26_R_E_2,2.5,2.5,3.8,original,insufficient data for D7.22 benchmarks (grey in source),E140
+IT-OFF_12_R_E_3,2.5,2.5,0.7,original,insufficient data for D7.22 benchmarks (grey in source),F140
+IT-XTR_02_R_E_3,2.5,2.5,21.5,original,insufficient data for D7.22 benchmarks (grey in source),G140
+IT-XTR_09_R_E_3,2.5,2.5,0.0,original,insufficient data for D7.22 benchmarks (grey in source),H140
+IT-EDU_05_R_C_2,2.5,2.5,8.7,original,insufficient data for D7.22 benchmarks (grey in source),I140
+IT-MFH_16_R_E_2,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),B141
+IT-OFF_02_R_C_2,2.6,2.6,13.8,original,insufficient data for D7.22 benchmarks (grey in source),C141
+IT-SFH_07_R_C_2,2.6,2.6,0.0,original,insufficient data for D7.22 benchmarks (grey in source),D141
+IT-MFH_26_R_E_2,2.6,2.6,1.1,original,insufficient data for D7.22 benchmarks (grey in source),E141
+IT-OFF_12_R_E_3,2.6,2.6,2.2,original,insufficient data for D7.22 benchmarks (grey in source),F141
+IT-XTR_02_R_E_3,2.6,2.6,66.5,original,insufficient data for D7.22 benchmarks (grey in source),G141
+IT-XTR_09_R_E_3,2.6,2.6,13.4,original,insufficient data for D7.22 benchmarks (grey in source),H141
+IT-EDU_05_R_C_2,2.6,2.6,6.0,original,insufficient data for D7.22 benchmarks (grey in source),I141
+IT-MFH_16_R_E_2,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),B142
+IT-OFF_02_R_C_2,2.7,2.7,52.1,original,insufficient data for D7.22 benchmarks (grey in source),C142
+IT-SFH_07_R_C_2,2.7,2.7,6.0,original,insufficient data for D7.22 benchmarks (grey in source),D142
+IT-MFH_26_R_E_2,2.7,2.7,62.4,original,insufficient data for D7.22 benchmarks (grey in source),E142
+IT-OFF_12_R_E_3,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),F142
+IT-XTR_02_R_E_3,2.7,2.7,5.0,original,insufficient data for D7.22 benchmarks (grey in source),G142
+IT-XTR_09_R_E_3,2.7,2.7,0.0,original,insufficient data for D7.22 benchmarks (grey in source),H142
+IT-EDU_05_R_C_2,2.7,2.7,75.2,original,insufficient data for D7.22 benchmarks (grey in source),I142
+IT-MFH_16_R_E_2,2.8,2.8,0.0,original,insufficient data for D7.22 benchmarks (grey in source),B143
+IT-OFF_02_R_C_2,2.8,2.8,37.4,original,insufficient data for D7.22 benchmarks (grey in source),C143
+IT-SFH_07_R_C_2,2.8,2.8,53.7,original,insufficient data for D7.22 benchmarks (grey in source),D143
+IT-MFH_26_R_E_2,2.8,2.8,31.4,original,insufficient data for D7.22 benchmarks (grey in source),E143
+IT-OFF_12_R_E_3,2.8,2.8,5.7,original,insufficient data for D7.22 benchmarks (grey in source),F143
+IT-XTR_02_R_E_3,2.8,2.8,0.0,original,insufficient data for D7.22 benchmarks (grey in source),G143
+IT-XTR_09_R_E_3,2.8,2.8,10.4,original,insufficient data for D7.22 benchmarks (grey in source),H143
+IT-EDU_05_R_C_2,2.8,2.8,15.5,original,insufficient data for D7.22 benchmarks (grey in source),I143
+IT-MFH_16_R_E_2,2.9,2.9,0.0,original,insufficient data for D7.22 benchmarks (grey in source),B144
+IT-OFF_02_R_C_2,2.9,2.9,2.5,original,insufficient data for D7.22 benchmarks (grey in source),C144
+IT-SFH_07_R_C_2,2.9,2.9,0.0,original,insufficient data for D7.22 benchmarks (grey in source),D144
+IT-MFH_26_R_E_2,2.9,2.9,0.0,original,insufficient data for D7.22 benchmarks (grey in source),E144
+IT-OFF_12_R_E_3,2.9,2.9,8.1,original,insufficient data for D7.22 benchmarks (grey in source),F144
+IT-XTR_02_R_E_3,2.9,2.9,18.6,original,insufficient data for D7.22 benchmarks (grey in source),G144
+IT-XTR_09_R_E_3,2.9,2.9,29.2,original,insufficient data for D7.22 benchmarks (grey in source),H144
+IT-EDU_05_R_C_2,2.9,2.9,46.7,original,insufficient data for D7.22 benchmarks (grey in source),I144
+IT-MFH_16_R_E_2,4.1,4.1,152.3,original,,B145
+IT-OFF_02_R_C_2,4.1,4.1,0.0,original,,C145
+IT-SFH_07_R_C_2,4.1,4.1,77.5,original,,D145
+IT-MFH_26_R_E_2,4.1,4.1,4.2,original,,E145
+IT-OFF_12_R_E_3,4.1,4.1,0.0,original,,F145
+IT-XTR_02_R_E_3,4.1,4.1,25.2,original,,G145
+IT-XTR_09_R_E_3,4.1,4.1,38.6,original,,H145
+IT-EDU_05_R_C_2,4.1,4.1,81.5,original,,I145
