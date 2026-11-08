@@ -1,0 +1,71 @@
+country,indicator,source_columns,module,covers,flag,source_unit,n_buildings
+AT,GWPbio,GWP biogenic - A1A3,A1-A3,A1-A3,,kgCO2e,67
+AT,GWPbio,GWP biogenic - A4,A4,A4,,kgCO2e,67
+AT,GWPbio,GWP biogenic - A5,A5,A5,,kgCO2e,67
+AT,GWPbio,GWP biogenic - B4,B4,B4,B5 not reported,kgCO2e,67
+AT,GWPbio,GWP biogenic - B5,B6,B6,"header ""B5"", description row ""B6""; treated as B6 (to confirm)",kgCO2e,67
+AT,GWPbio,GWP biogenic - C1,C1,C1,,kgCO2e,67
+AT,GWPbio,GWP biogenic - C2,C2,C2,,kgCO2e,67
+AT,GWPbio,GWP biogenic - C3C4,C3,C3-C4,C3 and C4 reported together,kgCO2e,67
+AT,GWPfossil,GWP fossil - A1A3,A1-A3,A1-A3,,kgCO2e,67
+AT,GWPfossil,GWP fossil - A4,A4,A4,,kgCO2e,67
+AT,GWPfossil,GWP fossil - A5,A5,A5,,kgCO2e,67
+AT,GWPfossil,GWP fossil - B4,B4,B4,B5 not reported,kgCO2e,67
+AT,GWPfossil,GWP fossil - B5,B6,B6,"header ""B5"", description row ""B6""; treated as B6 (to confirm)",kgCO2e,67
+AT,GWPfossil,GWP fossil - C1,C1,C1,,kgCO2e,67
+AT,GWPfossil,GWP fossil - C2,C2,C2,,kgCO2e,67
+AT,GWPfossil,GWP fossil - C3C4,C3,C3-C4,C3 and C4 reported together,kgCO2e,67
+AT,GWPluluc,GWP LULUC - A1A3,A1-A3,A1-A3,,kgCO2e,67
+AT,GWPluluc,GWP LULUC - A4,A4,A4,,kgCO2e,67
+AT,GWPluluc,GWP LULUC - A5,A5,A5,,kgCO2e,67
+AT,GWPluluc,GWP LULUC - B4,B4,B4,B5 not reported,kgCO2e,67
+AT,GWPluluc,GWP LULUC - B5,B6,B6,"header ""B5"", description row ""B6""; treated as B6 (to confirm)",kgCO2e,67
+AT,GWPluluc,GWP LULUC - C1,C1,C1,,kgCO2e,67
+AT,GWPluluc,GWP LULUC - C2,C2,C2,,kgCO2e,67
+AT,GWPluluc,GWP LULUC - C3C4,C3,C3-C4,C3 and C4 reported together,kgCO2e,67
+AT,GWPtotal,GWP total - A1A3,A1-A3,A1-A3,,kgCO2e,67
+AT,GWPtotal,GWP total - A4,A4,A4,,kgCO2e,67
+AT,GWPtotal,GWP total - A5,A5,A5,,kgCO2e,67
+AT,GWPtotal,GWP total - B4,B4,B4,B5 not reported,kgCO2e,67
+AT,GWPtotal,GWP total - B5,B6,B6,"header ""B5"", description row ""B6""; treated as B6 (to confirm)",kgCO2e,67
+AT,GWPtotal,GWP total - C1,C1,C1,,kgCO2e,67
+AT,GWPtotal,GWP total - C2,C2,C2,,kgCO2e,67
+AT,GWPtotal,GWP total - C3C4,C3,C3-C4,C3 and C4 reported together,kgCO2e,67
+HR,GWPtotal,A1_A3_GWP_TOTAL,A1-A3,A1-A3,,kgCO2e,50
+HR,GWPtotal,A4_GWP_TOTAL,A4,A4,,kgCO2e,50
+HR,GWPtotal,A5_GWP_total,A5,A5,,kgCO2e,50
+HR,GWPtotal,B3_GWP total,B3,B3,,kgCO2e,50
+HR,GWPtotal,B4-B5_GWP_TOTAL,B4,B4-B5,B4 and B5 reported together,kgCO2e,50
+HR,GWPtotal,B6_GWP_TOTAL,B6,B6,,kgCO2e,50
+HR,GWPtotal,B7_GWP_total,B7,B7,,kgCO2e,50
+HR,GWPtotal,C1-C4_GWP total,C1,C1-C4,C1-C4 reported together,kgCO2e,50
+HR,GWPtotal,D_GWP_total,D1,D1-D2,D reported as one value,kgCO2e,50
+IT,GWPtotal,A1_A3_GWP_TOTAL,A1-A3,A1-A3,,kgCO2e,50
+IT,GWPtotal,A4_GWP_TOTAL,A4,A4,,kgCO2e,50
+IT,GWPtotal,A5_GWP_Fossil + A5w_DAB_GWP_TOTAL + A5w_BOQ_GWP_TOTAL,A5,A5,A5 = A5 (GWP-fossil) + A5w_DAB + A5w_BOQ (construction waste),kgCO2e,50
+IT,GWPtotal,B2_GWP_Fossil,B2,B2,reported as GWP-fossil,kgCO2e,50
+IT,GWPtotal,B3_GWP_Fossil,B3,B3,reported as GWP-fossil,kgCO2e,50
+IT,GWPtotal,B4_GWP_TOTAL,B4,B4,B5 not reported,kgCO2e,50
+IT,GWPtotal,B6_GWP_TOTAL,B6,B6,,kgCO2e,48
+IT,GWPtotal,B6_GWP_TOTAL,B6,B6,reported as 0; treated as not reported,kgCO2e,2
+IT,GWPtotal,C1_GWP_Fossil,C1,C1,reported as GWP-fossil,kgCO2e,50
+IT,GWPtotal,C2_GWP_TOTAL,C2,C2,,kgCO2e,50
+IT,GWPtotal,C3_GWP_TOTAL,C3,C3,,kgCO2e,50
+IT,GWPtotal,C4_GWP_TOTAL,C4,C4,,kgCO2e,50
+LU,GWPbio,"A1-A3, biog",A1-A3,A1-A3,,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPbio,"C3-C4, biog",C3,C3-C4,C3 and C4 together,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPfossil,"A1-A3, fossil",A1-A3,A1-A3,fossil incl. LULUC,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPfossil,"A4, fossil",A4,A4,fossil incl. LULUC,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPfossil,"A5, fossil",A5,A5,fossil incl. LULUC,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPfossil,"B4-B5, fossil",B4,B4-B5,B4 and B5 together; fossil incl. LULUC,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPfossil,"C2, fossil",C2,C2,fossil incl. LULUC,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPfossil,"C3, fossil",C3,C3,fossil incl. LULUC,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPfossil,"C4, fossil",C4,C4,fossil incl. LULUC,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPtotal,"A1-A3, fossil + A1-A3, biog",A1-A3,A1-A3,,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPtotal,"A4, fossil",A4,A4,,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPtotal,"A5, fossil",A5,A5,,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPtotal,"B4-B5, fossil",B4,B4-B5,B4 and B5 together,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPtotal,"C2, fossil",C2,C2,,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPtotal,"C3, fossil + C3-C4, biog",C3,C3,includes the biogenic part of C3–C4,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPtotal,"C4, fossil",C4,C4,,kgCO2e/m² UFA (per D3.2; not stated in the file),52
+LU,GWPtotal,"D, tot",D1,D1-D2,D reported as one value,kgCO2e/m² UFA (per D3.2; not stated in the file),52

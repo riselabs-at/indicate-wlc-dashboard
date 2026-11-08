@@ -1,8 +1,11 @@
 country,check,value,tolerance,passed
-AT,"GWP total = fossil + biogenic + LULUC (relative difference, all buildings)",1.2394410182807357e-15,0.001,True
+AT,"GWP total = fossil + biogenic + LULUC (relative difference, all values)",1.3521174744880753e-15,0.001,True
 HR,"Sum of A–C modules vs source ""GWP total"" (max abs difference, kgCO2e)",2.0,5.0,True
-IT,"Absolute vs per-m² GFA × GFA, per module (max relative difference)",2.1990204987689366e-16,1e-06,True
-IT,Sum of modules vs GWPtot (max relative difference),3.261653274832924e-16,1e-06,True
-IT,GWPtot/GFA/year × 50 vs GWPtot/GFA (max abs difference) → RSP = 50 years,2.2737367544323206e-13,1e-06,True
-LU,"Element rows sum to building totals (max abs difference, kgCO2e/m²)",3.410605131648481e-13,0.01,True
-IT,Tier sum ÷ LCM embodied (A–C excl. B6) per m² GFA: median ratio (info only; proxies included),1.073,1000000000.0,True
+HR,RSP derived from per-year column = 50 years (max abs difference),7.105427357601002e-15,0.01,True
+IT,"Absolute = per-m² GFA × GFA, per module (max relative difference)",1.7614474203301037e-16,1e-06,True
+IT,Sum of modules = GWPtot (max relative difference),2.1794708221643002e-16,1e-06,True
+IT,GWPtot/GFA/year × 50 = GWPtot/GFA (max abs difference) → RSP 50 years,2.2737367544323206e-13,1e-06,True
+LU,"Element rows sum to building totals incl. D (max abs difference, kgCO2e/m²)",6.821210263296962e-13,0.01,True
+LU,"GWPtotal = fossil (+LULUC) + biogenic, excl. D (max abs difference, kgCO2e/m²)",2.2737367544323206e-13,0.01,True
+IT,Tier sum ÷ LCM A–C per m² GFA: median ratio (information only; tiers include proxies),1.073,1000000000.0,True
+LU,"Elements mapped to EU tiers sum to building totals incl. D (max abs difference, kgCO2e)",1.862645149230957e-09,1.0,True
