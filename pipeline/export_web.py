@@ -1,55 +1,108 @@
-"""Write the dashboard data file (assets/js/data.js) from the harmonised tables."""
+"""Write the dashboard data file (assets/js/data.js) from the template-based database tables."""
 import json, os
 import pandas as pd
-from config import MODULES, DATABASE_VERSION
+from config import DISPLAY_ORDER, DATABASE_VERSION, TYPOLOGIES, EU_ELEMENTS, EMBODIED, DISPLAY, MODULES, CODEBOOK
+
+EMB_NATIVE = [m for d in EMBODIED for m in DISPLAY[d]]
 
 
 def _n(v):
-    return None if v is None or (isinstance(v, float) and pd.isna(v)) else (round(float(v), 4) if isinstance(v, float) else v)
+    if v is None or (isinstance(v, float) and pd.isna(v)):
+        return None
+    return round(float(v), 4) if isinstance(v, (float, int)) and not isinstance(v, bool) else v
 
 
 def export(d, js_path):
-    b, lcm = d['buildings'], d['lcm']
-    # LU module values stay per m² as in the source; the dashboard applies the area assumption (GFA or UFA)
-    val = lcm.assign(v=lcm.source_value.where(lcm.country == 'LU', lcm.value_kgco2e))
-    mods = val.pivot(index='building_id', columns='module', values='v')
+    p, r, w = d['projects'], d['results'], d['wide'].set_index('building_id')
+    tot = r[r.indicator == 'GWPtotal']
+    # LU values stay per m² as in the source (per m² UFA, per D3.2); the dashboard converts to GFA where needed
+    lu = tot[tot.country == 'LU'].groupby(['building_id', 'display_module']).source_value.sum().unstack()
     out_b = []
-    for r in b.itertuples(index=False):
-        mm = mods.loc[r.building_id] if r.building_id in mods.index else {}
+    for row in p.itertuples(index=False):
+        is_lu = row.country == 'LU'
+        mods = {}
+        for m in DISPLAY_ORDER:
+            v = (lu.loc[row.building_id, m] if m in lu.columns else None) if is_lu else w.loc[row.building_id, m]
+            mods[m] = _n(v) if not (is_lu and m not in lu.columns) else None
+        depth = row.project_renovation_depth
         out_b.append(dict(
-            id=r.building_id, country=r.country, natType=r.national_typology, type=r.harmonised_type,
-            intervention=r.intervention_class,
-            interventionLabel=r.intervention + (f' ({r.renovation_level})' if r.renovation_level else ''),
-            gfa=_n(r.gfa_m2), ufa=_n(r.ufa_m2), hfa=_n(r.hfa_m2), rsp=_n(r.rsp_years),
-            mods={m: _n(mm.get(m)) if m in mm else None for m in MODULES},
-            perM2=r.country == 'LU' or None,
+            id=row.building_id, country=row.country, natType=row.x_typology_national, type=row.typology_code,
+            intervention='Renovation' if row.project_intervention_type == 'Renovation' else 'New construction',
+            interventionLabel=row.project_intervention_type + ('' if depth.startswith('Not applicable') else f' ({depth.split()[0].lower()})'),
+            gfa=_n(row.bldg_area_gfa), nfa=_n(row.bldg_area_nfa), nfaBasis='HFA' if row.country == 'IT' else 'UFA',
+            nfaType='HFA' if row.country == 'IT' else 'UFA',
+            rsp=_n(row.lca_rsp) or 50, mods=mods, perM2=is_lu or None,
         ))
-    lu_el = {}
-    for r in d['lu_elements'].itertuples(index=False):
-        rec = r._asdict()
-        lu_el.setdefault(rec['building_id'], {})[rec['code']] = {m: round(float(rec[m]), 5) for m in MODULES
-                                                                   if m in rec and pd.notna(rec[m]) and rec[m]}
-    lu_mat = {}
-    mat = d['lu_materials']
-    for _, rec in mat.iterrows():
-        lu_mat.setdefault(rec['building_id'], {})[rec['material_group']] = {m: round(float(rec[m]), 5) for m in MODULES
-                                                                            if m in rec and pd.notna(rec[m]) and rec[m]}
-    codes = d['codes']
-    lu_desc = {r.code: r.description.split('; ') for r in codes[codes.classification.str.startswith('LU')].itertuples()}
-    it = d['it_elements']
-    quality = ['original'] + sorted(q for q in it.quality.unique() if q != 'original')
-    it_t = {}
-    for r in it.itertuples(index=False):
-        flag = 1 if 'paint' in (r.note or '') else 0
-        it_t.setdefault(r.building_id, {})[r.code] = [round(float(r.value_kgco2e_m2), 4), quality.index(r.quality), flag]
-    it_codes = list(codes[codes.classification.str.startswith('IT')].code)
-
-    data = dict(version=DATABASE_VERSION, built=d['meta']['built'], modules=MODULES, buildings=out_b,
-                luElements=lu_el, luMaterials=lu_mat, luTier3Desc=lu_desc,
-                itTiers=it_t, itTierCodes=it_codes, itQuality=quality)
+    e = d['elements']
+    quality = ['original'] + sorted(q for q in e.quality.unique() if q != 'original')
+    els = {}
+    lu_e = e[(e.country == 'LU') & e.module.isin(EMB_NATIVE)].groupby(['building_id', 'eu_code']).value_kgco2e_m2.sum()
+    for (bid, code), v in lu_e.items():
+        els.setdefault(bid, {})[code] = [round(float(v), 4), 0, 0]
+    for row in e[e.country == 'IT'].itertuples(index=False):
+        els.setdefault(row.building_id, {})[row.eu_code] = [round(float(row.value_kgco2e_m2), 4), quality.index(row.quality),
+                                                            1 if 'paint' in (row.note or '') else 0]
+    mats = {}
+    mt = d['materials']
+    for _, rec in mt.iterrows():
+        v = sum(rec[c] for c in EMB_NATIVE if c in rec and pd.notna(rec[c]))
+        if v:
+            mats.setdefault(rec['building_id'], {})[rec['material_group']] = round(float(v), 4)
+    me = d['map_elements']
+    nat = {}
+    for row in me.itertuples(index=False):
+        nat.setdefault(row.country, {}).setdefault(row.eu_code, []).append(row.national_code)
+    desc = dict(zip(me.national_code[me.country == 'LU'], me['national_content (LU: top-3 product categories)'][me.country == 'LU']))
+    data = dict(version=DATABASE_VERSION, built=d['meta']['built'], modules=DISPLAY_ORDER, typologies=TYPOLOGIES,
+                types={k: v.replace(f' ({k})', '') for k, v in TYPOLOGIES.items()}, groupModules=DISPLAY,
+                completeness=completeness(d),
+                euElements=[dict(code=c, tier=t, name=n) for c, t, n in EU_ELEMENTS], buildings=out_b,
+                elements=els, materials=mats, elQuality=quality, natCodes=nat, luDesc=desc)
     os.makedirs(os.path.dirname(js_path), exist_ok=True)
     with open(js_path, 'w', encoding='utf-8') as fh:
-        fh.write(f"/* INDICATE WLC Dashboard data, database v{DATABASE_VERSION}, built {d['meta']['built']}. "
+        fh.write(f"/* INDICATE WLC Dashboard data, database v{DATABASE_VERSION} (template v1.1 vocabulary), built {d['meta']['built']}. "
                  'Generated by pipeline/run_all.py; do not edit by hand. PRELIMINARY: verification pending. */\n')
         fh.write('window.WLC_DATA = ' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';\n')
     return data
+
+
+def completeness(d):
+    """Share of buildings per country with a value, for template attributes, modules, sub-indicators and the material tab.
+    A module reported only inside a combined value (e.g. B5 within B4-B5) counts as half."""
+    p, r = d['projects'], d['results']
+    n = p.groupby('country').size()
+    rows = []
+    for code, label, unit, prio, kind in CODEBOOK:
+        if kind != 'template':
+            continue
+        has, note = p[code].notna(), {}
+        if code in ('project_intervention_type', 'project_renovation_depth'):      # assumed values do not count as reported
+            assumed = p.x_intervention_basis.fillna('').str.contains('assumed')
+            has &= ~assumed
+            note = {c: 'assumed (not stated in source)' for c in n.index if assumed[p.country == c].any()}
+        share = {c: round(float(has[p.country == c].mean()), 3) for c in n.index}
+        rows.append(dict(kind='attribute', code=code, label=label, high=prio == 'HP', share=share, note=note))
+    tot = r[(r.indicator == 'GWPtotal') & r.value_kgco2e.notna()]
+    def span(cv):
+        a, _, b = cv.partition('-')
+        if a == 'A1':                       # 'A1-A3' is one template module
+            return ['A1-A3']
+        return MODULES[MODULES.index(a):MODULES.index(b) + 1] if b else [a]
+    for mod in MODULES:
+        share, note = {}, {}
+        for c in n.index:
+            t = tot[tot.country == c]
+            direct = set(t[(t.module == mod) & (t.covers == mod)].building_id)
+            within = t[(t.covers != t.module) & t.covers.map(lambda cv: mod in span(cv))]
+            part = set(within.building_id) - direct
+            share[c] = round((len(direct) + 0.5 * len(part)) / n[c], 3)
+            if part:
+                note[c] = 'only within ' + ', '.join(sorted(set(within.covers)))
+        rows.append(dict(kind='module (GWPtotal)', code=mod, label=f'GWPtotal {mod}', high=True, share=share, note=note))
+    for ind in ['GWPfossil', 'GWPbio', 'GWPluluc']:
+        share = {c: round(r[(r.country == c) & (r.indicator == ind) & r.value_kgco2e.notna()].building_id.nunique() / n[c], 3) for c in n.index}
+        rows.append(dict(kind='indicator', code=ind, label=ind, high=False, share=share,
+                         note={'LU': 'fossil incl. LULUC; biogenic for A1-A3 and C3-C4 only'} if ind != 'GWPluluc' else {}))
+    rows.append(dict(kind='tab', code='Material-use_building-total', label='Material mass by element × material (kg)', high=True,
+                     share={c: 0.0 for c in n.index}, note={'LU': 'material groups available, but as emissions, not mass'}))
+    return rows

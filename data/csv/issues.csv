@@ -1,24 +1,31 @@
-issue_id,country,type,building_ids,observation,handling,status
-I01,AT,confirm,,"Column header ""GWP total - B5"" but description row says B6",Treated as B6 (operational energy),open – partner to confirm
-I02,AT,info,,B4-B5 contains B4 only,Mapped to B4-B5,noted
-I03,AT,info,,No GFA reported,Austria drops out of per-GFA views,noted
-I04,AT,info,,Type of intervention not stated,Treated as new construction,noted
-I05,HR,info,,"Per-GFA B3 column in the source holds a running index (0, 1, 2…)",Per-m² values recomputed from the absolute block,noted
-I06,HR,info,,The 50 cases are design variants of 16 base buildings (identical floor areas),Kept as separate records; percentiles reflect variant spread,noted
-I07,IT,warning,IT-EDU_01_N_C_3,B6 reported as 0 (operational carbon share 0 %),Treated as not reported,handled
-I08,IT,warning,IT-XTR_07_N_E_3,B6 reported as 0 (operational carbon share 0 %),Treated as not reported,handled
-I09,IT,warning,IT-XTR_07_N_E_3,No HFA reported,Excluded from per-HFA/UFA views,handled
-I10,IT,confirm,"IT-MFH_17_R_E_2, IT-MFH_20_R_E_2, IT-MFH_21_R_E_2, IT-MFH_25_R_E_2","Identical B6 value (375,913 kgCO2e) for different buildings",Kept as reported,open – partner to confirm
-I11,IT,confirm,"IT-OFF_07_N_E_3, IT-OFF_08_N_E_3","Identical B6 value (38,633,327 kgCO2e) for different buildings",Kept as reported,open – partner to confirm
-I12,IT,info,"IT-MFH_17_R_E_2, IT-MFH_20_R_E_2, IT-MFH_21_R_E_2, IT-MFH_25_R_E_2",Cases share identical GFA and HFA (variants of one building),Kept as separate records,noted
-I13,IT,confirm,,No UFA reported; heated floor area (HFA) given instead,HFA used as the UFA-equivalent in per-UFA views (switchable),open – partner to confirm
-I14,IT,confirm,,Typology codes HOS and XTR are not defined in the file,"Kept as own harmonised types: ""Other residential (IT: HOS)"", ""Other non-residential (IT: XTR)""",open – partner to confirm
-I15,IT,info,,"21 of 50 cases are renovations (12 minor R-, 9 major R+)",Flagged by intervention; dashboard defaults to new construction,noted
-I16,IT,info,,B2 and B3 are GWP-fossil only; C1 is GWP-fossil only,Used as reported,noted
-I17,IT,info,,Module D and B7 not reported,,noted
-I18,IT,confirm,,"Element tiers include proxy values (missing values, outlier replacement, cross-typology proxies, +16.67 paint)",Each tier value carries a quality flag from the cell colour; tier totals differ from LCM totals,open – partner to confirm
-I19,LU,confirm,,Reference area of the per-m² results not stated in the file,Assumed GFA total; switchable in the dashboard,open – partner to confirm
-I20,LU,confirm,,"""House"" typology includes larger multi-unit residences (e.g. MI_Con_1, 35 occupants)",Mapped to Single-family house,open – partner to confirm
-I21,LU,confirm,,LEVELS Tier 3 codes have no names in the file,Group names inferred from product content; codes described by top-3 product categories,open – partner to confirm
-I22,LU,info,,No operational modules (B6/B7) reported,Luxembourg drops out of whole-life views,noted
-I23,LU,info,,Type of intervention not stated (construction years 2017–2028),Treated as new construction,noted
+issue_id,country,type,building_ids,observation,handling,question_to_national_team,status
+I01,AT,info,,"Column header ""GWP total - B5"", but the description row says B6.",Stored as B6 (operational energy). Confirmed by D3.2: its AT operational benchmarks (B6-B7) equal these values.,Please correct the column header to B6.,noted
+I02,AT,info,,B4 reported without B5; C3 and C4 reported together.,B4 stored as B4; C3+C4 stored in C3 with covers = C3-C4.,,noted
+I03,AT,confirm,,"No GFA reported; storeys only as a total. D3.2 (Table 1, Fig. 2) reports AT GFA (mean 3,547 m², median 1,699 m²) and floors above ground (mean 3.4), so these data exist.",Austria drops out of per-GFA views; total storeys kept as x_storeys_total.,Please provide GFA and floors above / below ground per building (as used in D3.2).,open – partner to confirm
+I04,AT,confirm,,"Mean UFA in this file is 2,470 m²; D3.2 Table 1 gives 2,241 m² for the same 67 buildings (per-m² results match D3.2 exactly, so the UFA used for normalisation is the same).","UFA as in the file (""with filled gaps"").",Which UFA values does D3.2 Table 1 use?,open – partner to confirm
+I05,AT,info,,Type of intervention not stated.,Treated as new construction.,Are all 67 buildings new construction?,noted
+I06,HR,info,,"Per-GFA B3 column of the source holds a running index (0, 1, 2…).",Not used; per-m² values are calculated from the absolute block.,,noted
+I07,HR,info,,The 50 cases are design variants of 16 base buildings (identical floor areas).,Kept as separate records; percentiles reflect variant spread.,Which variant (if any) represents each base building as built?,noted
+I08,HR,info,,"B4-B5, C1-C4 and D reported as combined values.",Stored in the first module of each range with covers flag.,"Can B4 / B5, C1–C4 and D1 / D2 be reported separately?",noted
+I09,HR,confirm,,"The D7.12 file has results per module only. D3.2 uses Croatian element and material results (Fig. 10, 11), material masses (Fig. 4), structural systems (Fig. 3) and floors (mean 2.6).","No element, material or floor data for HR.",Please provide the element (EU Tier 2/3) and material results and the building metadata used in D3.2.,open – partner to confirm
+I10,IT,warning,IT-EDU_01_N_C_3,B6 reported as 0 (operational carbon share 0 %).,Treated as not reported.,Is operational carbon (B6) available for this building?,handled
+I11,IT,warning,IT-XTR_07_N_E_3,B6 reported as 0 (operational carbon share 0 %).,Treated as not reported.,Is operational carbon (B6) available for this building?,handled
+I12,IT,warning,IT-XTR_07_N_E_3,No HFA reported.,Excluded from per-NFA views.,Can the heated (or useful) floor area be provided?,handled
+I13,IT,confirm,"IT-MFH_17_R_E_2, IT-MFH_20_R_E_2, IT-MFH_21_R_E_2, IT-MFH_25_R_E_2","Identical B6 value (375,913 kgCO2e) for different buildings.",Kept as reported.,Is the identical B6 value intended (same energy model) or a copy error?,open – partner to confirm
+I14,IT,confirm,"IT-OFF_07_N_E_3, IT-OFF_08_N_E_3","Identical B6 value (38,633,327 kgCO2e) for different buildings.",Kept as reported.,Is the identical B6 value intended (same energy model) or a copy error?,open – partner to confirm
+I15,IT,info,"IT-MFH_17_R_E_2, IT-MFH_20_R_E_2, IT-MFH_21_R_E_2, IT-MFH_25_R_E_2",Cases share identical GFA and HFA (variants of one building).,Kept as separate records.,,noted
+I16,IT,confirm,,No UFA reported; heated floor area (HFA) given instead.,NFA = HFA (agreed 2026-10-20).,Is a useful floor area (UFA) available?,open – partner to confirm
+I17,IT,confirm,,"Typology codes HOS and XTR are not defined in the file. D3.2 describes HOS as hospitality (mainly long-term stay and student rooms, 3 new buildings, grouped with MFH) and XTR as other non-residential (2 new buildings).","HOS mapped to HOR (agreed 2026-11-08), XTR to OTH.","Please confirm: HOS = hospitality (template HOR), XTR = other non-residential (OTH).",open – partner to confirm
+I18,IT,confirm,,"D3.2 IT benchmarks (29 new buildings, per m² HFA, proxies excluded) differ from the values in this file (e.g. whole-life median 2,211 vs 2,315 kgCO2e/m² HFA; this file has no HFA for IT-XTR_07). Operational values match.",Values used as in SumUP LCM.,Which data version is final: does SumUP LCM include the proxy values excluded in D3.2? Please provide the HFA of XTR_07.,open – partner to confirm
+I19,IT,confirm,,Tier names are not given in the file.,Tiers 2.2–2.9 read as the EU Table 4 building-services list (agreed 2026-10-20).,Please confirm the tier names (in particular 2.2–2.9 and 4.1).,open – partner to confirm
+I20,IT,info,,"21 of 50 cases are renovations (13 minor R-, 8 major R+). D3.2 uses the new buildings only.",project_renovation_depth set; renovations benchmarked separately.,,noted
+I21,IT,info,,"A5 construction part, B2, B3 and C1 are GWP-fossil only; D and B7 not reported.","Used as reported, flagged per value.",,noted
+I22,IT,confirm,,"Element tiers include proxy values (missing values, outlier replacement, cross-typology proxies, +16.67 paint).",Each tier value carries a quality flag from the cell colour; tier sums differ from the life-cycle totals.,,open – partner to confirm
+I23,LU,info,,Reference area of the per-m² results not stated in the file.,"Treated as per m² UFA: D3.2 Table E.1 (per m² UFA) matches these values exactly for A1-A3, A4-A5, B1-B4 and C1-C4.",Please confirm that the per-m² results are per m² UFA.,noted
+I24,LU,confirm,,"""House"" includes larger multi-unit residences (e.g. MI_Con_1, 35 occupants).",Mapped to SFH (as in D3.2).,"Should the larger ""House"" projects be MFH instead of SFH?",open – partner to confirm
+I25,LU,confirm,,LEVELS Tier 3 codes have no names in the file.,Mapped to EU Table 4 tiers from the product content (inferred).,Please provide the names of the LEVELS codes or confirm the mapping to EU Table 4.,open – partner to confirm
+I26,LU,confirm,,"Structure given as main material only (concrete, wood, mixes, steel).",Kept as x_struct_material_national; bldg_struct_type left blank.,"Is the structure frame or massive (template list: frame / massive wood, concrete, steel, brick)?",open – partner to confirm
+I27,LU,confirm,,"No operational modules (B6/B7) in the export file, but D3.2 reports LU operational carbon for 49 of 52 buildings (median 373 kgCO2e/m² UFA). Energy given as primary energy demand per heated area only.",Luxembourg drops out of whole-life views; primary energy kept as x_ fields.,Please provide the B6 (and B7) results used in D7.30/D3.2 and the annual energy consumption (kWh/a).,open – partner to confirm
+I28,LU,confirm,,"D3.2 embodied carbon for LU (median 1,372 kgCO2e/m² UFA) is higher than the sum of the reported embodied modules (median 1,324), although each module matches D3.2.","Embodied = sum of A1-A3, A4, A5, B4-B5, C1-C4 as reported.",Which additional values does the D3.2 / D7.30 embodied total include?,open – partner to confirm
+I29,LU,info,,Type of intervention not stated (construction years 2017–2028).,Treated as new construction.,Are all 52 projects new construction?,noted
+I30,LU,info,,Users of office buildings equal UFA ÷ 10.,"Kept, flagged as likely estimated (x_users_basis).",,noted

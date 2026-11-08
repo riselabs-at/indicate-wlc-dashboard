@@ -1,0 +1,27 @@
+country,national_typology,template_code,status,note,template_label,n_buildings
+AT,Single-family house,SFH,direct,,Single family houses (SFH),24
+AT,Multi-family house,MFH,direct,,Multifamily houses (MFH),6
+AT,Apartment block,ABL,direct,,Apartment blocks (ABL),21
+AT,Office building,OFF,direct,,Offices (OFF),3
+AT,Education building,EDU,direct,,Education (EDU),6
+AT,Retail,TRA,direct,,Trade (TRA),6
+AT,Hotel and Restaurant,HOR,direct,,Hotels and Restaurants (HOR),1
+HR,SINGLE FAMILY HOUSE,SFH,direct,,Single family houses (SFH),12
+HR,MULTY FAMILY HOUSE,MFH,direct,,Multifamily houses (MFH),12
+HR,OFFICE BUILDING,OFF,direct,,Offices (OFF),12
+HR,EDUCATION,EDU,direct,,Education (EDU),6
+HR,HOSPITAL,HEA,direct,,Health (HEA),2
+HR,HOTEL,HOR,direct,,Hotels and Restaurants (HOR),2
+HR,SPORT HALL BUILDING,OTH,direct,No sport type in the template list,Other non-residential buildings (OTH),2
+HR,NEW BUILDING FOR RETAIL AND WHOLESALE,TRA,direct,,Trade (TRA),2
+IT,SFH,SFH,direct,,Single family houses (SFH),8
+IT,MFH,MFH,direct,,Multifamily houses (MFH),22
+IT,OFF,OFF,direct,,Offices (OFF),9
+IT,EDU,EDU,direct,,Education (EDU),4
+IT,HOS,HOR,to confirm,"Code not defined in the file; hospitality (mainly long-term stays and student rooms) per D3.2, which groups it with MFH; HOR agreed 2026-11-08, to be confirmed by the Italian team",Hotels and Restaurants (HOR),3
+IT,XTR,OTH,to confirm,Code not defined in the file (non-residential); OTH until confirmed,Other non-residential buildings (OTH),4
+LU,House,SFH,to confirm,"Includes some larger multi-unit residences (e.g. MI_Con_1, 35 occupants)",Single family houses (SFH),13
+LU,Apartments,ABL,direct,Apartment buildings → ABL (agreed 2026-10-20),Apartment blocks (ABL),17
+LU,Office,OFF,direct,,Offices (OFF),10
+LU,School,EDU,direct,,Education (EDU),8
+LU,Hall,OTH,direct,No hall type in the template list,Other non-residential buildings (OTH),4

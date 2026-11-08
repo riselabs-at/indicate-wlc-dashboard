@@ -1,0 +1,48 @@
+country,national_code,eu_code,status,basis,eu_name,national_content (LU: top-3 product categories)
+LU,1.1.1,1.1,inferred,"concrete, reinforcement, drainage → substructure",Substructure,"Concrete structural elements; Reinforcement bars, welded mesh and reinforcing fibres; Steel structural / load-bearing elements"
+LU,1.1.2,1.1,inferred,"concrete, reinforcement, insulation, aggregates → substructure",Substructure,"Concrete structural elements; Reinforcement bars, welded mesh and reinforcing fibres; Insulation volume"
+LU,1.1.3,1.1,inferred,"concrete, insulation, waterproofing → substructure / basement",Substructure,"Concrete structural elements; Insulation volume; Reinforcement bars, welded mesh and reinforcing fibres"
+LU,1.1.4,1.1,inferred,"concrete, reinforcement, masonry → substructure",Substructure,"Concrete structural elements; Reinforcement bars, welded mesh and reinforcing fibres; Other masonry"
+LU,1.2.1,1.2,inferred,"structural concrete, steel, wood → structure",Structure,"Concrete structural elements; Reinforcement bars, welded mesh and reinforcing fibres; Steel structural / load-bearing elements"
+LU,1.2.2,1.2,inferred,"concrete, stairs, tanks → structure",Structure,"Concrete structural elements; Reinforcement bars, welded mesh and reinforcing fibres; Stairs (interior and exterior)"
+LU,1.3.1,1.3.1,inferred,"shutters, glazing, joinery, insulation → façade",Façade,Shutters / roller shutters / louvres / blinds / solar shading; Insulation volume; Glazing volume
+LU,1.3.2,1.3.2,inferred,"insulation, metal, EPDM / bituminous membranes → roof",Roof,"Insulation volume; Metal products (aluminium, steel, zinc, etc.); EPDM and bituminous waterproofing membranes"
+LU,2.1.1,2.1,inferred,"internal doors, partitions → internal architectural works",Internal or under cover architectural works (non-structural),Internal doors; Concrete structural elements; Composite elements not listed elsewhere
+LU,2.1.2,2.1,inferred,"stairs, guardrails, furniture → internal architectural works",Internal or under cover architectural works (non-structural),Stairs (interior and exterior); Guardrails; Furniture
+LU,2.1.3,2.1,inferred,"paint, screeds, floor coverings → internal finishes",Internal or under cover architectural works (non-structural),"Paint; Other cement-based products, screeds; Hard floor coverings (tiles, parquet)"
+LU,2.1.4,2.1,inferred,"paint, floor coverings, gypsum → internal finishes",Internal or under cover architectural works (non-structural),"Paint; Resilient floor coverings (carpet, vinyl); Hard floor coverings (tiles, parquet)"
+LU,2.2.1,2.2.2,inferred,"valves, hydronic emitters, pipes → heating distribution",Heating systems,"Valves / taps / dampers; Hydronic heating and/or cooling emitters (fan coil units, radiant ceilings, radiators, etc.); Pipes and network elements (all materials)"
+LU,2.2.2,2.2.2,inferred,hydronic heat / cooling production → heating (may include cooling),Heating systems,"Hydronic heat and/or cooling production equipment; Pipes and network elements (all materials); Hydronic heating and/or cooling emitters (fan coil units, radiant ceilings, radiators, etc.)"
+LU,2.2.3,2.2.4,inferred,"ducts, air handling units, grilles → ventilation",Ventilation systems,"Ventilation ducts (all types); Ventilation units, air handling units; Grilles, air terminals, dampers"
+LU,2.2.4,2.2.7,inferred,"solar panels, conversion, generators → on-site renewables",On-site renewable energy generation,Solar panels; Conversion and control; Miscellaneous energy production
+LU,2.2.5,2.2.6,inferred,"LV wiring, cable trays, cabinets → electrical services","Electrical services for power, communications, security, IT and fire detection",LV electrical wiring; Cable trays and cable ladders; LV electrical cabinet (enclosure)
+LU,2.2.6,2.2.5,inferred,interior / emergency lighting → lighting,Lighting systems,Interior lighting equipment and power supplies; Emergency lighting system; Exterior lighting equipment and power supplies
+LU,2.2.7,2.2.5,inferred,interior / exterior lighting → lighting,Lighting systems,Interior lighting equipment and power supplies; Exterior lighting equipment and power supplies; Emergency lighting system
+LU,2.2.8,2.2.6,inferred,"cameras, access control, intercoms → electrical services (security, comms)","Electrical services for power, communications, security, IT and fire detection","Cameras, access control terminals; Touchscreens, video intercoms, etc.; Fire safety (fire hose reels, extinguishers, sprinklers excluding pipes, etc.)"
+LU,2.3.1,2.2.1,inferred,"pipes, network accessories → water",Water and wastewater-related systems,Pipes and network elements (all materials); Other passive network accessories; Pipe insulation
+LU,2.3.2,2.2.1,inferred,"pipes, water treatment, chambers → water and wastewater",Water and wastewater-related systems,Pipes and network elements (all materials); Water treatment; Access or pull chambers
+LU,2.4.1,2.2.1,inferred,"WCs, sinks, washbasins → sanitaryware (water systems)",Water and wastewater-related systems,WC - toilet - bowl; Furniture; Sink
+LU,2.4.2,2.2.1,inferred,"washbasins, baths, taps, showers → sanitaryware (water systems)",Water and wastewater-related systems,Washbasin; Bathtub; Taps and shower columns
+LU,2.5.1,2.2.8,inferred,"fire safety, alarm systems → life safety","Life safety, fuel and movement system installations","Fire safety (fire hose reels, extinguishers, sprinklers excluding pipes, etc.); Pipes and network elements (all materials); Emergency lighting system"
+LU,2.5.2,2.2.8,inferred,pipes (single product) → life safety,"Life safety, fuel and movement system installations",Pipes and network elements (all materials)
+LU,2.5.3,2.2.8,inferred,lifts → movement installations,"Life safety, fuel and movement system installations","Lifts or elevators; Pipes and network elements (all materials); Fire safety (fire hose reels, extinguishers, sprinklers excluding pipes, etc.)"
+LU,3.1.1,3.3,inferred,"drainage, pipes → external building services",External building services,"Drainage system; Pipes and network elements (all materials); Caged ladders, metal walkways"
+LU,3.1.2,3.3,inferred,"pipes, chambers, drainage → external building services",External building services,Pipes and network elements (all materials); Access or pull chambers; Drainage system
+LU,3.1.3,3.3,inferred,"chambers, pipes, drainage → external building services",External building services,Access or pull chambers; Pipes and network elements (all materials); Drainage system
+LU,3.2.1,3.2,inferred,"concrete, aggregates, fencing → external fittings",External fittings and fixtures,Concrete structural elements; Crushed aggregates; Fencing
+LU,3.2.2,3.1,inferred,"concrete, road surfacing → external roads and surfaces","External roads, paths, paving and other surfaces",Concrete structural elements; Road surfacings; Roadway elements
+LU,3.2.3,3.1,inferred,"roadway elements, green-roof substrate → external surfaces (mixed)","External roads, paths, paving and other surfaces",Roadway elements; Substrate for green roof; Concrete structural elements
+LU,3.2.4,3.3,inferred,"pipes, concrete, solar panels → external services (mixed)",External building services,Pipes and network elements (all materials); Concrete structural elements; Solar panels
+IT,1.1,1.1,inferred,same code as EU Tier 2,Substructure,
+IT,1.2,1.2,inferred,same code as EU Tier 2,Structure,
+IT,1.3.1,1.3.1,inferred,same code as EU Tier 3 façade,Façade,
+IT,1.3.2,1.3.2,inferred,same code as EU Tier 3 roof,Roof,
+IT,2.1,2.1,inferred,same code as EU Tier 2,Internal or under cover architectural works (non-structural),
+IT,2.2,2.2.1,inferred,1st EU services item: water and wastewater,Water and wastewater-related systems,
+IT,2.3,2.2.2,inferred,"2nd and 3rd EU services items: heating, incl. cooling (source: ""2.3 includes 2.4"")",Heating systems,
+IT,2.5,2.2.4,inferred,4th EU services item: ventilation,Ventilation systems,
+IT,2.6,2.2.5,inferred,5th EU services item: lighting,Lighting systems,
+IT,2.7,2.2.6,inferred,6th EU services item: electrical services,"Electrical services for power, communications, security, IT and fire detection",
+IT,2.8,2.2.7,inferred,7th EU services item: on-site renewables,On-site renewable energy generation,
+IT,2.9,2.2.8,inferred,"8th EU services item: life safety, fuel, movement","Life safety, fuel and movement system installations",
+IT,4.1,4.1,unknown,renovation cases only; meaning not stated,Other or not allocated,
