@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="INDICATE WLC Dashboard: page for the INDICATE LIFE national teams on completing their data with the INDICATE reporting template.">
+<title>INDICATE WLC Dashboard · Reporting template (national teams)</title>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/brand-fonts.css">
+<style>
+/* Layout: one analytical column (max 1240px) under a sticky filter rail; each section = heading, one-line takeaway, chart, footnote. */
+:root{
+  --bg:#f3f5f3; --surface:#fcfcfb; --ink:#101614; --ink2:#4b534f; --muted:#7f8682;
+  --grid:#e1e5e1; --axis:#c2c8c3; --line:rgba(16,22,20,.10); --accent:#0d6a5a; --accent-wash:#e1efeb;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#4a3aa7; --s8:#e34948;
+  --d-mod:#a9aea9; --box:#e6ebe7;
+  --wip-bg:#fff4d6; --wip-ink:#4a3500; --wip-edge:#e0a800;
+  --good:#0ca30c; --warn:#fab219; --serious:#ec835a; --critical:#d03b3b; --na:#b9bdb9;
+  --cls-bp:var(--good); --cls-ref:var(--warn); --cls-lim:var(--serious); --cls-ab:var(--critical);
+  --f-ui:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-data:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0d100f; --surface:#161a18; --ink:#eef2ef; --ink2:#bfc6c1; --muted:#878e89;
+  --grid:#282d2a; --axis:#3a403c; --line:rgba(255,255,255,.10); --accent:#57c0aa; --accent-wash:#183029;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --d-mod:#5b615d; --box:#242a27; --na:#5d635f; --wip-bg:#3a2c05; --wip-ink:#ffe7a3; --wip-edge:#c98500; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0d100f; --surface:#161a18; --ink:#eef2ef; --ink2:#bfc6c1; --muted:#878e89;
+  --grid:#282d2a; --axis:#3a403c; --line:rgba(255,255,255,.10); --accent:#57c0aa; --accent-wash:#183029;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --d-mod:#5b615d; --box:#242a27; --na:#5d635f; --wip-bg:#3a2c05; --wip-ink:#ffe7a3; --wip-edge:#c98500; color-scheme:dark}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:14px;line-height:1.5}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:20px;padding-block:0 64px}
+header.top{padding-block:28px 18px;display:flex;flex-wrap:wrap;gap:12px 32px;align-items:flex-end;justify-content:space-between}
+.eyebrow{font-family:var(--f-data);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:28px;line-height:1.15;margin:4px 0 6px;font-weight:600;letter-spacing:-.01em;text-wrap:balance}
+.lede{color:var(--ink2);max-width:68ch;margin:0}
+nav.jump{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px}
+nav.jump a{color:var(--ink2);text-decoration:none;border-bottom:1px solid var(--axis)}
+nav.jump a:hover{color:var(--accent);border-color:var(--accent)}
+
+.rail{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-block:1px solid var(--line);margin-inline:-20px;padding:10px 20px}
+.rail-in{max-width:1240px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center}
+.ctl{display:flex;align-items:center;gap:8px;min-width:0}
+.ctl>label,.ctl>.lab{font-family:var(--f-data);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:7px;background:var(--surface);overflow:hidden}
+.seg button{font:inherit;font-size:13px;color:var(--ink2);background:none;border:0;padding:5px 10px;cursor:pointer;border-right:1px solid var(--line);white-space:nowrap}
+.seg button:last-child{border-right:0}
+.seg button[aria-pressed="true"]{background:var(--accent-wash);color:var(--ink);font-weight:600}
+.seg button:hover{color:var(--ink)}
+select{font:inherit;font-size:13px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:7px;padding:5px 8px;max-width:100%}
+button:focus-visible,select:focus-visible,a:focus-visible,th:focus-visible,tr:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+section{padding-block:34px 6px;border-top:1px solid var(--line);margin-top:30px}
+section:first-of-type{border-top:0;margin-top:8px}
+h2{font-size:20px;font-weight:600;margin:0 0 4px;letter-spacing:-.005em;text-wrap:balance}
+h3{font-size:14.5px;font-weight:600;margin:22px 0 4px}
+.take{color:var(--ink2);max-width:80ch;margin:0 0 14px}
+.note{font-size:12.5px;color:var(--muted);max-width:90ch;margin:8px 0 0}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 16px 12px;min-width:0}
+.grid2{display:grid;align-items:start;grid-template-columns:repeat(auto-fit,minmax(min(100%,520px),1fr));gap:16px}
+.row-head{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:space-between;margin-bottom:8px}
+
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.kpi{background:var(--surface);padding:14px 16px}
+.kpi .v{font-size:26px;font-weight:600;line-height:1.1;margin-top:4px}
+.kpi .v small{font-size:12px;font-weight:500;color:var(--muted);margin-left:4px}
+.kpi .s{font-size:12.5px;color:var(--ink2);margin-top:3px}
+
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--ink2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:11px;height:11px;border-radius:3px;display:inline-block;flex:none}
+.sw.dot{border-radius:50%}
+.sw.hatch{background:repeating-linear-gradient(45deg,var(--d-mod) 0 2px,transparent 2px 4px);outline:1px solid var(--d-mod)}
+
+svg text{font-family:var(--f-ui);fill:var(--ink2);font-size:12px}
+svg .tick{font-family:var(--f-data);font-size:10.5px;fill:var(--muted)}
+svg .lab{fill:var(--ink);font-size:12.5px}
+svg .sub{fill:var(--muted);font-size:11px;font-family:var(--f-data)}
+.chart{width:100%;overflow-x:auto}
+.hit{cursor:default}
+
+.tip{position:fixed;z-index:50;pointer-events:none;background:var(--surface);color:var(--ink);border:1px solid var(--line);box-shadow:0 6px 24px rgba(0,0,0,.14);border-radius:8px;padding:8px 10px;font-size:12.5px;max-width:300px;opacity:0;transition:opacity .08s}
+.tip b{font-weight:600}
+.tip .k{color:var(--muted);font-family:var(--f-data);font-size:11px}
+.tip table{border-collapse:collapse;margin-top:4px}
+.tip td{padding:1px 6px 1px 0;font-variant-numeric:tabular-nums}
+.tip td:last-child{text-align:right}
+
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table.t{border-collapse:collapse;width:100%;font-size:12.5px}
+table.t th,table.t td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+table.t th{font-family:var(--f-data);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500;position:sticky;top:0;background:var(--surface)}
+table.t th.num,table.t td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.t tbody tr:hover{background:var(--accent-wash)}
+table.t th[data-k]{cursor:pointer}
+table.t th[aria-sort] ::after{content:""}
+tr.sel{background:var(--accent-wash)}
+tr.clickable{cursor:pointer}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;padding:1px 8px 1px 6px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.pill i{width:8px;height:8px;border-radius:50%;display:inline-block}
+.flag{font-family:var(--f-data);font-size:10.5px;color:var(--muted)}
+.cov td.y{color:var(--ink)} .cov td.n{color:var(--muted)}
+.empty{padding:28px 10px;color:var(--muted);text-align:center}
+.method{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:14px 28px}
+.method div{min-width:0}
+.method h3{margin-top:6px}
+.method p,.method li{color:var(--ink2);font-size:13px;max-width:65ch}
+.method ul{padding-left:18px;margin:6px 0}
+code{font-family:var(--f-data);font-size:12px;background:var(--box);padding:0 4px;border-radius:4px}
+.wip{background:var(--wip-bg);color:var(--wip-ink);border-bottom:3px solid var(--wip-edge);
+  background-image:repeating-linear-gradient(135deg,transparent 0 14px,color-mix(in srgb,var(--wip-edge) 14%,transparent) 14px 28px)}
+.wip-in{max-width:1240px;margin:0 auto;padding:12px 20px;display:flex;gap:12px;align-items:flex-start}
+.wip svg{flex:none;margin-top:2px}
+.wip strong{font-weight:700;letter-spacing:.01em}
+.wip p{margin:2px 0 0;max-width:110ch;font-size:13.5px}
+.wip-chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-data);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;
+  background:var(--wip-bg);color:var(--wip-ink);border:1px solid var(--wip-edge);border-radius:99px;padding:3px 9px;margin-left:auto;white-space:nowrap}
+footer.foot{border-top:1px solid var(--line);margin-top:40px;padding-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:14px 28px;font-size:12.5px;color:var(--ink2)}
+footer.foot p{margin:0 0 6px;max-width:70ch}
+footer.foot b{color:var(--ink)}
+@media (max-width:640px){h1{font-size:23px}.rail{position:static}.kpi .v{font-size:22px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;border-radius:7px;padding:8px 14px}
+.btn:hover{filter:brightness(1.08)}
+ul.plain{list-style:none;padding:0;margin:6px 0}
+ul.plain li{margin:0 0 10px;color:var(--ink2);max-width:75ch}
+ol.qs{padding-left:22px;margin:6px 0}
+ol.qs li{margin:0 0 14px;max-width:95ch}
+.cell{display:inline-block;width:14px;height:14px;border:1px solid var(--line);border-radius:3px;vertical-align:-2px;margin-right:6px}
+.cell.pink{background:#f4b6c2}.cell.yellow{background:#fff2a8}
+details summary{cursor:pointer}
+
+/* ---- INDICATE LIFE brand layer (D6.2 Brand Guidelines) ---- */
+:root{
+  --b-navy:#132B45; --b-coral:#DD7877; --b-green:#3C886C; --b-violet:#616DB1;
+  --bg:#f5f6f8; --surface:#ffffff; --ink:#132B45; --ink2:#46566a; --muted:#6f7b89;
+  --grid:#e3e7ec; --axis:#c3cad3; --line:rgba(19,43,69,.12); --accent:#2f7a5f; --accent-wash:#e2f0ea;
+  --f-ui:"Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0c1723; --surface:#132233; --ink:#eef2f6; --ink2:#bcc7d3; --muted:#8693a2;
+  --grid:#223347; --axis:#34485e; --line:rgba(255,255,255,.11); --accent:#6cc3a2; --accent-wash:#183a30;}}
+:root[data-theme="dark"]{
+  --bg:#0c1723; --surface:#132233; --ink:#eef2f6; --ink2:#bcc7d3; --muted:#8693a2;
+  --grid:#223347; --axis:#34485e; --line:rgba(255,255,255,.11); --accent:#6cc3a2; --accent-wash:#183a30;}
+body{font-size:13.5px;font-feature-settings:"tnum" 1,"lnum" 1}
+h1{font-weight:800;letter-spacing:-.005em}
+h2{font-weight:700}
+.kpi .v{font-weight:700}
+.hd-right{display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;gap:14px;margin-left:auto;align-self:stretch}
+@media (min-width:900px){header.top{flex-wrap:nowrap;align-items:stretch}header.top>div:first-child{flex:1 1 auto;min-width:0}}
+.brand-logo{display:block;line-height:0}
+.brand-logo img{height:60px;width:auto}
+.logo-dark{display:none}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo-light{display:none}:root:not([data-theme="light"]) .logo-dark{display:inline}}
+:root[data-theme="dark"] .logo-light{display:none}
+:root[data-theme="dark"] .logo-dark{display:inline}
+.brand-stripe{display:grid;gap:3px;margin:0 0 4px}
+.brand-stripe i{display:block;height:3px;border-radius:2px}
+.brand-stripe i:nth-child(1){background:var(--b-coral);width:100%}
+.brand-stripe i:nth-child(2){background:var(--b-violet);width:66%}
+.brand-stripe i:nth-child(3){background:var(--b-green);width:33%}
+footer.foot .fund{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+footer.foot .fund img{height:42px;width:auto;flex:none}
+@media (max-width:640px){.hd-right{align-items:flex-start;margin-left:0;flex-direction:column-reverse}.brand-logo img{height:46px}}
+
+/* Option D: chart colours as in the D3.2 synthesis report (brand colours + the report's tints).
+   Exact brand values sit outside the generic lightness/chroma band by design; adjacent-pair CVD and
+   normal-vision separation were validated (validate_palette.js) for every sequence used:
+   modules (whole life and embodied), element groups, classes, countries; light on #ffffff, dark on #132233. */
+:root{
+  --c-navy:#132b45; --c-green:#3c886c; --c-coral:#dd7877; --c-violet:#616db1;
+  --c-mint:#b9ded0; --c-pink:#f0b5b4; --c-lviolet:#8da0cb; --c-mgreen:#68a88d; --c-grey:#7e7979; --c-lgrey:#d9d9d9;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --c-navy:#7aa2e0; --c-green:#4ea283; --c-coral:#e0807f; --c-violet:#6a74c8;
+  --c-mint:#b2dccb; --c-pink:#f2bdbc; --c-lviolet:#aeb9e6; --c-mgreen:#6fae94; --c-grey:#9a9494; --c-lgrey:#5b6878;}}
+:root[data-theme="dark"]{
+  --c-navy:#7aa2e0; --c-green:#4ea283; --c-coral:#e0807f; --c-violet:#6a74c8;
+  --c-mint:#b2dccb; --c-pink:#f2bdbc; --c-lviolet:#aeb9e6; --c-mgreen:#6fae94; --c-grey:#9a9494; --c-lgrey:#5b6878;}
+:root:not(.brand-none){   /* (0,2,0): beats the template dark-mode token blocks, which come earlier */
+  /* life-cycle modules: product navy · construction greens · use violets · operation corals · end of life mid-green */
+  --s1:var(--c-navy); --s2:var(--c-mint); --s3:var(--c-green); --s4:var(--c-lviolet); --s5:var(--c-violet);
+  --s6:var(--c-coral); --s7:var(--c-pink); --s8:var(--c-mgreen); --d-mod:#b5b5b5;
+  /* EU Table 4 element groups, as the D3.2 hotspot charts */
+  --e1:var(--c-coral); --e2:var(--c-navy); --e3:var(--c-green); --e4:var(--c-violet); --e5:var(--c-pink); --e6:var(--c-grey); --e7:var(--c-lgrey);
+  /* benchmark classes and thresholds, as the D3.2 P25 / P50 / P75 markers */
+  --cls-bp:var(--c-green); --cls-ref:var(--c-violet); --cls-lim:var(--c-coral); --cls-ab:var(--c-navy); --na:var(--c-lgrey);
+  --th-p25:var(--c-green); --th-p50:var(--c-violet); --th-p75:var(--c-coral);
+  /* range bands stay neutral grey (no country colours): classes are read within a country, not across countries */
+  --box:color-mix(in srgb,var(--ink) 10%,var(--surface));
+}
+</style>
+</head>
+<body>
+<div class="wip" role="note" aria-label="Work in progress">
+ <div class="wip-in">
+  <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 1.5 21h21L12 2.5Z" fill="var(--wip-edge)"/><path d="M12 9v5.5M12 17.2v.3" stroke="var(--wip-bg)" stroke-width="2.2" stroke-linecap="round"/></svg>
+  <div><strong>Work in progress: preliminary results, not yet verified</strong>
+  <p>This dashboard is under development. Data harmonisation, assumptions and results are still being checked with the national teams, and figures may change. Please do not cite, quote or reuse them. Preview build 2026-11-08, version 0.3.1 preview.</p></div>
+ </div>
+</div>
+<div class="wrap">
+<header class="top">
+  <div>
+    <div class="eyebrow">INDICATE LIFE · For the national teams</div>
+    <h1>Reporting your data with the INDICATE template</h1>
+    <p class="lede">The national datasets were delivered before the INDICATE reporting template was finalised, and nobody was asked to use it. The dashboard therefore harmonises each dataset to the template itself. This page helps you check that harmonisation and, where you can, complete your data in the template format. It is a working page for your team, not an assessment of the datasets.</p>
+  </div>
+  <div class="hd-right"><a class="brand-logo" href="https://www.indicatedata.com/" title="INDICATE LIFE website"><img class="logo-light" src="assets/img/indicate-life-logo.png" alt="INDICATE LIFE" width="162" height="60"><img class="logo-dark" src="assets/img/indicate-life-logo-white.png" alt="INDICATE LIFE" width="162" height="60"></a>
+  <nav class="jump" aria-label="Back"><a href="./">← Back to the dashboard</a></nav></div>
+</header>
+<div class="brand-stripe" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<div class="rail" role="region" aria-label="Country">
+ <div class="rail-in">
+  <div class="ctl"><span class="lab" id="lab-c">Your dataset</span><div class="seg" id="f-country" role="group" aria-labelledby="lab-c">
+   <button data-v="AT" aria-pressed="false">Austria · D7.3</button><button data-v="HR" aria-pressed="false">Croatia · D7.12</button><button data-v="IT" aria-pressed="false">Italy · D7.21</button><button data-v="LU" aria-pressed="false">Luxembourg · D7.30</button></div></div>
+ </div>
+</div>
+
+<p class="note" id="pick" style="font-size:14px;margin-top:22px">Select your dataset above to see your data request and the questions for your team.</p>
+
+<div id="country" hidden>
+<section id="steps" aria-labelledby="h-steps">
+  <h2 id="h-steps">1 · Your pre-filled data request</h2>
+  <p class="take">We have transferred everything we could take from <span data-f="deliv"></span> into a copy of the reporting template v1.1, one column per building. Please review it, correct what we got wrong and fill what you can.</p>
+  <div class="grid2">
+   <div class="panel">
+    <h3 style="margin-top:0">Download</h3>
+    <p><a class="btn" data-f="file" href="#" download>Data request for <span data-f="name"></span> (.xlsx)</a></p>
+    <p class="note" style="margin-top:6px"><span data-f="n"></span> buildings, the same IDs as on the dashboard.</p>
+   </div>
+   <div class="panel">
+    <h3 style="margin-top:0">How to read it</h3>
+    <ul class="plain">
+     <li><span class="cell pink"></span><b>Pink cells</b>: high-priority fields that your delivered file did not contain. Fill them where the information exists.</li>
+     <li><span class="cell yellow"></span><b>Yellow cells</b>: values we had to assume. The cell comment says what we assumed. Please confirm or correct.</li>
+     <li><b>Questions tab</b>: the questions listed in step 2 below.</li>
+     <li data-f="elmap"><b>Element mapping tab</b>: how we matched your element codes to the EU Table 4 element tiers. Please check the mapping.</li>
+    </ul>
+   </div>
+  </div>
+</section>
+
+<section id="questions" aria-labelledby="h-q">
+  <h2 id="h-q">2 · Questions for your team</h2>
+  <p class="take">These came up while we harmonised your dataset and compared it with the D3.2 synthesis report. Your answers decide how the values are shown on the dashboard.</p>
+  <ol class="qs" id="q-list"></ol>
+  <details class="panel" style="margin-top:14px"><summary><b>For information</b>: how we handled other points in your dataset (<span id="i-n"></span>)</summary><ul class="plain" id="i-list" style="margin-top:10px"></ul></details>
+</section>
+
+<section id="open" aria-labelledby="h-open">
+  <h2 id="h-open">3 · Template fields still open in your data request</h2>
+  <p class="take">High-priority fields and life-cycle modules of template v1.1 that your delivered file did not cover, or covered only in part. Any of them you can add makes your data more useful for benchmarking. Nothing here is required.</p>
+  <div class="grid2">
+   <div class="panel"><h3 style="margin-top:0">Building and project information</h3><ul class="plain" id="o-attr"></ul></div>
+   <div class="panel"><h3 style="margin-top:0">Life-cycle modules (GWP total)</h3><ul class="plain" id="o-mod"></ul></div>
+  </div>
+</section>
+
+<section id="return" aria-labelledby="h-ret">
+  <h2 id="h-ret">4 · Send it back</h2>
+  <p class="take">Please email the completed file, or just your answers to the questions, to <a href="mailto:martin.roeck@riselabs.at?subject=INDICATE%20WLC%20data%20request" style="color:inherit">martin.roeck@riselabs.at</a>. We will update the database and the dashboard and let you know when your corrections are live.</p>
+</section>
+</div>
+
+<section id="template" aria-labelledby="h-t">
+  <h2 id="h-t">The reporting template</h2>
+  <div class="grid2">
+   <div class="panel">
+    <p style="margin-top:0"><b>INDICATE – Building Whole Life Cycle Emissions Reporting Template, v1.1</b><br>Martin Röck, Nathan Verstappen, Lise Mouton, Karen Allacker</p>
+    <p><a class="btn" href="template/INDICATE_Building-WLC-Emissions-Reporting_Template_v1.1.xlsx" download>Blank template v1.1 (.xlsx)</a></p>
+    <p class="note">v1.0: <a href="https://doi.org/10.5281/zenodo.21169904" style="color:inherit">doi:10.5281/zenodo.21169904</a>. Version 1.1 is about to be published on Zenodo. Its Changelog tab lists the changes.</p>
+   </div>
+   <div class="panel">
+    <p style="margin-top:0">Use one template per building, or the <i>Multi-Project_Overview</i> tab for several buildings. Your data request is already laid out like the overview tab. For new assessments, please use the template from the start. It covers the minimum documentation the INDICATE databases need.</p>
+   </div>
+  </div>
+</section>
+<footer class="foot">
+  <div><p><b>INDICATE WLC Dashboard</b> · version 0.3.1 preview · build 2026-11-08</p>
+  <p>Part of <a href="https://www.indicatedata.com/" style="color:inherit">INDICATE LIFE</a>, National Building LCA Data Accelerator EU LIFE, coordinated by Smith Innovation.</p></div>
+  <div><p><b>Data sources</b></p>
+  <p>D7.3 AT national WLC dataset (TU Graz) · D7.12 HR national WLC dataset (University of Zagreb, Faculty of Civil Engineering) · D7.21 IT national WLC dataset (POLIMI, with POLITO, UNIBG and Harpaceas) · D7.30 LU national WLC dataset (Energie et Environnement S.A. on behalf of the OAI). Harmonised to the INDICATE reporting template v1.1 (Röck 2026, doi:10.5281/zenodo.21169904). Harmonisation and analysis on this page are preliminary.</p></div>
+  <div class="fund"><img class="eu-light logo-light" src="assets/img/eu-cofunded.png" alt="Co-funded by the European Union" width="176" height="37"><img class="eu-dark logo-dark" src="assets/img/eu-cofunded-white.png" alt="Co-funded by the European Union" width="176" height="37">
+  <div><p>This project is co-funded by the European Union’s LIFE programme under grant agreement 101167585.</p><p>The views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or CINEA. Neither the European Union nor CINEA can be held responsible for them.</p>
+  <p>This page sets no cookies, stores nothing in your browser and loads nothing from third-party servers.</p></div></div>
+</footer>
+</div>
+
+<script src="assets/js/data.js"></script>
+<script>
+(()=>{
+const D = window.WLC_DATA; if(!D) return;
+const C = {AT:{name:'Austria',deliv:'D7.3',file:'INDICATE_WLC_data-request_AT_D7.3.xlsx'},HR:{name:'Croatia',deliv:'D7.12',file:'INDICATE_WLC_data-request_HR_D7.12.xlsx'},
+           IT:{name:'Italy',deliv:'D7.21',file:'INDICATE_WLC_data-request_IT_D7.21.xlsx'},LU:{name:'Luxembourg',deliv:'D7.30',file:'INDICATE_WLC_data-request_LU_D7.30.xlsx'}};
+const esc = s => String(s??'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const status = (r,c) => { const v=r.share[c]||0, n=(r.note||{})[c]; if(v>=0.999 && !n) return null;
+  if(n && /only within/.test(n)) return 'reported only together with other modules ('+n.replace('only within ','')+')';
+  if(n) return n; if(v>0) return 'for some buildings'; return 'not in the delivered file'; };
+function show(c){
+  document.querySelectorAll('#f-country button').forEach(b=>b.setAttribute('aria-pressed', b.dataset.v===c));
+  const box=document.getElementById('country'); document.getElementById('pick').hidden = !!C[c]; box.hidden = !C[c]; if(!C[c]) return;
+  const m=C[c]; const n=D.buildings.filter(b=>b.country===c).length;
+  box.querySelectorAll('[data-f="name"]').forEach(e=>e.textContent=m.name);
+  box.querySelectorAll('[data-f="deliv"]').forEach(e=>e.textContent=m.deliv+' ('+m.name+')');
+  box.querySelector('[data-f="n"]').textContent=n;
+  box.querySelector('[data-f="file"]').href='data/data-requests/'+m.file;
+  box.querySelector('[data-f="elmap"]').hidden = !(c==='IT'||c==='LU');
+  const iss=(D.issues||[]).filter(i=>i.country===c);
+  const ask=iss.filter(i=>i.type!=='info' && i.question), info=iss.filter(i=>!(i.type!=='info' && i.question));
+  document.getElementById('q-list').innerHTML = ask.map(i=>`<li><b>${esc(i.question)}</b><br><span class="note">${esc(i.observation)}${i.buildings?` Buildings: ${esc(i.buildings)}.`:''} Current handling: ${esc(i.handling)}</span></li>`).join('') || '<li>No open questions.</li>';
+  document.getElementById('i-n').textContent=info.length;
+  document.getElementById('i-list').innerHTML = info.map(i=>`<li>${esc(i.observation)} <span class="note">${esc(i.handling)}</span>${i.question?` <span class="note">(${esc(i.question)})</span>`:''}</li>`).join('');
+  const rows=D.completeness||[];
+  const list=(sel)=>rows.filter(sel).map(r=>[r,status(r,c)]).filter(([,s])=>s).map(([r,s])=>`<li><b>${esc(r.label.replace('GWPtotal ',''))}</b> <code>${esc(r.code)}</code><br><span class="note">${esc(s)}</span></li>`).join('') || '<li>Nothing open.</li>';
+  document.getElementById('o-attr').innerHTML = list(r=>r.kind==='attribute' && r.high);
+  document.getElementById('o-mod').innerHTML = list(r=>r.kind.startsWith('module'));
+}
+document.querySelectorAll('#f-country button').forEach(b=>b.addEventListener('click',()=>{ history.replaceState(null,'','#'+b.dataset.v); show(b.dataset.v); }));
+const fromHash=()=>show((location.hash||'').slice(1).toUpperCase());
+window.addEventListener('hashchange',fromHash); fromHash();
+})();
+</script>
+</body>
+</html>
