@@ -55,7 +55,7 @@ def export(d, js_path):
     desc = dict(zip(me.national_code[me.country == 'LU'], me['national_content (LU: top-3 product categories)'][me.country == 'LU']))
     data = dict(version=DATABASE_VERSION, built=d['meta']['built'], modules=DISPLAY_ORDER, typologies=TYPOLOGIES,
                 types={k: v.replace(f' ({k})', '') for k, v in TYPOLOGIES.items()}, groupModules=DISPLAY,
-                completeness=completeness(d),
+                completeness=completeness(d), issues=issues(d),
                 euElements=[dict(code=c, tier=t, name=n) for c, t, n in EU_ELEMENTS], buildings=out_b,
                 elements=els, materials=mats, elQuality=quality, natCodes=nat, luDesc=desc)
     os.makedirs(os.path.dirname(js_path), exist_ok=True)
@@ -106,3 +106,13 @@ def completeness(d):
     rows.append(dict(kind='tab', code='Material-use_building-total', label='Material mass by element × material (kg)', high=True,
                      share={c: 0.0 for c in n.index}, note={'LU': 'material groups available, but as emissions, not mass'}))
     return rows
+
+
+def issues(d):
+    """Questions and notes per country for the national-team page (reporting.html)."""
+    out = []
+    for r in d['issues'].itertuples(index=False):
+        out.append(dict(country=r.country, type=r.type, buildings=r.building_ids if isinstance(r.building_ids, str) else '',
+                        observation=r.observation, handling=r.handling,
+                        question=r.question_to_national_team if isinstance(r.question_to_national_team, str) else ''))
+    return out

@@ -208,7 +208,7 @@ footer.foot .fund img{height:42px;width:auto;flex:none}
   </div>
   <div class="hd-right"><a class="brand-logo" href="https://www.indicatedata.com/" title="INDICATE LIFE website"><img class="logo-light" src="assets/img/indicate-life-logo.png" alt="INDICATE LIFE" width="162" height="60"><img class="logo-dark" src="assets/img/indicate-life-logo-white.png" alt="INDICATE LIFE" width="162" height="60"></a>
   <nav class="jump" aria-label="Sections">
-    <a href="#dist">Distribution</a><a href="#lc">Life cycle</a><a href="#el">Elements</a><a href="#bm">Benchmarks</a><a href="#bld">Buildings</a><a href="#comp">Completeness</a><a href="#method">Method</a>
+    <a href="#dist">Distribution</a><a href="#lc">Life cycle</a><a href="#el">Elements</a><a href="#bm">Benchmarks</a><a href="#bld">Buildings</a><a href="#method">Method</a>
   </nav></div>
 </header>
 <div class="brand-stripe" aria-hidden="true"><i></i><i></i><i></i></div>
@@ -256,7 +256,7 @@ footer.foot .fund img{height:42px;width:auto;flex:none}
     <div class="chart" id="c-lc"></div>
   </div>
   <p class="note">Bars show the mean of per-building values for each group. Module D is reported outside the system boundary and is not part of the totals. Share mode divides each module by the group's mean total, so it is not available for D.</p>
-  <h3>Module reporting coverage (template v1.1 modules)</h3>
+  <h3>Life-cycle modules included in each national dataset</h3>
   <div class="tbl-wrap" style="max-width:780px"><table class="t cov" id="t-cov"></table></div>
 </section>
 
@@ -291,14 +291,6 @@ footer.foot .fund img{height:42px;width:auto;flex:none}
   <h2 id="h-bld">Building records</h2>
   <p class="take">All buildings in the current selection with the harmonised values. Select a column heading to sort.</p>
   <div class="tbl-wrap" style="max-height:520px;overflow:auto"><table class="t" id="t-bld"></table></div>
-</section>
-
-<section id="comp" aria-labelledby="h-comp">
-  <h2 id="h-comp">Reporting completeness</h2>
-  <p class="take">Share of buildings in each national dataset with a value for the attributes and modules of the INDICATE reporting template v1.1. High-priority attributes are marked ★. A module reported only together with others (for example B4–B5) counts as half. Missing values are being requested from the national teams with pre-filled template overviews.</p>
-  <div class="kpis" id="comp-kpis" style="margin-bottom:16px"></div>
-  <div class="tbl-wrap"><table class="t" id="t-comp"></table></div>
-  <p class="note">Source: database sheet “completeness”. Template: Röck, M. (2026). INDICATE – Building Whole Life Cycle Emissions Reporting Template, v1.0, doi:10.5281/zenodo.21169904, with v1.1 corrections and extensions.</p>
 </section>
 
 <section id="method" aria-labelledby="h-m">
@@ -738,23 +730,6 @@ function renderBM(bm){
   document.getElementById('bm-note').textContent = notes.join(' ');
 }
 
-// ---------- completeness ----------
-function renderComp(){
-  const rows=(DATA.completeness||[]); if(!rows.length) return;
-  const mean = (sel,c) => { const r=rows.filter(sel); return r.reduce((s,x)=>s+(x.share[c]||0),0)/r.length; };
-  document.getElementById('comp-kpis').innerHTML = CC.map(c=>`<div class="kpi"><div class="eyebrow">${CTRY[c]}</div><div class="v">${pct(mean(r=>r.kind==='attribute'&&r.high,c))}</div><div class="s">high-priority attributes · modules ${pct(mean(r=>r.kind.startsWith('module'),c))}</div></div>`).join('');
-  const shade = v => v>=0.999?'var(--good)':v>=0.5?'var(--warn)':v>0?'var(--serious)':'var(--na)';
-  const kinds=[['attribute','Project information'],['module (GWPtotal)','Life-cycle modules (GWPtotal)'],['indicator','GWP sub-indicators'],['tab','Material inventory']];
-  let html=`<thead><tr><th>Item</th><th>Code</th>${CC.map(c=>`<th class="num">${c}</th>`).join('')}</tr></thead><tbody>`;
-  for(const [k,label] of kinds){
-    html+=`<tr><td colspan="${2+CC.length}" style="font-weight:600;background:var(--box)">${label}</td></tr>`;
-    for(const r of rows.filter(x=>x.kind===k && (k!=='attribute' || x.high || Object.values(x.share).some(v=>v>0)))){
-      html+=`<tr><td>${r.high?'★ ':''}${esc(r.label)}</td><td><code>${esc(r.code)}</code></td>${CC.map(c=>{ const v=r.share[c]||0; const n=(r.note||{})[c]; return `<td class="num"${n?` data-tip="${esc(CTRY[c]+': '+n)}"`:''}><span class="pill" style="min-width:56px;justify-content:flex-end"><i style="background:${shade(v)}"></i>${pct(v)}</span></td>`; }).join('')}</tr>`;
-    }
-  }
-  document.getElementById('t-comp').innerHTML = html+'</tbody>';
-}
-
 // ---------- building table ----------
 let sortK='total', sortDir=1;
 function renderTable(sel, bm){
@@ -789,7 +764,7 @@ typeSel.addEventListener('change',()=>{S.type=typeSel.value; update();});
 function update(){
   syncControls(); save();
   const sel=selection(), bm=benchmarks();
-  renderKPIs(sel); renderDist(sel,bm); renderLC(sel); renderEl(sel); renderBM(bm); renderTable(sel,bm); renderComp();
+  renderKPIs(sel); renderDist(sel,bm); renderLC(sel); renderEl(sel); renderBM(bm); renderTable(sel,bm);
 }
 let rt; window.addEventListener('resize',()=>{clearTimeout(rt); rt=setTimeout(update,150);});
 update();
